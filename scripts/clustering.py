@@ -1,11 +1,15 @@
-import os
 import pandas as pd
 import numpy as np
 from sklearn.cluster import KMeans
+from utils.plot import generate_elbow_plot, generate_silhouette_coef_plot
 
 df = pd.read_csv("../data/nba.games.stats-clean.csv", index_col=0)
 df = df.drop(df.columns[list(range(0, 6))], axis=1)
 print(df)
+
+generate_elbow_plot(df, 10)
+generate_silhouette_coef_plot(df, 10)
+
 n_clusters = 9
 
 print("Running the KMeans clustering model -----------\n\n")
