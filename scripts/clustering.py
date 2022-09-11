@@ -2,28 +2,27 @@ import pandas as pd
 import numpy as np
 from sklearn.cluster import KMeans
 from utils.plot import generate_elbow_plot, generate_silhouette_coef_plot
+from utils.kmeans import get_distortion_values, show_samples_closest_to_centroid
 
-df = pd.read_csv("../data/nba.games.stats-clean.csv", index_col=0)
+N_CLUSTERS = 9
+
+df = pd.read_csv("./data/nba.games.stats-clean.csv", index_col=0)
 df = df.drop(df.columns[list(range(0, 6))], axis=1)
 print(df)
 
-generate_elbow_plot(df, 10)
-generate_silhouette_coef_plot(df, 10)
-
-n_clusters = 9
+generate_elbow_plot(df, 30)
+generate_silhouette_coef_plot(df, 30)
 
 print("Running the KMeans clustering model -----------\n\n")
-kmeans = KMeans(n_clusters=n_clusters, init='random')
+kmeans = KMeans(n_clusters=N_CLUSTERS, init='random')
 y_km = kmeans.fit_predict(df)
-distortion = ((df - kmeans.cluster_centers_[y_km]) ** 2.0).sum(axis=1)
 
-labels = pd.DataFrame({'cluster': kmeans.labels_, 'distortion': distortion})
-print(labels['cluster'].value_counts())
+labeled_df = df.copy()
+labeled_df["cluster"] = kmeans.labels_
+print(labeled_df)
 
-print("Get the samples closest to the centroids")
-for cluster in range(0, n_clusters):
-    print(f"\nThe closest samples to cluster {cluster}")
-    d = kmeans.transform(df)[:, cluster]
-    print(labels.loc[labels['cluster'] == cluster, 'distortion'].sum())
-    ind = np.argsort(d)[::][:10]
-    print(df.iloc[list(ind)])
+distortion_df = get_distortion_values(kmeans)
+print(distortion_df['cluster'].value_counts())
+
+# print("Get the samples closest to the centroids")
+show_samples_closest_to_centroid(df, distortion_df, kmeans, N_CLUSTERS)
