@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from .constants import NUMERIC_COLS
+from .constants import NUMERIC_COLS, N_CLUSTERS
 
 
 def _get_distortion_values(df, kmeans, y_km):
@@ -8,7 +8,7 @@ def _get_distortion_values(df, kmeans, y_km):
     return pd.DataFrame({'cluster': kmeans.labels_, 'distortion': distortion})
 
 
-def get_distortion_totals_per_cluster(df, kmeans, y_km, N_CLUSTERS):
+def get_distortion_totals_per_cluster(df, kmeans, y_km):
     distortion_df = _get_distortion_values(df, kmeans, y_km)
     results_df = pd.DataFrame(columns=[list(range(0, N_CLUSTERS))])
     print(results_df)
@@ -23,7 +23,7 @@ def get_cluster_distribution(df):
     return df['cluster'].value_counts()
 
 
-def get_samples_closest_to_centroid(df, stats_df, kmeans, N_CLUSTERS, num_samples=4):
+def get_samples_closest_to_centroid(df, stats_df, kmeans, num_samples=4):
     results_df = df.iloc[:0, :].copy()
     for cluster in range(0, N_CLUSTERS):
         d = kmeans.transform(df)[:, cluster]
@@ -33,10 +33,10 @@ def get_samples_closest_to_centroid(df, stats_df, kmeans, N_CLUSTERS, num_sample
     return results_df
 
 
-def get_column_avgs_per_cluster(df, n_clusters):
+def get_column_avgs_per_cluster(df):
     column_avgs_df = pd.DataFrame(columns=NUMERIC_COLS + ["cluster"])
     rows = []
-    for cluster in range(0, n_clusters):
+    for cluster in range(0, N_CLUSTERS):
         temp_dict = {}
         temp_df = df[df.cluster == cluster]
         for col in temp_df.columns:
