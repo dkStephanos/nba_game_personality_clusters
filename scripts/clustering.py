@@ -6,6 +6,7 @@ from utils.kmeans import (
     get_distortion_totals_per_cluster,
     get_samples_closest_to_centroid,
     get_column_avgs_per_cluster,
+    get_cluster_distribution,
 )
 
 _N_CLUSTERS = 5
@@ -33,7 +34,9 @@ column_avgs_df = get_column_avgs_per_cluster(stats_df, _N_CLUSTERS)
 
 print("Distribution of cluster labels:: ")
 distortion_df = get_distortion_totals_per_cluster(df, kmeans, y_km, _N_CLUSTERS)
-print(distortion_df)
+cluster_dist = get_cluster_distribution(stats_df)
+
+print(cluster_dist)
 
 print("Get the samples closest to the centroids")
 closest_samples_dict = get_samples_closest_to_centroid(

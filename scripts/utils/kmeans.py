@@ -18,6 +18,10 @@ def get_distortion_totals_per_cluster(df, kmeans, y_km, N_CLUSTERS):
     return results
 
 
+def get_cluster_distribution(df):
+    return df['cluster'].value_counts()
+
+
 def get_samples_closest_to_centroid(df, stats_df, kmeans, N_CLUSTERS, num_samples=4):
     results = {}
     for cluster in range(0, N_CLUSTERS):
