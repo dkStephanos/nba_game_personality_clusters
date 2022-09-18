@@ -23,11 +23,13 @@ def get_cluster_distribution(df):
 
 
 def get_samples_closest_to_centroid(df, stats_df, kmeans, N_CLUSTERS, num_samples=4):
-    results = {}
+    results_df = df.iloc[:0, :].copy()
     for cluster in range(0, N_CLUSTERS):
         d = kmeans.transform(df)[:, cluster]
-        results[cluster] = stats_df.iloc[list(np.argsort(d)[::][:num_samples])]
-    return results
+        results_df = pd.concat(
+            [results_df, stats_df.iloc[list(np.argsort(d)[::][:num_samples])]]
+        )
+    return results_df
 
 
 def get_column_avgs_per_cluster(df, n_clusters):
