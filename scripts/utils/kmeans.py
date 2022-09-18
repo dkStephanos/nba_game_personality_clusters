@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 from .constants import NUMERIC_COLS, N_CLUSTERS
+from .general import mimic_df
 
 
 def _get_distortion_values(df, kmeans, y_km):
@@ -24,7 +25,7 @@ def get_cluster_distribution(df):
 
 
 def get_samples_closest_to_centroid(df, stats_df, kmeans, num_samples=4):
-    results_df = df.iloc[:0, :].copy()
+    results_df = mimic_df(df)
     for cluster in range(0, N_CLUSTERS):
         d = kmeans.transform(df)[:, cluster]
         results_df = pd.concat(
