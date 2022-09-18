@@ -10,12 +10,13 @@ def _get_distortion_values(df, kmeans, y_km):
 
 def get_distortion_totals_per_cluster(df, kmeans, y_km, N_CLUSTERS):
     distortion_df = _get_distortion_values(df, kmeans, y_km)
-    results = {}
+    results_df = pd.DataFrame(columns=[list(range(0, N_CLUSTERS))])
+    print(results_df)
     for cluster in range(0, N_CLUSTERS):
-        results[cluster] = distortion_df.loc[
+        results_df.loc[0, cluster] = distortion_df.loc[
             distortion_df['cluster'] == cluster, 'distortion'
         ].sum()
-    return results
+    return results_df
 
 
 def get_cluster_distribution(df):
