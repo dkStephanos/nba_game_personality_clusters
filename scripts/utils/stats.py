@@ -18,3 +18,27 @@ def get_column_quantiles(stats_df, quantile=[0.1, 0.3, 0.5, 0.7, 0.9]):
         )
 
     return quantiles_df
+
+
+def generate_quantile_truth_table(stats_df):
+    quantiles_df = get_column_quantiles(stats_df)
+
+    for cluster in range(0, N_CLUSTERS):
+        result_dict = {}
+        for index, row in stats_df.loc[stats_df["cluster"] == cluster].iterrows():
+            for col, val in list(row.iteritems())[1:]:
+                if col in NUMERIC_COLS:
+                    for q_index, q_row in quantiles_df.loc[
+                        quantiles_df["cluster"] == cluster
+                    ].iterrows():
+                        for q_col, q_val in q_row.iteritems():
+                            if col == q_col:
+                                if col + str(q_index) not in result_dict:
+                                    result_dict[col + str(q_index)] = []
+                                result_dict[col + str(q_index)].append(val > q_val)
+                else:
+                    if col not in result_dict:
+                        result_dict[col] = []
+                    result_dict[col].append(val)
+
+    return pd.DataFrame.from_dict(result_dict)
