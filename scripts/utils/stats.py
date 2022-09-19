@@ -3,7 +3,7 @@ from utils.constants import NUMERIC_COLS, N_CLUSTERS
 from utils.general import mimic_df
 
 
-def get_column_quantiles(stats_df, quantile=[0.1, 0.3, 0.5, 0.7, 0.9]):
+def get_column_quantiles(stats_df, quantile=[0.2, 0.4, 0.6, 0.8]):
     quantiles_df = mimic_df(stats_df[NUMERIC_COLS + ["cluster"]])
     for cluster in range(0, N_CLUSTERS):
         temp_df = stats_df.loc[stats_df["cluster"] == cluster][NUMERIC_COLS].quantile(
