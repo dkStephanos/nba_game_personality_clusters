@@ -69,3 +69,7 @@ def run_apriori(dataset, cluster, min_support=0.75, min_confidence=0.90, max_len
     ) as f:
         for result in sortedResults[:1000]:
             f.write(str(result))
+
+
+def process_apriori_results(results):
+    print(results)

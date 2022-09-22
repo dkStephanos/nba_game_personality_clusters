@@ -5,7 +5,7 @@ from utils.kmeans import (
     get_cluster_distribution,
 )
 from utils.stats import generate_quantile_truth_table
-from utils.apriori import run_apriori
+from utils.apriori import run_apriori, process_apriori_results
 
 _save_results = False
 
@@ -20,17 +20,27 @@ print("Reading in data -----------\n\n")
 
 # print("Generating cluster truth tables...")
 # truth_table_df = generate_quantile_truth_table(stats_df)
-truth_table_df = pd.read_csv(
-    "./data/cluster.stats.results-truth-table.csv", index_col=0
-)
-print(truth_table_df)
-truth_table_df.drop(truth_table_df.columns[list(range(0, 5))], axis=1, inplace=True)
+# truth_table_df = pd.read_csv(
+#     "./data/cluster.stats.results-truth-table.csv", index_col=0
+# )
+# print(truth_table_df)
+# truth_table_df.drop(truth_table_df.columns[list(range(0, 5))], axis=1, inplace=True)
+
+# for cluster in range(0, N_CLUSTERS):
+#     print(f"Running apriori algorithm for cluster {cluster}...")
+#     run_apriori(truth_table_df.loc[truth_table_df["cluster"] == cluster], cluster)
 
 for cluster in range(0, N_CLUSTERS):
-    print(f"Running apriori algorithm for cluster {cluster}...")
-    run_apriori(truth_table_df.loc[truth_table_df["cluster"] == cluster], cluster)
+    print(f"Processing apriori algorithm results for cluster {cluster}...")
+    for result in ['wins', 'losses']:
+        f = open(
+            f"./data/stats.results-apriori-rules-cluster-{cluster}-{result}.txt", "r"
+        ).read()
+        process_apriori_results(f)
+
 
 if _save_results:
-    truth_table_df.to_csv("./data/cluster.stats.results-truth-table.csv")
+    pass
+    # truth_table_df.to_csv("./data/cluster.stats.results-truth-table.csv")
     # column_avgs_df.to_csv("./data/cluster.stats.results-column-avgs.csv")
     # cluster_dist_df.to_csv("./data/cluster.stats.results-distribution.csv")
