@@ -1,0 +1,6 @@
+,items_base,items_add,confidence,lift
+0,"['TeamPoints0.6-False', 'OpponentPoints0.4-True']",['WINorLOSS-False'],0.9033333333333333,2.430396825396825
+1,"['OpponentPoints0.6-True', 'TeamPoints0.8-False']",['WINorLOSS-False'],0.8726591760299626,2.3478687355091847
+2,"['OpponentPoints0.2-True', 'TeamPoints0.4-False']",['WINorLOSS-False'],0.8245033112582781,2.218306527909177
+3,"['TeamPoints0.6-False', 'Opp.FieldGoals.0.6-True']",['WINorLOSS-False'],0.8208955223880596,2.208599857853589
+4,"['TeamPoints0.4-False', 'Opp.FieldGoals.0.4-True']",['WINorLOSS-False'],0.8081180811808119,2.1742224565102792
