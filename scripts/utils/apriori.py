@@ -1,4 +1,4 @@
-import enum
+import pandas as pd
 from apyori import apriori
 
 
@@ -55,33 +55,40 @@ def run_apriori(
                 f.write(str(result))
 
 
-def process_apriori_results(results):
-    apriori_results = []
+def process_apriori_results(results, columns):
+    apriori_results = {
+        "items_base": [],
+        "items_add": [],
+        "confidence": [],
+        "lift": [],
+    }
     results = results.split('OrderedStatistic')
     for idx, result in enumerate(results[1:]):
-        parsed_result = {}
-
         # splitting base result
         results[idx] = result.split("=")
 
         # Stripping off items_base
+        tmp_list = []
         for val in results[idx][1].split(", items_add")[0][11:-2].split(", "):
-            if "items_base" not in parsed_result:
-                parsed_result["items_base"] = []
-            parsed_result["items_base"].append(val[1:-1])
+            tmp_str = val[1:-1].split('.')
+            tmp_list.append(
+                f"{columns[int(tmp_str[0])]}-{'True' if tmp_str[1] == '1' else 'False'}"
+            )
+        apriori_results["items_base"].append(tmp_list)
 
         # Stripping off items_add
+        tmp_list = []
         for val in results[idx][2].split(", confidence")[0][11:-2].split(", "):
-            if "items_add" not in parsed_result:
-                parsed_result["items_add"] = []
-            parsed_result["items_add"].append(val[1:-1])
+            tmp_str = val[1:-1].split('.')
+            tmp_list.append(
+                f"{columns[int(tmp_str[0])]}-{'True' if tmp_str[1] == '1' else 'False'}"
+            )
+        apriori_results["items_add"].append(tmp_list)
 
         # Stripping off lift
-        parsed_result["confidence"] = float(results[idx][3].split(', ')[0])
+        apriori_results["confidence"].append(float(results[idx][3].split(', ')[0]))
 
         # Stripping off lift
-        parsed_result["lift"] = float(results[idx][4][:-1])
+        apriori_results["lift"].append(float(results[idx][4][:-1]))
 
-        # Append the parsed result to the full set
-        apriori_results.append(parsed_result)
-    print(apriori_results)
+    return pd.DataFrame(apriori_results)
