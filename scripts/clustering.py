@@ -7,11 +7,11 @@ from utils.kmeans import (
     get_samples_closest_to_centroid,
 )
 
-_save_results = False
+_save_results = True
 
 print("Reading in data -----------\n\n")
-stats_df = pd.read_csv("./data/nba.games.stats-clean.csv", index_col=0)
-df = pd.read_csv("./data/nba.games.stats-normalized.csv", index_col=0)
+stats_df = pd.read_csv("./data/box_scores/nba.games.stats-clean.csv", index_col=0)
+df = pd.read_csv("./data/box_scores/nba.games.stats-normalized.csv", index_col=0)
 df.drop(df.columns[list(range(0, 6))], axis=1, inplace=True)
 
 print("Generating cluster plots -----------\n\n")
@@ -30,6 +30,8 @@ print("Getting the samples closest to the centroids...")
 closest_samples_df = get_samples_closest_to_centroid(df, stats_df, kmeans)
 
 if _save_results:
-    stats_df.to_csv("./data/cluster.stats.results-raw.csv")
-    distortion_df.to_csv("./data/cluster.stats.results-distortion.csv")
-    closest_samples_df.to_csv("./data/cluster.stats.results-closest-samples.csv")
+    stats_df.to_csv("./data/cluster_results/cluster.stats.results-raw.csv")
+    distortion_df.to_csv("./data/cluster_results/cluster.stats.results-distortion.csv")
+    closest_samples_df.to_csv(
+        "./data/cluster_results/cluster.stats.results-closest-samples.csv"
+    )

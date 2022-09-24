@@ -26,7 +26,7 @@ def generate_elbow_plot(dataset, cluster_range=31, save=True, show=True):
     plt.ylabel('Distortion')
 
     if save:
-        plt.savefig('./data/elbow_plot.png')
+        plt.savefig('./data/plots/elbow_plot.png')
 
     if show:
         plt.show()
@@ -50,7 +50,7 @@ def generate_silhouette_coef_plot(dataset, cluster_range=31, save=True, show=Tru
     plt.ylabel("Silhouette Coefficient")
 
     if save:
-        plt.savefig('./data/silhouette_plot.png')
+        plt.savefig('./data/plots/silhouette_plot.png')
 
     if show:
         plt.show()

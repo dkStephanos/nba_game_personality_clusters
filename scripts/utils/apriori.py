@@ -41,8 +41,13 @@ def run_apriori(
     if save_results:
         # Sorting by lift
         for result in ["wins", "losses"]:
-            processed_results = process_apriori_results(sorted(results[result], key=lambda x: x.lift, reverse=True)[:1000], list(dataset.columns))
-            processed_results.to_csv(f'./data/stats.results-apriori-rules-cluster-{cluster}-losses.csv')
+            processed_results = process_apriori_results(
+                sorted(results[result], key=lambda x: x.lift, reverse=True)[:1000],
+                list(dataset.columns),
+            )
+            processed_results.to_csv(
+                f'./data/apriori_results/stats.results-apriori-rules-cluster-{cluster}-{result}.csv'
+            )
 
 
 def process_apriori_results(results, columns):

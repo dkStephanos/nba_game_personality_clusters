@@ -10,47 +10,40 @@ from utils.apriori import run_apriori, process_apriori_results
 _save_results = True
 
 print("Reading in data -----------\n\n")
-# stats_df = pd.read_csv("./data/cluster.stats.results-raw.csv", index_col=0)
+stats_df = pd.read_csv(
+    "./data/cluster_results/cluster.stats.results-raw.csv", index_col=0
+)
 
 # print("Getting column averages for each cluster.... ")
-# column_avgs_df = get_column_avgs_per_cluster(stats_df)
+column_avgs_df = get_column_avgs_per_cluster(stats_df)
 
 # print("Calculating cluster distribution...")
-# cluster_dist_df = get_cluster_distribution(stats_df)
+cluster_dist_df = get_cluster_distribution(stats_df)
 
 # print("Generating cluster truth tables...")
-# truth_table_df = generate_quantile_truth_table(stats_df)
-truth_table_df = pd.read_csv(
-    "./data/cluster.stats.results-truth-table.csv", index_col=0
-)
-print(truth_table_df)
+truth_table_df = generate_quantile_truth_table(stats_df)
+# truth_table_df = pd.read_csv(
+#     "./data/cluster_results/cluster.stats.results-truth-table.csv", index_col=0
+# )
+# print(truth_table_df)
 truth_table_df.drop(truth_table_df.columns[list(range(0, 5))], axis=1, inplace=True)
 
-# for cluster in range(0, N_CLUSTERS):
-#     print(f"Running apriori algorithm for cluster {cluster}...")
-#     run_apriori(
-#         truth_table_df.loc[truth_table_df["cluster"] == cluster],
-#         cluster,
-#         save_results=_save_results,
-#     )
-
 for cluster in range(0, N_CLUSTERS):
-    print(f"Processing apriori algorithm results for cluster {cluster}...")
-    for result in ['wins', 'losses']:
-        results = open(
-            f"./data/stats.results-apriori-rules-cluster-{cluster}-{result}.txt", "r"
-        ).read()
-        if len(results) > 1:
-            processed_results = process_apriori_results(
-                results, list(truth_table_df.columns)
-            )
-            processed_results.to_csv(
-                f"./data/stats.results-apriori-rules-cluster-{cluster}-{result}.csv"
-            )
+    print(f"Running apriori algorithm for cluster {cluster}...")
+    run_apriori(
+        truth_table_df.loc[truth_table_df["cluster"] == cluster],
+        cluster,
+        save_results=_save_results,
+    )
 
 
 if _save_results:
-    pass
-    # truth_table_df.to_csv("./data/cluster.stats.results-truth-table.csv")
-    # column_avgs_df.to_csv("./data/cluster.stats.results-column-avgs.csv")
-    # cluster_dist_df.to_csv("./data/cluster.stats.results-distribution.csv")
+    truth_table_df.to_csv(
+        "./data/cluster_results/cluster.stats.results-truth-table.csv"
+    )
+    column_avgs_df.to_csv(
+        "./data/cluster_results/cluster.stats.results-column-avgs.csv"
+    )
+    cluster_dist_df.to_csv(
+        "./data/cluster_results/cluster.stats.results-distribution.csv"
+    )
