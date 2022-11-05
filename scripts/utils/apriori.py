@@ -5,7 +5,7 @@ from apyori import apriori
 def run_apriori(
     dataset,
     cluster,
-    min_support=0.05,
+    min_support=0.5,
     min_confidence=0.8,
     max_length=6,
     save_results=True,
@@ -51,39 +51,33 @@ def run_apriori(
 
 
 def process_apriori_results(results, columns):
+    columns = ["WINorLOSS"] + columns
     apriori_results = {
         "items_base": [],
         "items_add": [],
         "confidence": [],
         "lift": [],
     }
-    results = results.split('OrderedStatistic')
-    for idx, result in enumerate(results[1:]):
-        # splitting base result
-        results[idx] = result.split("=")
-
+    for result in results:
         # Stripping off items_base
         tmp_list = []
-        for val in results[idx][1].split(", items_add")[0][11:-2].split(", "):
-            tmp_str = val[1:-1].split('.')
+        for element in list(result.items_base):
+            tmp_element = element.split('.')
             tmp_list.append(
-                f"{columns[int(tmp_str[0])]}-{'True' if tmp_str[1] == '1' else 'False'}"
+                f"{columns[int(tmp_element[0])]}-{'True' if tmp_element[1] == '1' else 'False'}"
             )
         apriori_results["items_base"].append(tmp_list)
 
         # Stripping off items_add
         tmp_list = []
-        for val in results[idx][2].split(", confidence")[0][11:-2].split(", "):
-            tmp_str = val[1:-1].split('.')
+        for element in list(result.items_add):
+            tmp_element = element.split('.')
             tmp_list.append(
-                f"{columns[int(tmp_str[0])]}-{'True' if tmp_str[1] == '1' else 'False'}"
+                f"{columns[int(tmp_element[0])]}-{'True' if tmp_element[1] == '1' else 'False'}"
             )
         apriori_results["items_add"].append(tmp_list)
 
-        # Stripping off lift
-        apriori_results["confidence"].append(float(results[idx][3].split(', ')[0]))
-
-        # Stripping off lift
-        apriori_results["lift"].append(float(results[idx][4][:-1]))
+        apriori_results["confidence"].append(result.confidence)
+        apriori_results["lift"].append(result.lift)
 
     return pd.DataFrame(apriori_results)

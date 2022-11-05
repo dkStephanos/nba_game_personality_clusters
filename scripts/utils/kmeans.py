@@ -35,7 +35,8 @@ def get_samples_closest_to_centroid(df, stats_df, kmeans, num_samples=4):
 
 
 def get_column_avgs_per_cluster(df):
-    column_avgs_df = pd.DataFrame(columns=NUMERIC_COLS + ["cluster"])
+    column_avgs_df = pd.DataFrame(columns=NUMERIC_COLS + ["Win%", "cluster"])
+
     rows = []
     for cluster in range(0, N_CLUSTERS):
         temp_dict = {}
@@ -45,6 +46,8 @@ def get_column_avgs_per_cluster(df):
                 temp_dict[col] = temp_df[col].mean()
             elif col == "cluster":
                 temp_dict[col] = temp_df[col].iloc[0]
+            elif col == "WINorLOSS":
+                temp_dict[col] = temp_df[col].value_counts(normalize=True)["W"]
         rows.append(temp_dict)
     column_avgs_df = pd.DataFrame.from_dict(rows, orient="columns")
     return column_avgs_df
