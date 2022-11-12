@@ -57,7 +57,7 @@ def generate_silhouette_coef_plot(dataset, cluster_range=31, save=True, show=Tru
 
 
 def generate_biplot(score, y, coeff, labels=None, save=True, show=True):
-    colors = {0: 'r', 1: 'g', 2: 'b', 3: 'y'}
+    colors = {0: 'r', 1: 'c', 2: 'b', 3: 'y', 4: 'm'}
     y = list(map(lambda x: colors[x], y))
     xs = score[:, 0]
     ys = score[:, 1]
