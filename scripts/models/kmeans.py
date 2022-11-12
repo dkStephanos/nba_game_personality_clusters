@@ -1,7 +1,15 @@
 import pandas as pd
 import numpy as np
-from .constants import NUMERIC_COLS, N_CLUSTERS
-from .general import mimic_df
+from sklearn.cluster import KMeans
+from ..utils.constants import NUMERIC_COLS, N_CLUSTERS
+from ..utils.general import mimic_df
+
+
+def perform_k_means(df):
+    kmeans = KMeans(n_clusters=N_CLUSTERS, init='random')
+    y_km = kmeans.fit_predict(df)
+
+    return kmeans, y_km
 
 
 def _get_distortion_values(df, kmeans, y_km):
