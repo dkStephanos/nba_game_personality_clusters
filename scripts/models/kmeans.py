@@ -28,8 +28,16 @@ def get_samples_closest_to_centroid(df, stats_df, kmeans, num_samples=4):
     results_df = mimic_df(df)
     for cluster in range(0, N_CLUSTERS):
         d = kmeans.transform(df)[:, cluster]
+        temp_df = stats_df[stats_df.cluster == cluster]
+        indices = list(filter(lambda x: x in temp_df.index, list(np.argsort(d)[::-1])))[
+            :num_samples
+        ]
+        print(indices, temp_df)
         results_df = pd.concat(
-            [results_df, stats_df.iloc[list(np.argsort(d)[::][:num_samples])]]
+            [
+                results_df,
+                temp_df.loc[indices],
+            ]
         )
     return results_df
 
