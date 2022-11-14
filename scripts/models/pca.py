@@ -1,6 +1,6 @@
 import numpy as np
 from sklearn.decomposition import PCA
-from ..utils.plot import generate_biplot
+from utils.plot import generate_biplot
 
 
 def run_pca(dataset, save_results=False):
@@ -18,7 +18,7 @@ def run_pca(dataset, save_results=False):
 def create_pca_biplot(dataset, save_results=True):
     pca = PCA()
     y = dataset["cluster"]
-    dataset.drop("cluster", axis=1, inplace=True)
+    dataset.drop(["WINorLOSS", "cluster"], axis=1, inplace=True)
     X = pca.fit_transform(dataset)
 
     generate_biplot(
@@ -26,5 +26,5 @@ def create_pca_biplot(dataset, save_results=True):
         y,
         np.transpose(pca.components_[0:2, :]),
         list(map(lambda x: x.replace('.', '%'), dataset.columns)),
-        save=save_results
+        save=save_results,
     )

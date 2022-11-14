@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 from sklearn.cluster import KMeans
-from ..utils.constants import NUMERIC_COLS, N_CLUSTERS
-from ..utils.general import mimic_df
+from utils.constants import NUMERIC_COLS, N_CLUSTERS
+from utils.general import mimic_df
 
 
 def perform_k_means(df):
