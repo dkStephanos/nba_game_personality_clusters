@@ -1,1 +1,316 @@
-,items_base,items_add,confidence,lift
+,lhs,rhs,confidence,lift
+0,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.4-False']",['WINorLOSS-False'],0.7740384615384616,1.8874948580830935
+1,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.4-False']",['WINorLOSS-False'],0.7740384615384616,1.8874948580830935
+2,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.4-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7740384615384616,1.8874948580830935
+3,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.4-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7688679245283019,1.8748864897588537
+4,"['OpponentPoints0.4-False', 'Opp.FreeThrows0.4-False']",['WINorLOSS-False'],0.7522935779816514,1.834469901388412
+5,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FreeThrows0.4-False']",['WINorLOSS-False'],0.7522935779816514,1.834469901388412
+6,"['OpponentPoints0.4-False', 'Opp.FreeThrows0.4-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7522935779816514,1.834469901388412
+7,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FreeThrows0.4-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7522935779816514,1.834469901388412
+8,"['OpponentPoints0.4-False', 'Opp.FreeThrows0.4-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7511737089201878,1.8317390976877306
+9,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FreeThrows0.4-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7511737089201878,1.8317390976877306
+10,"['OpponentPoints0.4-False', 'Opp.FreeThrows0.4-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7511737089201878,1.8317390976877306
+11,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.4-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7455357142857143,1.817990832696715
+12,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FieldGoals0.4-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7455357142857143,1.817990832696715
+13,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7455357142857143,1.817990832696715
+14,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.4-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7432432432432432,1.8124006359300477
+15,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FieldGoals0.4-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7432432432432432,1.8124006359300477
+16,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7432432432432432,1.8124006359300477
+17,"['OpponentPoints0.4-False', 'OffRebounds0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7377777777777778,1.7990730837789664
+18,"['OpponentPoints0.4-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.7351598173515982,1.792689180279833
+19,"['OpponentPoints0.4-False', 'OffRebounds0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7347826086956522,1.7917693559637293
+20,"['OpponentPoints0.4-False', 'OffRebounds0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7312775330396476,1.7832222196047023
+21,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7283950617283951,1.7761933056050703
+22,"['OpponentPoints0.4-False', 'TotalFouls0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.726457399103139,1.7714683101124673
+23,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.3PointShots0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7236842105263158,1.7647058823529413
+24,"['OpponentPoints0.4-False', 'Opp.3PointShots0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7224669603524229,1.7617376145492238
+25,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.3PointShots0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7212389380530974,1.7587430788888363
+26,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.7212389380530974,1.7587430788888363
+27,"['OpponentPoints0.4-False', 'Turnovers0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7207207207207207,1.757479404538228
+28,"['OpponentPoints0.4-False', 'FreeThrows0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7207207207207207,1.757479404538228
+29,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Turnovers0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7207207207207207,1.757479404538228
+30,"['OpponentPoints0.4-False', 'TotalFouls0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7180616740088106,1.7509953120214845
+31,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.7174887892376681,1.7495983309752763
+32,"['OpponentPoints0.4-False', 'Opp.FreeThrows0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.717391304347826,1.7493606138107418
+33,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.717391304347826,1.7493606138107418
+34,"['OpponentPoints0.4-False', 'OffRebounds0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7167381974248928,1.7477680108328932
+35,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'OffRebounds0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7167381974248928,1.7477680108328932
+36,"['OpponentPoints0.4-False', 'TotalFouls0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7161572052401747,1.7463512598370037
+37,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.7155555555555555,1.7448841354723708
+38,"['OpponentPoints0.4-False', 'OffRebounds0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7142857142857143,1.7417876241405652
+39,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'OffRebounds0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7142857142857143,1.7417876241405652
+40,"['OpponentPoints0.4-False', 'Steals0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7136563876651982,1.7402530094937454
+41,"['OpponentPoints0.4-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.7117903930131004,1.7357027765453146
+42,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.7117903930131004,1.7357027765453146
+43,"['OpponentPoints0.4-False', 'Steals0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7117903930131004,1.7357027765453146
+44,"['OpponentPoints0.4-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7114624505928854,1.7349030880767686
+45,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7114624505928854,1.7349030880767686
+46,"['OpponentPoints0.4-False', 'Steals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7105263157894737,1.732620320855615
+47,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.70995670995671,1.7312313355094102
+48,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7098039215686275,1.7308587606165462
+49,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7098039215686275,1.7308587606165462
+50,"['OpponentPoints0.4-False', 'TotalFouls0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7081545064377682,1.7268366574097451
+51,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'TotalFouls0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7081545064377682,1.7268366574097451
+52,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7075098814229249,1.7252647375874532
+53,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7075098814229249,1.7252647375874532
+54,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.7074235807860262,1.7250542932536255
+55,"['OpponentPoints0.4-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.7074235807860262,1.7250542932536255
+56,"['OpponentPoints0.4-False', 'Opp.3PointShots0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7058823529411765,1.721296005033029
+57,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.3PointShots0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7058823529411765,1.721296005033029
+58,"['OpponentPoints0.4-False', 'FreeThrows0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7043478260869566,1.717554057196001
+59,"['OpponentPoints0.4-False', 'FreeThrows0.6-False', 'OpponentPoints0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.7043478260869566,1.717554057196001
+60,"['OpponentPoints0.4-False', 'Opp.3PointShots0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7033898305084746,1.7152179824163871
+61,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.3PointShots0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.7033898305084746,1.7152179824163871
+62,"['OpponentPoints0.4-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.TotalRebounds0.6-False']",['WINorLOSS-False'],0.7017543859649122,1.7112299465240641
+63,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.TotalRebounds0.6-False']",['WINorLOSS-False'],0.7017543859649122,1.7112299465240641
+64,"['OpponentPoints0.4-False', 'Opp.FreeThrows0.6-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.7012987012987013,1.7101187582471005
+65,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.7012987012987013,1.7101187582471005
+66,"['OpponentPoints0.4-False', 'TotalFouls0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.70042194092827,1.707980775739525
+67,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'TotalFouls0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.70042194092827,1.707980775739525
+68,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.4-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6995708154506438,1.7059053039865966
+69,"['OpponentPoints0.4-False', 'FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6986899563318777,1.7037573266702473
+70,"['OpponentPoints0.4-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.6986899563318777,1.7037573266702473
+71,"['OpponentPoints0.4-False', 'FreeThrows0.6-False', 'OpponentPoints0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6986899563318777,1.7037573266702473
+72,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.6986899563318777,1.7037573266702473
+73,"['Opp.FieldGoals0.4-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6965811965811965,1.6986151103798164
+74,"['Opp.FieldGoals0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6965811965811965,1.6986151103798164
+75,"['OpponentPoints0.4-False', 'Opp.FreeThrows0.6-False', 'Opp.TotalRebounds0.6-False']",['WINorLOSS-False'],0.6956521739130435,1.696349686119507
+76,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.TotalRebounds0.6-False']",['WINorLOSS-False'],0.6956521739130435,1.696349686119507
+77,"['OpponentPoints0.4-False', 'Steals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6949152542372882,1.6945527055198042
+78,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Steals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6949152542372882,1.6945527055198042
+79,"['OpponentPoints0.4-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6943396226415094,1.6931490263343758
+80,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6943396226415094,1.6931490263343758
+81,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.4-False']",['WINorLOSS-False'],0.6939655172413793,1.6922367693158766
+82,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.4-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6939655172413793,1.6922367693158766
+83,"['OpponentPoints0.4-False', 'Steals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6932773109243697,1.6905585763717252
+84,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Steals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6932773109243697,1.6905585763717252
+85,"['OpponentPoints0.4-False', 'Turnovers0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.6923076923076923,1.688194158782394
+86,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Turnovers0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.6923076923076923,1.688194158782394
+87,"['OpponentPoints0.4-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6920152091254753,1.6874809377605176
+88,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6920152091254753,1.6874809377605176
+89,"['OpponentPoints0.4-False', 'Opp.FreeThrows0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.6916666666666667,1.6866310160427809
+90,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.6916666666666667,1.6866310160427809
+91,"['OpponentPoints0.4-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.6890756302521008,1.6803127668179572
+92,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.6890756302521008,1.6803127668179572
+93,"['OpponentPoints0.4-False', 'TotalFouls0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.6875,1.6764705882352942
+94,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'TotalFouls0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.6875,1.6764705882352942
+95,"['OpponentPoints0.4-False', 'OffRebounds0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.6867469879518072,1.6746343663423748
+96,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'OffRebounds0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.6867469879518072,1.6746343663423748
+97,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.4-False']",['WINorLOSS-False'],0.6854838709677419,1.6715542521994133
+98,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FieldGoals0.4-False']",['WINorLOSS-False'],0.6854838709677419,1.6715542521994133
+99,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.4-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.6854838709677419,1.6715542521994133
+100,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FieldGoals0.4-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.6854838709677419,1.6715542521994133
+101,"['Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.4-False']",['WINorLOSS-False'],0.6822033898305084,1.6635547901749297
+102,"['Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.4-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6822033898305084,1.6635547901749297
+103,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.4-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6788617886178862,1.6554062866831876
+104,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6788617886178862,1.6554062866831876
+105,"['Opp.FieldGoals0.4-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6761133603238867,1.6487042369395308
+106,"['Opp.FieldGoals0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6761133603238867,1.6487042369395308
+107,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.Blocks0.6-False']",['WINorLOSS-False'],0.6751054852320675,1.6462465308332768
+108,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.Blocks0.6-False']",['WINorLOSS-False'],0.6751054852320675,1.6462465308332768
+109,"['OpponentPoints0.4-False', 'Turnovers0.6-False']",['WINorLOSS-False'],0.6735537190082644,1.6424625447474255
+110,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Turnovers0.6-False']",['WINorLOSS-False'],0.6735537190082644,1.6424625447474255
+111,"['OpponentPoints0.4-False', 'TotalFouls0.6-False']",['WINorLOSS-False'],0.672,1.6386737967914438
+112,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'TotalFouls0.6-False']",['WINorLOSS-False'],0.672,1.6386737967914438
+113,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.3PointShots0.6-False']",['WINorLOSS-False'],0.672,1.6386737967914438
+114,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.3PointShots0.6-False']",['WINorLOSS-False'],0.672,1.6386737967914438
+115,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.6707818930041153,1.6357034396250083
+116,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.6707818930041153,1.6357034396250083
+117,"['OpponentPoints0.4-False', 'FreeThrows0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.6694214876033058,1.6323860874176868
+118,"['OpponentPoints0.4-False', 'FreeThrows0.6-False', 'OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.6694214876033058,1.6323860874176868
+119,"['OpponentPoints0.4-False', 'Steals0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.6693548387096774,1.6322235639123686
+120,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Steals0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.6693548387096774,1.6322235639123686
+121,"['OpponentPoints0.4-False', 'OffRebounds0.6-False']",['WINorLOSS-False'],0.669260700389105,1.631994007365946
+122,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'OffRebounds0.6-False']",['WINorLOSS-False'],0.669260700389105,1.631994007365946
+123,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.TotalRebounds0.6-False']",['WINorLOSS-False'],0.6666666666666666,1.625668449197861
+124,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.TotalRebounds0.6-False']",['WINorLOSS-False'],0.6666666666666666,1.625668449197861
+125,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.4-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6653225806451613,1.6223908918406071
+126,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6653225806451613,1.6223908918406071
+127,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.664,1.6191657754010695
+128,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.664,1.6191657754010695
+129,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.6626984126984127,1.615991851285969
+130,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.6626984126984127,1.615991851285969
+131,"['OpponentPoints0.4-False', 'Opp.Blocks0.6-False']",['WINorLOSS-False'],0.6625514403292181,1.6156334587707135
+132,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.Blocks0.6-False']",['WINorLOSS-False'],0.6625514403292181,1.6156334587707135
+133,"['OpponentPoints0.4-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.6614173228346457,1.612867910227799
+134,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.6614173228346457,1.612867910227799
+135,"['OpponentPoints0.4-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.6594982078853047,1.6081881432925076
+136,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.6594982078853047,1.6081881432925076
+137,"['OpponentPoints0.4-False', 'Opp.3PointShots0.6-False']",['WINorLOSS-False'],0.6576923076923077,1.6037844508432744
+138,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.3PointShots0.6-False']",['WINorLOSS-False'],0.6576923076923077,1.6037844508432744
+139,"['OpponentPoints0.4-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.6573705179282868,1.6029997656433093
+140,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.6573705179282868,1.6029997656433093
+141,"['OpponentPoints0.4-False', 'FreeThrows0.6-False']",['WINorLOSS-False'],0.656,1.5996577540106953
+142,"['OpponentPoints0.4-False', 'FreeThrows0.6-False', 'OpponentPoints0.6-False']",['WINorLOSS-False'],0.656,1.5996577540106953
+143,"['Opp.FieldGoals0.4-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6547619047619048,1.596638655462185
+144,"['Opp.FieldGoals0.4-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6547619047619048,1.596638655462185
+145,"['OpponentPoints0.4-False', 'Steals0.6-False']",['WINorLOSS-False'],0.6536964980544747,1.5940406583574356
+146,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Steals0.6-False']",['WINorLOSS-False'],0.6536964980544747,1.5940406583574356
+147,"['OpponentPoints0.4-False', 'Opp.TotalRebounds0.6-False']",['WINorLOSS-False'],0.6532258064516129,1.5928928756253233
+148,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.TotalRebounds0.6-False']",['WINorLOSS-False'],0.6532258064516129,1.5928928756253233
+149,"['OpponentPoints0.4-False', 'Opp.FieldGoalsAttempted0.6-False']",['WINorLOSS-False'],0.6530612244897959,1.5924915420713739
+150,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.FieldGoalsAttempted0.6-False']",['WINorLOSS-False'],0.6530612244897959,1.5924915420713739
+151,"['OpponentPoints0.4-False', 'Opp.3PointShotsAttempted0.6-False']",['WINorLOSS-False'],0.6518218623481782,1.5894693541752363
+152,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.3PointShotsAttempted0.6-False']",['WINorLOSS-False'],0.6518218623481782,1.5894693541752363
+153,"['OpponentPoints0.4-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.6475095785440613,1.578953838588727
+154,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.6475095785440613,1.578953838588727
+155,['OpponentPoints0.4-False'],['WINorLOSS-False'],0.6470588235294118,1.5778546712802768
+156,"['OpponentPoints0.4-False', 'OpponentPoints0.6-False']",['WINorLOSS-False'],0.6470588235294118,1.5778546712802768
+157,"['Opp.FieldGoals0.6-False', 'Opp.3PointShots0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6388888888888888,1.5579322638146167
+158,"['OpponentPoints0.6-False', 'Opp.FreeThrows0.4-False']",['WINorLOSS-False'],0.6356589147286822,1.5500559631886581
+159,"['OpponentPoints0.6-False', 'Opp.FreeThrows0.4-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6356589147286822,1.5500559631886581
+160,"['FreeThrows0.6-False', 'OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6349206349206349,1.5482556659027247
+161,"['OpponentPoints0.6-False', 'Opp.FreeThrows0.4-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6324110671936759,1.5421360782904607
+162,"['OpponentPoints0.6-False', 'Opp.FreeThrows0.4-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6324110671936759,1.5421360782904607
+163,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.3PointShots0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.632183908045977,1.54158215010142
+164,"['OffRebounds0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6297709923664122,1.535698248765155
+165,"['OpponentPoints0.6-False', 'OffRebounds0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6282527881040892,1.5319961036121106
+166,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6254416961130742,1.5251412482757316
+167,"['OpponentPoints0.6-False', 'TotalFouls0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6230769230769231,1.5193747429041546
+168,"['Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.622568093385214,1.518133960340415
+169,"['OpponentPoints0.6-False', 'OffRebounds0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6217228464419475,1.5160728234092413
+170,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.3PointShots0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6197718631178707,1.5113153453569468
+171,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.6197718631178707,1.5113153453569468
+172,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.6188679245283019,1.509111088689335
+173,"['Opp.FieldGoals0.6-False', 'Opp.3PointShots0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6179775280898876,1.5069398545935229
+174,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.6177606177606177,1.506410918175624
+175,"['FreeThrows0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6153846153846154,1.5006170300287947
+176,"['Steals0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6153846153846154,1.5006170300287947
+177,"['TotalFouls0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6145038167938931,1.498469200310242
+178,"['OpponentPoints0.6-False', 'Steals0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6127819548872181,1.494270435446906
+179,"['OffRebounds0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6101083032490975,1.4877507287785479
+180,"['OpponentPoints0.6-False', 'TotalFouls0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6082089552238806,1.4831191635405858
+181,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.6075471698113207,1.481505398042579
+182,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6073825503355704,1.481103973010803
+183,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.6067415730337079,1.479540948146368
+184,"['Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6061643835616438,1.4781334700754523
+185,"['TotalFouls0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6044776119402985,1.4740202729667173
+186,"['OpponentPoints0.6-False', 'Steals0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.6044776119402985,1.4740202729667173
+187,"['OpponentPoints0.6-False', 'Turnovers0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.6037735849056604,1.4723035011603267
+188,"['OpponentPoints0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.602996254681648,1.4704079793306495
+189,"['Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.6014760147601476,1.4667008702172584
+190,"['Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.6007326007326007,1.4648880531233472
+191,"['OpponentPoints0.6-False', 'OffRebounds0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5992779783393501,1.4613409525280412
+192,"['Opp.FieldGoals0.6-False', 'Opp.3PointShots0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5992647058823529,1.4613085876061656
+193,"['OffRebounds0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5971223021582733,1.4560843303966453
+194,"['Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.5970149253731343,1.45582249181898
+195,"['OpponentPoints0.6-False', 'Opp.3PointShots0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5963636363636363,1.4542343218279048
+196,"['OpponentPoints0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.5955882352941176,1.4523435042466184
+197,"['Steals0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.5948905109489051,1.4506421015652444
+198,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5946843853820598,1.4501394638193545
+199,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.4-False']",['WINorLOSS-False'],0.5944055944055944,1.4494596312778132
+200,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.4-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.5944055944055944,1.4494596312778132
+201,"['FreeThrows0.6-False', 'OpponentPoints0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.5912408759124088,1.4417424567703656
+202,"['OpponentPoints0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.5892857142857143,1.4369747899159664
+203,"['Opp.FieldGoals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.5857605177993528,1.4283785888583147
+204,"['TotalFouls0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5842293906810035,1.4246449312862977
+205,"['OpponentPoints0.6-False', 'OffRebounds0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.584192439862543,1.4245548266166823
+206,"['OpponentPoints0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.TotalRebounds0.6-False']",['WINorLOSS-False'],0.583941605839416,1.423943167180608
+207,"['OpponentPoints0.6-False', 'TotalFouls0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5836298932384342,1.4231830551696578
+208,"['Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.5827338129496403,1.420997960989497
+209,"['OpponentPoints0.6-False', 'Opp.3PointShots0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.5813148788927336,1.4175378864977888
+210,"['Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.5812274368231047,1.4173246587771964
+211,"['Steals0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5806451612903226,1.415904778333621
+212,"['OpponentPoints0.6-False', 'Steals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5806451612903226,1.415904778333621
+213,"['OpponentPoints0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.5804195804195804,1.4153546987771588
+214,"['OpponentPoints0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5787781350482315,1.4113520298502331
+215,"['OpponentPoints0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.5785714285714286,1.4108479755538579
+216,"['OpponentPoints0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.5780141843971631,1.409489134144954
+217,"['OpponentPoints0.6-False', 'OffRebounds0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5778546712802768,1.409100160982921
+218,"['FreeThrows0.6-False', 'OpponentPoints0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5776173285198556,1.4085214000270274
+219,"['OpponentPoints0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.TotalRebounds0.6-False']",['WINorLOSS-False'],0.5776173285198556,1.4085214000270274
+220,"['OpponentPoints0.6-False', 'TotalFouls0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.5769230769230769,1.4068284656519952
+221,"['OpponentPoints0.6-False', 'TotalFouls0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.5709342560553633,1.3922247099531855
+222,['Opp.FieldGoals0.4-False'],['WINorLOSS-False'],0.5704697986577181,1.391092129347163
+223,"['Opp.FieldGoals0.4-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.5704697986577181,1.391092129347163
+224,"['OpponentPoints0.6-False', 'Opp.3PointShots0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.570446735395189,1.3910358895198194
+225,"['OpponentPoints0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.5694444444444444,1.388591800356506
+226,"['OpponentPoints0.6-False', 'Turnovers0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.5684210526315789,1.3860962566844919
+227,"['Opp.FieldGoals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5682539682539682,1.3856888209829386
+228,"['OpponentPoints0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.5673758865248227,1.383547616338605
+229,"['OpponentPoints0.6-False', 'Steals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.5670103092783505,1.3826561552456036
+230,"['Opp.FreeThrows0.4-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5653710247349824,1.3786587555034862
+231,"['Opp.FreeThrows0.4-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5653710247349824,1.3786587555034862
+232,"['OpponentPoints0.6-False', 'TotalFouls0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.564625850340136,1.376841645749209
+233,"['OpponentPoints0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.5644171779141104,1.3763327974803976
+234,['Opp.FreeThrows0.4-False'],['WINorLOSS-False'],0.563573883161512,1.3742764209713878
+235,"['Opp.FreeThrows0.4-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.563573883161512,1.3742764209713878
+236,"['FreeThrows0.6-False', 'OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.5625,1.3716577540106951
+237,"['OpponentPoints0.6-False', 'Steals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5597269624573379,1.3648956945483746
+238,"['OpponentPoints0.6-False', 'OffRebounds0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.5588235294117647,1.3626926706511482
+239,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.3PointShots0.6-False']",['WINorLOSS-False'],0.5562913907284768,1.3565180437015263
+240,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.TotalRebounds0.6-False']",['WINorLOSS-False'],0.5536332179930796,1.3500360823788464
+241,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.Blocks0.6-False']",['WINorLOSS-False'],0.5536332179930796,1.3500360823788464
+242,"['OpponentPoints0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5531914893617021,1.34895892593014
+243,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.5529801324503312,1.348443531536636
+244,"['OpponentPoints0.6-False', 'Steals0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.5514950166112956,1.3448220725922506
+245,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.5506756756756757,1.34282410752999
+246,"['Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.5494880546075085,1.3399280903798068
+247,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.5478547854785478,1.3359453592418067
+248,"['TotalFouls0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.5427631578947368,1.3235294117647058
+249,"['OpponentPoints0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.5364431486880467,1.3081180524157714
+250,"['OpponentPoints0.6-False', 'Turnovers0.6-False']",['WINorLOSS-False'],0.5344262295081967,1.3031997896028753
+251,"['Opp.3PointShots0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5342019543973942,1.3026528941455173
+252,"['OffRebounds0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5337620578778135,1.3015802053063261
+253,"['OpponentPoints0.6-False', 'TotalFouls0.6-False']",['WINorLOSS-False'],0.5333333333333333,1.3005347593582886
+254,"['Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.5328947368421053,1.2994652406417113
+255,"['Opp.FreeThrows0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.532258064516129,1.2979127134724857
+256,"['FreeThrows0.6-False', 'OpponentPoints0.6-False']",['WINorLOSS-False'],0.5290322580645161,1.2900465758150768
+257,"['OpponentPoints0.6-False', 'Opp.TotalRebounds0.6-False']",['WINorLOSS-False'],0.5276872964169381,1.2867668832413035
+258,"['Opp.FieldGoals0.6-False', 'Opp.3PointShots0.6-False']",['WINorLOSS-False'],0.5266457680250783,1.2842271134729182
+259,"['OpponentPoints0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.525,1.2802139037433156
+260,"['Turnovers0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.5245901639344263,1.2792145174015954
+261,"['OpponentPoints0.6-False', 'OffRebounds0.6-False']",['WINorLOSS-False'],0.524390243902439,1.2787270118690492
+262,"['OpponentPoints0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.5232198142414861,1.2758729160113242
+263,"['OpponentPoints0.6-False', 'Opp.Blocks0.6-False']",['WINorLOSS-False'],0.5210355987055016,1.2705467005866777
+264,"['Turnovers0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.5209003215434084,1.2702168268652096
+265,"['OpponentPoints0.6-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.5205047318611987,1.269252180367415
+266,"['OpponentPoints0.6-False', 'Opp.3PointShots0.6-False']",['WINorLOSS-False'],0.5181818181818182,1.2635877491492467
+267,"['OpponentPoints0.6-False', 'Opp.FieldGoalsAttempted0.6-False']",['WINorLOSS-False'],0.517799352750809,1.2626551061730957
+268,"['FreeThrows0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.5175718849840255,1.2621004254155919
+269,"['FreeThrows0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.5175718849840255,1.2621004254155919
+270,"['Opp.FreeThrowsAttempted0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.5174603174603175,1.2618283677107205
+271,"['OffRebounds0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.5167173252279635,1.2600165791655153
+272,"['OpponentPoints0.6-False', 'Steals0.6-False']",['WINorLOSS-False'],0.5153374233128835,1.2566516846560152
+273,"['Opp.3PointShots0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.5153374233128835,1.2566516846560152
+274,"['Opp.FreeThrows0.6-False', 'Opp.TotalRebounds0.6-False']",['WINorLOSS-False'],0.5144694533762058,1.2545351376446514
+275,"['OffRebounds0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.5135135135135135,1.2522040757334876
+276,"['OpponentPoints0.6-False', 'Opp.3PointShotsAttempted0.6-False']",['WINorLOSS-False'],0.5127388535031847,1.2503150652270172
+277,"['TotalFouls0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5125,1.2497326203208559
+278,"['Opp.FreeThrows0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.5123456790123457,1.2493563081798376
+279,"['Opp.FieldGoals0.6-False', 'Opp.TotalRebounds0.6-False']",['WINorLOSS-False'],0.5111821086261981,1.2465189386820659
+280,"['Opp.FieldGoals0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.5107033639143731,1.2453515184222144
+281,"['OffRebounds0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5091463414634146,1.2415547150123907
+282,"['Opp.FieldGoals0.6-False', 'Opp.Blocks0.6-False']",['WINorLOSS-False'],0.5079365079365079,1.2386045327221795
+283,"['Steals0.6-False', 'Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5078369905956113,1.238361859420314
+284,"['Opp.FreeThrowsAttempted0.6-False', 'Opp.TotalRebounds0.6-False']",['WINorLOSS-False'],0.5063291139240507,1.2346848981249576
+285,"['Opp.FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5056179775280899,1.2329507901219732
+286,"['FreeThrows0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5047318611987381,1.230789993083554
+287,"['Steals0.6-False', 'Opp.FieldGoals0.6-False']",['WINorLOSS-False'],0.5045592705167173,1.2303691302439739
+288,"['Opp.3PointShots0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.5045592705167173,1.2303691302439739
+289,['OpponentPoints0.6-False'],['WINorLOSS-False'],0.5040431266846361,1.22911051212938
+290,"['Opp.FreeThrowsAttempted0.6-False', 'Opp.TotalFouls0.6-False']",['WINorLOSS-False'],0.5030674846625767,1.2267314064499197
+291,"['Opp.FieldGoals0.6-False', 'Opp.Assists0.6-False']",['WINorLOSS-False'],0.503030303030303,1.2266407389402043
+292,"['Opp.FreeThrows0.6-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.5015479876160991,1.2230261088392578
+293,"['Opp.FieldGoals0.6-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.5015384615384615,1.2230028794734678
+294,"['TotalFouls0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.5,1.219251336898396
+295,"['TotalFouls0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.4911242603550296,1.1976078220422113
+296,"['Steals0.6-False', 'Opp.FreeThrows0.6-False']",['WINorLOSS-False'],0.49107142857142855,1.1974789915966386
+297,['Opp.FieldGoals0.6-False'],['WINorLOSS-False'],0.48936170212765956,1.1933098190920468
+298,"['Opp.FreeThrowsAttempted0.6-False', 'Opp.Turnovers0.6-False']",['WINorLOSS-False'],0.4892966360856269,1.1931511553745766
+299,['Opp.FreeThrows0.6-False'],['WINorLOSS-False'],0.48677248677248675,1.1869960105254223
+300,"['Steals0.6-False', 'Opp.FreeThrowsAttempted0.6-False']",['WINorLOSS-False'],0.4823529411764706,1.1762189367725702
+301,['Opp.FreeThrowsAttempted0.6-False'],['WINorLOSS-False'],0.4776902887139108,1.1648490462756327
+302,['TotalFouls0.6-False'],['WINorLOSS-False'],0.4540540540540541,1.1072120248590835
+303,['Opp.Assists0.6-False'],['WINorLOSS-False'],0.44327176781002636,1.0809193910233799
+304,['Opp.TotalRebounds0.6-False'],['WINorLOSS-False'],0.4426229508196721,1.079337249057596
+305,['Opp.TotalFouls0.6-False'],['WINorLOSS-False'],0.4412532637075718,1.0759972633724746
+306,['Opp.3PointShots0.6-False'],['WINorLOSS-False'],0.43958868894601544,1.0719381933656846
+307,['OffRebounds0.6-False'],['WINorLOSS-False'],0.4387755102040816,1.0699552548292044
+308,['FreeThrows0.6-False'],['WINorLOSS-False'],0.4385026737967914,1.0692899425205182
+309,['Turnovers0.6-False'],['WINorLOSS-False'],0.4381720430107527,1.0684836984647232
+310,['Opp.FieldGoalsAttempted0.6-False'],['WINorLOSS-False'],0.4371584699453552,1.0660120978346628
+311,['Opp.Blocks0.6-False'],['WINorLOSS-False'],0.43513513513513513,1.061078190489955
+312,['Opp.3PointShotsAttempted0.6-False'],['WINorLOSS-False'],0.4316353887399464,1.0525440495476768
+313,['Opp.Turnovers0.6-False'],['WINorLOSS-False'],0.4241645244215938,1.034326326931801
+314,['Steals0.6-False'],['WINorLOSS-False'],0.42105263157894735,1.0267379679144384
