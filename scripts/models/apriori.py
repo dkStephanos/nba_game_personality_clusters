@@ -1,5 +1,5 @@
 import pandas as pd
-from apyori import apriori
+from efficient_apriori import apriori
 
 
 def run_apriori(
@@ -19,7 +19,7 @@ def run_apriori(
         for idx, val in enumerate(row):
             temp_vals[index].append(str(idx) + ('.0' if val in [False, 'L'] else '.1'))
 
-    association_rules = apriori(
+    itemsets, rules = apriori(
         temp_vals,
         min_support=min_support,
         min_confidence=min_confidence,
@@ -28,13 +28,14 @@ def run_apriori(
 
     results = {"wins": [], "losses": []}
     # Filtering our results to just rules that rhs is survived
-    for result in list(association_rules):
-        for entry in result.ordered_statistics:
-            if entry.items_add == frozenset({'0.1'}):
-                results["wins"].append(entry)
-            elif entry.items_add == frozenset({'0.0'}):
-                results["losses"].append(entry)
+    for rule in rules:
+        if len(rule.rhs) == 1:
+            if rule.rhs[0] == "0.1":
+                results["wins"].append(rule)
+            elif rule.rhs[0] == "0.0":
+                results["losses"].append(rule)
 
+    print("\nNumber of rules overall: {0}\n".format(len(rules)))
     print("\nNumber of rules for wins: {0}\n".format(len(results["wins"])))
     print("\nNumber of rules for losses: {0}\n".format(len(results["losses"])))
 
@@ -53,29 +54,29 @@ def run_apriori(
 def process_apriori_results(results, columns):
     columns = ["WINorLOSS"] + columns
     apriori_results = {
-        "items_base": [],
-        "items_add": [],
+        "lhs": [],
+        "rhs": [],
         "confidence": [],
         "lift": [],
     }
     for result in results:
-        # Stripping off items_base
+        # Stripping off lhs
         tmp_list = []
-        for element in list(result.items_base):
+        for element in list(result.lhs):
             tmp_element = element.split('.')
             tmp_list.append(
                 f"{columns[int(tmp_element[0])]}-{'True' if tmp_element[1] == '1' else 'False'}"
             )
-        apriori_results["items_base"].append(tmp_list)
+        apriori_results["lhs"].append(tmp_list)
 
-        # Stripping off items_add
+        # Stripping off rhs
         tmp_list = []
-        for element in list(result.items_add):
+        for element in list(result.rhs):
             tmp_element = element.split('.')
             tmp_list.append(
                 f"{columns[int(tmp_element[0])]}-{'True' if tmp_element[1] == '1' else 'False'}"
             )
-        apriori_results["items_add"].append(tmp_list)
+        apriori_results["rhs"].append(tmp_list)
 
         apriori_results["confidence"].append(result.confidence)
         apriori_results["lift"].append(result.lift)
