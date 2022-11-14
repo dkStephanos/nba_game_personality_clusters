@@ -1,14 +1,14 @@
 import pandas as pd
 from utils.constants import NUMERIC_COLS, N_CLUSTERS
-from utils.general import mimic_df
+from utils.general import mimic_df, project_cols
 
 
 def get_column_quantiles(stats_df, quantile=[0.2, 0.4, 0.6, 0.8], save_results=False):
-    quantiles_df = mimic_df(stats_df[NUMERIC_COLS + ["cluster"]])
+    quantiles_df = mimic_df(project_cols(stats_df, NUMERIC_COLS + ["cluster"]))
     for cluster in range(0, N_CLUSTERS):
-        temp_df = stats_df.loc[stats_df["cluster"] == cluster][NUMERIC_COLS].quantile(
-            quantile
-        )
+        temp_df = stats_df.loc[stats_df["cluster"] == cluster][
+            [x for x in NUMERIC_COLS if x in stats_df.columns]
+        ].quantile(quantile)
         temp_df["cluster"] = cluster
         quantiles_df = pd.concat(
             [
