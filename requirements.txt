@@ -2,4 +2,4 @@ numpy
 pandas
 sklearn
 matplotlib
-apyori
+efficient_apriori
