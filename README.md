@@ -14,3 +14,43 @@ from preprocess import normalize_and_save
 # Specify the save filepath if different from the default
 normalize_and_save(save_filepath='./data/box_scores/nba.games.stats-normalized.csv')
 ```
+
+## 2. Clustering
+
+The clustering script performs feature selection to reduce dimensionality, generates elbow and silhouette coefficient plots for optimal cluster number identification, executes the KMeans clustering algorithm, calculates cluster distortion, and identifies samples closest to the cluster centroids. The results are saved to CSV files if the `save_results` flag is set to True.
+
+### Usage
+
+```python
+from clustering import perform_clustering
+
+# Specify custom parameters if necessary
+perform_clustering(
+    raw_data_filepath='./data/box_scores/nba.games.stats-clean.csv',
+    normalized_data_filepath='./data/box_scores/nba.games.stats-normalized.csv',
+    save_results=True  # Set to False if you do not wish to save the results
+)
+```
+
+## 3. Analytics
+
+The analytics script dives deeper into the clustered data to generate insights. It creates a PCA biplot for visual representation, calculates column averages for each cluster, determines cluster distribution, generates cluster truth tables, and runs the Apriori algorithm for association rule learning on each cluster. The generated insights and results are saved to CSV files if the `save_results` flag is set to True.
+
+### Usage
+
+```python
+from analytics import perform_analytics
+
+# Specify custom parameters if necessary
+perform_analytics(
+    raw_data_filepath='./data/cluster_results/cluster.stats.results-raw.csv',
+    cluster_data_filepath='./data/cluster_results/cluster.stats.results-closest-samples.csv',
+    truth_table_data_filepath='./data/cluster_results/cluster.stats.results-truth-table.csv',
+    save_results=True  # Set to False if you do not wish to save the results
+)
+
+## Acknowledgements
+
+This code accompanies a paper presented at the Sloan Sports Analytics Conference. If you're interested in learning more or have any questions, feel free to reach out to Koi Stephanos at [dkstephanos@gmail.com](mailto:dkstephanos@gmail.com).
+
+Special thanks to Kaggle user Patrick Hallila (user-patrickhallila1994) for providing the dataset utilized in this analysis.
