@@ -1,30 +1,49 @@
 import numpy as np
+import pandas as pd
 from sklearn.decomposition import PCA
 from utils.plot import generate_biplot
 
-
-def run_pca(dataset, save_results=False):
+def run_pca(dataset: np.array, save_results: bool = False) -> np.array:
+    """
+    Runs Principal Component Analysis (PCA) on the given dataset to reduce its dimensionality.
+    
+    Args:
+        dataset (np.array): The dataset to apply PCA on.
+        save_results (bool, optional): Whether to save the results to a file. Defaults to False.
+    
+    Returns:
+        np.array: The transformed dataset after applying PCA.
+    """
     print("Running dimensionality reduction on dataset ----------")
-    print("Shape before reduction:: ", dataset[0].shape)
+    print("Shape before reduction:: ", dataset.shape)
     pca = PCA()
-    dataset = pca.fit_transform(dataset)
+    dataset_transformed = pca.fit_transform(dataset)
     if save_results:
-        np.save("../data/nba.games.stats-pca", dataset)
-    print("Shape after reduction:: ", dataset[0].shape)
+        np.save("../data/nba.games.stats-pca", dataset_transformed)
+    print("Shape after reduction:: ", dataset_transformed.shape)
 
-    return dataset
+    return dataset_transformed
 
-
-def create_pca_biplot(dataset, save_results=True):
+def create_pca_biplot(dataset: pd.DataFrame, save_results: bool = True) -> None:
+    """
+    Creates a biplot of the first two principal components from the PCA applied on the dataset.
+    
+    Args:
+        dataset (pd.DataFrame): The dataset to create a biplot for.
+        save_results (bool, optional): Whether to save the biplot. Defaults to True.
+    
+    Returns:
+        None: The function saves the biplot or displays it, depending on the 'save_results' flag.
+    """
     pca = PCA()
     y = dataset["cluster"]
     dataset.drop(["WINorLOSS", "cluster"], axis=1, inplace=True)
-    X = pca.fit_transform(dataset)
+    X_transformed = pca.fit_transform(dataset)
 
     generate_biplot(
-        X[:, 0:2],
+        X_transformed[:, 0:2],
         y,
         np.transpose(pca.components_[0:2, :]),
         list(map(lambda x: x.replace('.', '%'), dataset.columns)),
-        save=save_results,
+        save=save_results
     )
