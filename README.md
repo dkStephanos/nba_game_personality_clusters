@@ -48,7 +48,7 @@ perform_analytics(
     truth_table_data_filepath='./data/cluster_results/cluster.stats.results-truth-table.csv',
     save_results=True  # Set to False if you do not wish to save the results
 )
-
+```
 ## Acknowledgements
 
 This code accompanies a paper presented at the Sloan Sports Analytics Conference. If you're interested in learning more or have any questions, feel free to reach out to Koi Stephanos at [dkstephanos@gmail.com](mailto:dkstephanos@gmail.com).
