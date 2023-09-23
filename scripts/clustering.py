@@ -9,7 +9,7 @@ from models.kmeans import (
 )
 
 
-def main(
+def perform_clustering(
     save_results: bool = True,
     generate_cluster_plots: bool = True,
     run_kmeans: bool = True,
@@ -73,4 +73,4 @@ def main(
             )
 
 if __name__ == "__main__":
-    main(save_results=True)  # Default flags can be changed as needed
+    perform_clustering(save_results=True)  # Default flags can be changed as needed

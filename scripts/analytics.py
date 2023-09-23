@@ -6,7 +6,7 @@ from models.kmeans import get_column_avgs_per_cluster, get_cluster_distribution
 from utils.stats import generate_quantile_truth_table, get_column_quantiles
 from utils.constants import N_CLUSTERS
 
-def main(
+def perform_analytics(
     save_results: bool = True,
     generate_biplot: bool = True,
     get_column_avg: bool = True,
@@ -86,4 +86,4 @@ def main(
             )
 
 if __name__ == "__main__":
-    main(save_results=True)  # Default flags can be changed as needed
+    perform_analytics(save_results=True)  # Default flags can be changed as needed
