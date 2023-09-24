@@ -51,6 +51,8 @@ perform_analytics(
 ```
 ## Acknowledgements
 
-This code accompanies a paper presented at the Sloan Sports Analytics Conference. If you're interested in learning more or have any questions, feel free to reach out to Koi Stephanos at [dkstephanos@gmail.com](mailto:dkstephanos@gmail.com).
+Data Collection Source:
+- Game statistics and data were collected from [Basketball Reference](https://www.basketball-reference.com).
 
-Special thanks to Kaggle user Patrick Hallila (user-patrickhallila1994) for providing the dataset utilized in this analysis.
+Scraping Tool:
+- The scraping scripts utilized for data collection can be found in this repository: [NBA Webscrapes by PatrickH1994](https://github.com/PatrickH1994/nba_webscrapes).
