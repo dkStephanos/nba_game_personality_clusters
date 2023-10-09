@@ -44,7 +44,6 @@ def perform_analytics(
     column_avgs_df = None  # Initializing DataFrame to None
     if get_column_avg:
         print("Getting column averages for each cluster.... ")
-        get_column_quantiles(stats_df, save_results=True)
         column_avgs_df = get_column_avgs_per_cluster(stats_df)
 
     cluster_dist_df = None  # Initializing DataFrame to None
@@ -54,7 +53,7 @@ def perform_analytics(
 
     if generate_truth_tables:
         print("Generating cluster truth tables...")
-        truth_table_df = generate_quantile_truth_table(cluster_df)
+        truth_table_df = generate_quantile_truth_table(cluster_df, save_results=save_results)
 
     if run_apriori_algo:
         if truth_table_df is not None:  # Ensure truth_table_df is not None
