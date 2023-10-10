@@ -1,6 +1,6 @@
 N_CLUSTERS = 4
 
-STRING_COLS = ["Team", "Game", "Date", "Home", "Opponent", "WINorLOSS", "cluster"]
+STRING_COLS = ["home_team", "game_id", "datetime", "away_team", "win", "cluster"]
 
 NUMERIC_COLS = [
     "TeamPoints",
@@ -38,3 +38,4 @@ NUMERIC_COLS = [
     "Opp.Turnovers",
     "Opp.TotalFouls",
 ]
+
