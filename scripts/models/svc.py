@@ -23,12 +23,13 @@ def perform_feature_selection(
     Returns:
         pd.DataFrame: A dataframe with selected features, and optionally with cluster labels.
     """
-    
+    stats_df = stats_df.dropna()
+
     # Project the data to the set of numeric columns
     X = project_cols(stats_df, NUMERIC_COLS)
-    
+
     # Get the target variable
-    y = stats_df["WINorLOSS"]
+    y = stats_df["win"]
     
     # Fit a LinearSVC model with L1 regularization
     lsvc = LinearSVC(C=C, penalty="l1", dual=False).fit(X, y)
@@ -37,7 +38,7 @@ def perform_feature_selection(
     model = SelectFromModel(lsvc, prefit=True)
     X_new = model.transform(X)
     X_new = X.iloc[:, model.get_support(indices=True)]
-    X_new["WINorLOSS"] = y
+    X_new["win"] = y
     
     # If a clustering result is provided, align the feature selection result with it
     if cluster_df is not None:
