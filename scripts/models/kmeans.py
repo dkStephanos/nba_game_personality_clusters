@@ -31,6 +31,8 @@ def _get_distortion_values(df: pd.DataFrame, kmeans: KMeans, y_km: np.array) -> 
     Returns:
         pd.DataFrame: A DataFrame containing the distortion values.
     """
+    print(df.shape)
+    print(kmeans.cluster_centers_[y_km].shape)
     distortion = ((df - kmeans.cluster_centers_[y_km]) ** 2.0).sum(axis=1)
     return pd.DataFrame({'cluster': kmeans.labels_, 'distortion': distortion})
 
@@ -66,7 +68,7 @@ def get_cluster_distribution(df: pd.DataFrame) -> pd.Series:
     """
     return df['cluster'].value_counts()
 
-def get_samples_closest_to_centroid(df: pd.DataFrame, stats_df: pd.DataFrame, kmeans: KMeans, num_samples: int = 4) -> pd.DataFrame:
+def get_samples_closest_to_centroid(X: pd.DataFrame, cluster_centers: list, y_kmeans, num_samples: int = 4) -> pd.DataFrame:
     """
     Finds the samples closest to the centroid of each cluster.
     
@@ -78,16 +80,25 @@ def get_samples_closest_to_centroid(df: pd.DataFrame, stats_df: pd.DataFrame, km
     
     Returns:
         pd.DataFrame: A DataFrame containing the samples closest to the centroid.
-    """
-    results_df = mimic_df(df)
-    
-    for cluster in range(0, N_CLUSTERS):
-        d = kmeans.transform(df)[:, cluster]
-        temp_df = stats_df[stats_df.cluster == cluster]
-        indices = list(filter(lambda x: x in temp_df.index, list(np.argsort(d)[::-1])))[:num_samples]
-        results_df = pd.concat([results_df, temp_df.loc[indices]])
+    """    
+    closest_samples = []
+    for i, center in enumerate(cluster_centers):
+        # Calculate the distance from each point in the cluster to its centroid
+        dists = np.linalg.norm(X[y_kmeans == i] - center, axis=1)
 
-    return results_df
+        # Get the indices of the n_samples closest points
+        idx_closest = np.argsort(dists)[:num_samples]
+
+        # Extract the rows corresponding to the closest points and add a 'cluster' column
+        cluster_samples = X[y_kmeans == i].iloc[idx_closest].copy()
+        cluster_samples['cluster'] = i
+        
+        closest_samples.append(cluster_samples)
+
+    # Concatenate the samples from all clusters into a single dataframe
+    closest_samples_df = pd.concat(closest_samples, axis=0)
+    
+    return closest_samples_df
 
 def get_column_avgs_per_cluster(df: pd.DataFrame) -> pd.DataFrame:
     """

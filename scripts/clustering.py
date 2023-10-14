@@ -28,8 +28,8 @@ def perform_clustering(
     """
 
     print("Reading in data -----------\n\n")
-    stats_df = pd.read_csv("./data/box_scores/nba.games.stats-clean.csv", index_col=0)
-    df = pd.read_csv("./data/box_scores/nba.games.stats-normalized.csv", index_col=0)
+    stats_df = pd.read_csv("./data/src/boxscore_aggregates.csv")
+    df = pd.read_csv("./data/src/nba.games.stats-normalized.csv", index_col=0)
     df.drop(df.columns[list(range(0, 6))], axis=1, inplace=True)
     print(stats_df, stats_df.columns)
 
@@ -37,31 +37,30 @@ def perform_clustering(
         stats_df.drop(stats_df.columns[list(range(0, 5))], axis=1), C=0.02
     )
     print(stats_df, stats_df.columns)
-    df = project_cols(df, stats_df.columns)
+    X = project_cols(df, stats_df.columns)
 
     if generate_cluster_plots:
         print("Generating cluster plots -----------\n\n")
-        generate_elbow_plot(df, 10, save=save_results)
-        generate_silhouette_coef_plot(df, 10, save=save_results)
+        generate_elbow_plot(X, 10, save=save_results)
+        generate_silhouette_coef_plot(X, 10, save=save_results)
 
     kmeans, y_km = None, None  # Initializing to None
     if run_kmeans:
         print("Running the KMeans clustering model -----------\n\n")
-        kmeans, y_km = perform_k_means(df)
-        stats_df["cluster"] = y_km
-
+        kmeans, y_km = perform_k_means(X)
+        print(X)
     distortion_df = None  # Initializing to None
     if calculate_distortion and kmeans is not None and y_km is not None:
         print("Calculating cluster distortion...")
-        distortion_df = get_distortion_totals_per_cluster(df, kmeans, y_km)
+        distortion_df = get_distortion_totals_per_cluster(X, kmeans, y_km)
 
     closest_samples_df = None  # Initializing to None
     if get_closest_samples and kmeans is not None:
         print("Getting the samples closest to the centroids...")
         closest_samples_df = get_samples_closest_to_centroid(
-            df, stats_df, kmeans, num_samples=1000
+            X, kmeans.cluster_centers_, y_km, num_samples=1000
         )
-
+        
     if save_results:
         # Save DataFrames to CSV if they are not None
         stats_df.to_csv("./data/cluster_results/cluster.stats.results-raw.csv")
@@ -73,4 +72,4 @@ def perform_clustering(
             )
 
 if __name__ == "__main__":
-    perform_clustering(save_results=True)  # Default flags can be changed as needed
+    perform_clustering(save_results=True, generate_cluster_plots=False)  # Default flags can be changed as needed
