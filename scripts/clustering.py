@@ -14,7 +14,7 @@ def perform_clustering(
     generate_cluster_plots: bool = True,
     run_kmeans: bool = True,
     calculate_distortion: bool = True,
-    get_closest_samples: bool = True
+    get_closest_samples: bool = True,
 ) -> None:
     """
     Main function to orchestrate the execution of various analytics tasks.
@@ -28,16 +28,17 @@ def perform_clustering(
     """
 
     print("Reading in data -----------\n\n")
-    stats_df = pd.read_csv("./data/src/boxscore_aggregates.csv")
-    df = pd.read_csv("./data/src/nba.games.stats-normalized.csv", index_col=0)
-    df.drop(df.columns[list(range(0, 6))], axis=1, inplace=True)
-    print(stats_df, stats_df.columns)
+    cluster_df = pd.read_csv("./data/src/nba.games.stats-raw.csv", index_col=0)
+    stats_df = pd.read_csv("./data/src/nba.games.stats-normalized.csv", index_col=0)
 
-    stats_df = perform_feature_selection(
-        stats_df.drop(stats_df.columns[list(range(0, 5))], axis=1), C=0.02
+    # Split the dataframe into metadata and data parts
+    data_df = stats_df.iloc[:, 5:]
+
+    print("Selecting features -----------\n\n")
+    data_df = perform_feature_selection(
+        data_df, C=0.02
     )
-    print(stats_df, stats_df.columns)
-    X = project_cols(df, stats_df.columns)
+    X = project_cols(stats_df, data_df.columns)
 
     if generate_cluster_plots:
         print("Generating cluster plots -----------\n\n")
@@ -48,7 +49,8 @@ def perform_clustering(
     if run_kmeans:
         print("Running the KMeans clustering model -----------\n\n")
         kmeans, y_km = perform_k_means(X)
-        print(X)
+        cluster_df["cluster"] = y_km
+
     distortion_df = None  # Initializing to None
     if calculate_distortion and kmeans is not None and y_km is not None:
         print("Calculating cluster distortion...")
@@ -60,16 +62,26 @@ def perform_clustering(
         closest_samples_df = get_samples_closest_to_centroid(
             X, kmeans.cluster_centers_, y_km, num_samples=1000
         )
-        
+
     if save_results:
-        # Save DataFrames to CSV if they are not None
-        stats_df.to_csv("./data/cluster_results/cluster.stats.results-raw.csv")
+        if kmeans is not None:
+            # Save DataFrames to CSV if they are not None
+            cluster_df.to_csv(
+                "./data/cluster_results/cluster.stats.results-raw.csv", index=False
+            )
         if distortion_df is not None:
-            distortion_df.to_csv("./data/cluster_results/cluster.stats.results-distortion.csv")
+            distortion_df.to_csv(
+                "./data/cluster_results/cluster.stats.results-distortion.csv",
+                index=False,
+            )
         if closest_samples_df is not None:
             closest_samples_df.to_csv(
-                "./data/cluster_results/cluster.stats.results-closest-samples.csv"
+                "./data/cluster_results/cluster.stats.results-closest-samples.csv",
+                index=False,
             )
 
+
 if __name__ == "__main__":
-    perform_clustering(save_results=True, generate_cluster_plots=False)  # Default flags can be changed as needed
+    perform_clustering(
+        save_results=True, generate_cluster_plots=True, run_kmeans=False
+    )  # Default flags can be changed as needed
