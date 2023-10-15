@@ -23,7 +23,6 @@ def perform_feature_selection(
     Returns:
         pd.DataFrame: A dataframe with selected features, and optionally with cluster labels.
     """
-    stats_df = stats_df.dropna()
 
     # Project the data to the set of numeric columns
     X = project_cols(stats_df, NUMERIC_COLS)
