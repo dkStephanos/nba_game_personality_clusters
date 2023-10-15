@@ -28,33 +28,40 @@ def perform_analytics(
 
     print("Reading in data -----------\n\n")
     stats_df = pd.read_csv(
-        "./data/cluster_results/cluster.stats.results-raw.csv", index_col=0
+        "./data/cluster_results/cluster.stats.results-raw.csv"
     )
+    print(stats_df.columns)
     cluster_df = pd.read_csv(
-        "./data/cluster_results/cluster.stats.results-closest-samples.csv", index_col=0
+        "./data/cluster_results/cluster.stats.results-closest-samples.csv"
     )
     truth_table_df = None  # Initializing DataFrame to None
 
     if generate_biplot:
         print("Generating PCA Biplot.... ")
+        # Reduce to features only
+        data_df = stats_df.iloc[:, 5:].drop(columns=['PTS', '+/-', 'Opp.PTS', 'Opp.+/-'])
+        df = perform_feature_selection(data_df, cluster_df)
         create_pca_biplot(
-            perform_feature_selection(stats_df, cluster_df), save_results=save_results
+            perform_feature_selection(df, cluster_df), save_results=save_results
         )
 
     column_avgs_df = None  # Initializing DataFrame to None
     if get_column_avg:
         print("Getting column averages for each cluster.... ")
         column_avgs_df = get_column_avgs_per_cluster(stats_df)
-
+    print(stats_df.columns)
     cluster_dist_df = None  # Initializing DataFrame to None
     if calculate_cluster_dist:
         print("Calculating cluster distribution...")
         cluster_dist_df = get_cluster_distribution(stats_df)
-
+    print(stats_df.columns)
     if generate_truth_tables:
         print("Generating cluster truth tables...")
-        truth_table_df = generate_quantile_truth_table(cluster_df, save_results=save_results)
-
+        data_df = stats_df.drop(columns=['+/-', 'Opp.+/-'])
+        truth_table_df = generate_quantile_truth_table(data_df, save_results=save_results)
+        truth_table_df.to_csv(
+                        "./data/cluster_results/cluster.stats.results-truth-table.csv"
+                    )
     if run_apriori_algo:
         if truth_table_df is not None:  # Ensure truth_table_df is not None
             truth_table_df.drop(truth_table_df.columns[list(range(0, 5))], axis=1, inplace=True)
@@ -85,4 +92,4 @@ def perform_analytics(
             )
 
 if __name__ == "__main__":
-    perform_analytics(save_results=True)  # Default flags can be changed as needed
+    perform_analytics(save_results=True, generate_biplot=False, run_apriori_algo=False)  # Default flags can be changed as needed
