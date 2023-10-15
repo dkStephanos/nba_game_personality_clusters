@@ -8,7 +8,7 @@ from utils.transform import (
 
 
 def perform_preprocessing(
-    save_filepath: str = "./data/src/nba.games.stats-normalized.csv", save_results=True
+    save_filepath: str = "./data/src/", save_results=True
 ) -> None:
     """
     This function reads raw data, aggregates it, merges it together, extends the data so each row
@@ -68,10 +68,11 @@ def perform_preprocessing(
 
     # Reduce to only Home games to avoid duplicated inputs
     final_df = game_boxscore_df[game_boxscore_df.home == "Home"]
-    final_df = normalize_df(final_df)
+    normalized_df = normalize_df(final_df)
 
     if save_results:
-        final_df.to_csv(save_filepath, index=False)
+        final_df.to_csv(save_filepath + "nba.games.stats-raw.csv", index=False)
+        normalized_df.to_csv(save_filepath + "nba.games.stats-normalized.csv", index=False)
 
 if __name__ == "__main__":
     # Specify the save filepath if different from the default
