@@ -71,6 +71,8 @@ def perform_preprocessing(
     normalized_df = normalize_df(final_df)
 
     if save_results:
+        final_df = final_df.sort_values(by=["datetime"])
+        normalized_df = normalized_df.sort_values(by=["datetime"])
         final_df.to_csv(save_filepath + "nba.games.stats-raw.csv", index=False)
         normalized_df.to_csv(save_filepath + "nba.games.stats-normalized.csv", index=False)
 
