@@ -1,4 +1,4 @@
-N_CLUSTERS = 4
+N_CLUSTERS = 5
 
 STRING_COLS = ["game_id", "team_name", "datetime", "is_regular", "opponent", "home", "win", "cluster"]
 
