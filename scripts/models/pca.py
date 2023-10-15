@@ -37,13 +37,13 @@ def create_pca_biplot(dataset: pd.DataFrame, save_results: bool = True) -> None:
     """
     pca = PCA()
     y = dataset["cluster"]
-    dataset.drop(["WINorLOSS", "cluster"], axis=1, inplace=True)
+    dataset = dataset.drop(["win", "cluster"], axis=1)
     X_transformed = pca.fit_transform(dataset)
 
     generate_biplot(
         X_transformed[:, 0:2],
         y,
         np.transpose(pca.components_[0:2, :]),
-        list(map(lambda x: x.replace('.', '%'), dataset.columns)),
+        dataset.columns,
         save=save_results
     )
