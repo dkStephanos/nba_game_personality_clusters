@@ -31,12 +31,12 @@ def perform_clustering(
     cluster_df = pd.read_csv("./data/src/nba.games.stats-raw.csv", index_col=0)
     stats_df = pd.read_csv("./data/src/nba.games.stats-normalized.csv", index_col=0)
 
-    # Split the dataframe into metadata and data parts
-    data_df = stats_df.iloc[:, 5:]
+    # Reduce to features only
+    data_df = stats_df.iloc[:, 5:].drop(columns=['PTS', '+/-', 'Opp.PTS', 'Opp.+/-'])
 
     print("Selecting features -----------\n\n")
     data_df = perform_feature_selection(
-        data_df, C=0.02
+        data_df, C=0.2
     )
     X = project_cols(stats_df, data_df.columns)
 
@@ -83,5 +83,5 @@ def perform_clustering(
 
 if __name__ == "__main__":
     perform_clustering(
-        save_results=True, generate_cluster_plots=True, run_kmeans=False
+        save_results=True, generate_cluster_plots=True, run_kmeans=True
     )  # Default flags can be changed as needed
