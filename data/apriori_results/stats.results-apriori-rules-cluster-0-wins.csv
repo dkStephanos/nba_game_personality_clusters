@@ -1,0 +1,1001 @@
+,lhs,rhs,confidence,lift
+0,['3P-True'],['WINorLOSS-True'],1.0,1.0
+1,['STL-True'],['WINorLOSS-True'],1.0,1.0
+2,['BLK-True'],['WINorLOSS-True'],1.0,1.0
+3,['TOV-True'],['WINorLOSS-True'],1.0,1.0
+4,['PF-True'],['WINorLOSS-True'],1.0,1.0
+5,['Opp.FG-True'],['WINorLOSS-True'],1.0,1.0
+6,['Opp.FGA-True'],['WINorLOSS-True'],1.0,1.0
+7,['Opp.FG%-True'],['WINorLOSS-True'],1.0,1.0
+8,['Opp.3P-True'],['WINorLOSS-True'],1.0,1.0
+9,['Opp.3PA-True'],['WINorLOSS-True'],1.0,1.0
+10,['Opp.3P%-True'],['WINorLOSS-True'],1.0,1.0
+11,['3PA-True'],['WINorLOSS-True'],1.0,1.0
+12,['Opp.FT-True'],['WINorLOSS-True'],1.0,1.0
+13,['Opp.FTA-True'],['WINorLOSS-True'],1.0,1.0
+14,['Opp.FT%-True'],['WINorLOSS-True'],1.0,1.0
+15,['Opp.ORB-True'],['WINorLOSS-True'],1.0,1.0
+16,['Opp.TRB-True'],['WINorLOSS-True'],1.0,1.0
+17,['Opp.AST-True'],['WINorLOSS-True'],1.0,1.0
+18,['Opp.STL-True'],['WINorLOSS-True'],1.0,1.0
+19,['Opp.BLK-True'],['WINorLOSS-True'],1.0,1.0
+20,['Opp.TOV-True'],['WINorLOSS-True'],1.0,1.0
+21,['Opp.PF-True'],['WINorLOSS-True'],1.0,1.0
+22,['3P%-True'],['WINorLOSS-True'],1.0,1.0
+23,['DRB-True'],['WINorLOSS-True'],1.0,1.0
+24,['Opp.DRB-True'],['WINorLOSS-True'],1.0,1.0
+25,['datetime-True'],['WINorLOSS-True'],1.0,1.0
+26,['home-True'],['WINorLOSS-True'],1.0,1.0
+27,['is_regular-True'],['WINorLOSS-True'],1.0,1.0
+28,['opponen-True'],['WINorLOSS-True'],1.0,1.0
+29,['team_name-False'],['WINorLOSS-True'],1.0,1.0
+30,['team_name-True'],['WINorLOSS-True'],1.0,1.0
+31,['FT-True'],['WINorLOSS-True'],1.0,1.0
+32,['FTA-True'],['WINorLOSS-True'],1.0,1.0
+33,['FT%-True'],['WINorLOSS-True'],1.0,1.0
+34,['ORB-True'],['WINorLOSS-True'],1.0,1.0
+35,['TRB-True'],['WINorLOSS-True'],1.0,1.0
+36,['AST-True'],['WINorLOSS-True'],1.0,1.0
+37,"['3P-True', 'STL-True']",['WINorLOSS-True'],1.0,1.0
+38,"['3P-True', 'BLK-True']",['WINorLOSS-True'],1.0,1.0
+39,"['3P-True', 'TOV-True']",['WINorLOSS-True'],1.0,1.0
+40,"['3P-True', 'PF-True']",['WINorLOSS-True'],1.0,1.0
+41,"['3P-True', 'Opp.FG-True']",['WINorLOSS-True'],1.0,1.0
+42,"['3P-True', 'Opp.FGA-True']",['WINorLOSS-True'],1.0,1.0
+43,"['3P-True', 'Opp.FG%-True']",['WINorLOSS-True'],1.0,1.0
+44,"['3P-True', 'Opp.3P-True']",['WINorLOSS-True'],1.0,1.0
+45,"['3P-True', 'Opp.3PA-True']",['WINorLOSS-True'],1.0,1.0
+46,"['3P-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+47,"['3P-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+48,"['3P-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+49,"['3P-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+50,"['3P-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+51,"['3P-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+52,"['3P-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+53,"['3P-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+54,"['3P-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+55,"['3P-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+56,"['3P-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+57,"['3P-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+58,"['3P-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+59,"['3P-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+60,"['3P-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+61,"['3P-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+62,"['3P-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+63,"['3P-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+64,"['3P-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+65,"['3P-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+66,"['3P-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+67,"['3P-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+68,"['3P-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+69,"['3P-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+70,"['3P-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+71,"['3P-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+72,"['3P-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+73,"['STL-True', 'BLK-True']",['WINorLOSS-True'],1.0,1.0
+74,"['STL-True', 'TOV-True']",['WINorLOSS-True'],1.0,1.0
+75,"['STL-True', 'PF-True']",['WINorLOSS-True'],1.0,1.0
+76,"['STL-True', 'Opp.FG-True']",['WINorLOSS-True'],1.0,1.0
+77,"['STL-True', 'Opp.FGA-True']",['WINorLOSS-True'],1.0,1.0
+78,"['STL-True', 'Opp.FG%-True']",['WINorLOSS-True'],1.0,1.0
+79,"['STL-True', 'Opp.3P-True']",['WINorLOSS-True'],1.0,1.0
+80,"['STL-True', 'Opp.3PA-True']",['WINorLOSS-True'],1.0,1.0
+81,"['STL-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+82,"['STL-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+83,"['STL-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+84,"['STL-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+85,"['STL-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+86,"['STL-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+87,"['STL-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+88,"['STL-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+89,"['STL-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+90,"['STL-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+91,"['STL-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+92,"['STL-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+93,"['STL-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+94,"['STL-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+95,"['STL-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+96,"['STL-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+97,"['STL-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+98,"['STL-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+99,"['STL-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+100,"['STL-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+101,"['STL-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+102,"['STL-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+103,"['STL-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+104,"['STL-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+105,"['STL-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+106,"['STL-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+107,"['STL-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+108,"['BLK-True', 'TOV-True']",['WINorLOSS-True'],1.0,1.0
+109,"['BLK-True', 'PF-True']",['WINorLOSS-True'],1.0,1.0
+110,"['BLK-True', 'Opp.FG-True']",['WINorLOSS-True'],1.0,1.0
+111,"['BLK-True', 'Opp.FGA-True']",['WINorLOSS-True'],1.0,1.0
+112,"['BLK-True', 'Opp.FG%-True']",['WINorLOSS-True'],1.0,1.0
+113,"['BLK-True', 'Opp.3P-True']",['WINorLOSS-True'],1.0,1.0
+114,"['BLK-True', 'Opp.3PA-True']",['WINorLOSS-True'],1.0,1.0
+115,"['BLK-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+116,"['BLK-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+117,"['BLK-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+118,"['BLK-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+119,"['BLK-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+120,"['BLK-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+121,"['BLK-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+122,"['BLK-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+123,"['BLK-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+124,"['BLK-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+125,"['BLK-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+126,"['BLK-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+127,"['BLK-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+128,"['BLK-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+129,"['BLK-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+130,"['BLK-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+131,"['BLK-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+132,"['BLK-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+133,"['BLK-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+134,"['BLK-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+135,"['BLK-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+136,"['BLK-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+137,"['BLK-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+138,"['BLK-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+139,"['BLK-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+140,"['BLK-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+141,"['BLK-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+142,"['TOV-True', 'PF-True']",['WINorLOSS-True'],1.0,1.0
+143,"['TOV-True', 'Opp.FG-True']",['WINorLOSS-True'],1.0,1.0
+144,"['TOV-True', 'Opp.FGA-True']",['WINorLOSS-True'],1.0,1.0
+145,"['TOV-True', 'Opp.FG%-True']",['WINorLOSS-True'],1.0,1.0
+146,"['TOV-True', 'Opp.3P-True']",['WINorLOSS-True'],1.0,1.0
+147,"['TOV-True', 'Opp.3PA-True']",['WINorLOSS-True'],1.0,1.0
+148,"['TOV-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+149,"['TOV-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+150,"['TOV-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+151,"['TOV-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+152,"['TOV-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+153,"['TOV-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+154,"['TOV-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+155,"['TOV-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+156,"['TOV-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+157,"['TOV-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+158,"['TOV-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+159,"['TOV-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+160,"['TOV-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+161,"['TOV-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+162,"['TOV-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+163,"['TOV-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+164,"['TOV-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+165,"['TOV-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+166,"['TOV-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+167,"['TOV-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+168,"['TOV-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+169,"['TOV-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+170,"['TOV-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+171,"['TOV-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+172,"['TOV-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+173,"['TOV-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+174,"['TOV-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+175,"['PF-True', 'Opp.FG-True']",['WINorLOSS-True'],1.0,1.0
+176,"['PF-True', 'Opp.FGA-True']",['WINorLOSS-True'],1.0,1.0
+177,"['PF-True', 'Opp.FG%-True']",['WINorLOSS-True'],1.0,1.0
+178,"['PF-True', 'Opp.3P-True']",['WINorLOSS-True'],1.0,1.0
+179,"['PF-True', 'Opp.3PA-True']",['WINorLOSS-True'],1.0,1.0
+180,"['PF-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+181,"['PF-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+182,"['PF-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+183,"['PF-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+184,"['PF-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+185,"['PF-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+186,"['PF-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+187,"['PF-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+188,"['PF-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+189,"['PF-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+190,"['PF-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+191,"['PF-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+192,"['PF-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+193,"['PF-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+194,"['PF-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+195,"['PF-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+196,"['PF-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+197,"['PF-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+198,"['PF-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+199,"['PF-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+200,"['PF-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+201,"['PF-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+202,"['PF-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+203,"['PF-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+204,"['PF-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+205,"['PF-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+206,"['PF-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+207,"['Opp.FG-True', 'Opp.FGA-True']",['WINorLOSS-True'],1.0,1.0
+208,"['Opp.FG-True', 'Opp.FG%-True']",['WINorLOSS-True'],1.0,1.0
+209,"['Opp.FG-True', 'Opp.3P-True']",['WINorLOSS-True'],1.0,1.0
+210,"['Opp.FG-True', 'Opp.3PA-True']",['WINorLOSS-True'],1.0,1.0
+211,"['Opp.FG-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+212,"['Opp.FG-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+213,"['Opp.FG-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+214,"['Opp.FG-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+215,"['Opp.FG-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+216,"['Opp.FG-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+217,"['Opp.FG-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+218,"['Opp.FG-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+219,"['Opp.FG-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+220,"['Opp.FG-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+221,"['Opp.FG-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+222,"['Opp.FG-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+223,"['Opp.FG-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+224,"['Opp.FG-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+225,"['Opp.FG-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+226,"['Opp.FG-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+227,"['Opp.FG-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+228,"['Opp.FG-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+229,"['Opp.FG-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+230,"['Opp.FG-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+231,"['Opp.FG-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+232,"['Opp.FG-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+233,"['Opp.FG-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+234,"['Opp.FG-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+235,"['Opp.FG-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+236,"['Opp.FG-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+237,"['Opp.FG-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+238,"['Opp.FGA-True', 'Opp.FG%-True']",['WINorLOSS-True'],1.0,1.0
+239,"['Opp.FGA-True', 'Opp.3P-True']",['WINorLOSS-True'],1.0,1.0
+240,"['Opp.FGA-True', 'Opp.3PA-True']",['WINorLOSS-True'],1.0,1.0
+241,"['Opp.FGA-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+242,"['Opp.FGA-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+243,"['Opp.FGA-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+244,"['Opp.FGA-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+245,"['Opp.FGA-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+246,"['Opp.FGA-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+247,"['Opp.FGA-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+248,"['Opp.FGA-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+249,"['Opp.FGA-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+250,"['Opp.FGA-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+251,"['Opp.FGA-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+252,"['Opp.FGA-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+253,"['Opp.FGA-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+254,"['Opp.FGA-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+255,"['Opp.FGA-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+256,"['Opp.FGA-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+257,"['Opp.FGA-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+258,"['Opp.FGA-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+259,"['Opp.FGA-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+260,"['Opp.FGA-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+261,"['Opp.FGA-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+262,"['Opp.FGA-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+263,"['Opp.FGA-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+264,"['Opp.FGA-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+265,"['Opp.FGA-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+266,"['Opp.FGA-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+267,"['Opp.FGA-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+268,"['Opp.FG%-True', 'Opp.3P-True']",['WINorLOSS-True'],1.0,1.0
+269,"['Opp.FG%-True', 'Opp.3PA-True']",['WINorLOSS-True'],1.0,1.0
+270,"['Opp.FG%-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+271,"['Opp.FG%-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+272,"['Opp.FG%-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+273,"['Opp.FG%-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+274,"['Opp.FG%-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+275,"['Opp.FG%-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+276,"['Opp.FG%-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+277,"['Opp.FG%-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+278,"['Opp.FG%-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+279,"['Opp.FG%-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+280,"['Opp.FG%-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+281,"['Opp.FG%-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+282,"['Opp.FG%-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+283,"['Opp.FG%-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+284,"['Opp.FG%-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+285,"['Opp.FG%-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+286,"['Opp.FG%-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+287,"['Opp.FG%-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+288,"['Opp.FG%-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+289,"['Opp.FG%-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+290,"['Opp.FG%-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+291,"['Opp.FG%-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+292,"['Opp.FG%-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+293,"['Opp.FG%-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+294,"['Opp.FG%-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+295,"['Opp.FG%-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+296,"['Opp.FG%-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+297,"['Opp.3P-True', 'Opp.3PA-True']",['WINorLOSS-True'],1.0,1.0
+298,"['Opp.3P-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+299,"['Opp.3P-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+300,"['Opp.3P-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+301,"['Opp.3P-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+302,"['Opp.3P-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+303,"['Opp.3P-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+304,"['Opp.3P-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+305,"['Opp.3P-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+306,"['Opp.3P-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+307,"['Opp.3P-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+308,"['Opp.3P-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+309,"['Opp.3P-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+310,"['Opp.3P-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+311,"['Opp.3P-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+312,"['Opp.3P-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+313,"['Opp.3P-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+314,"['Opp.3P-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+315,"['Opp.3P-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+316,"['Opp.3P-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+317,"['Opp.3P-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+318,"['Opp.3P-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+319,"['Opp.3P-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+320,"['Opp.3P-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+321,"['Opp.3P-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+322,"['Opp.3P-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+323,"['Opp.3P-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+324,"['Opp.3P-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+325,"['Opp.3PA-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+326,"['Opp.3PA-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+327,"['Opp.3PA-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+328,"['Opp.3PA-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+329,"['Opp.3PA-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+330,"['Opp.3PA-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+331,"['Opp.3PA-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+332,"['Opp.3PA-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+333,"['Opp.3PA-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+334,"['Opp.3PA-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+335,"['Opp.3PA-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+336,"['Opp.3PA-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+337,"['Opp.3PA-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+338,"['Opp.3PA-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+339,"['Opp.3PA-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+340,"['Opp.3PA-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+341,"['Opp.3PA-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+342,"['Opp.3PA-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+343,"['Opp.3PA-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+344,"['Opp.3PA-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+345,"['Opp.3PA-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+346,"['Opp.3PA-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+347,"['Opp.3PA-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+348,"['Opp.3PA-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+349,"['Opp.3PA-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+350,"['Opp.3PA-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+351,"['Opp.3PA-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+352,"['Opp.3P%-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+353,"['Opp.3P%-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+354,"['Opp.3P%-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+355,"['Opp.3P%-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+356,"['Opp.3P%-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+357,"['Opp.3P%-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+358,"['Opp.3P%-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+359,"['Opp.3P%-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+360,"['Opp.3P%-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+361,"['Opp.3P%-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+362,"['Opp.3P%-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+363,"['Opp.3P%-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+364,"['Opp.3P%-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+365,"['Opp.3P%-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+366,"['Opp.3P%-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+367,"['Opp.3P%-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+368,"['Opp.3P%-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+369,"['Opp.3P%-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+370,"['Opp.3P%-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+371,"['Opp.3P%-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+372,"['Opp.3P%-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+373,"['Opp.3P%-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+374,"['Opp.3P%-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+375,"['Opp.3P%-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+376,"['Opp.3P%-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+377,"['Opp.3P%-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+378,"['3PA-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+379,"['3PA-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+380,"['3PA-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+381,"['3PA-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+382,"['3PA-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+383,"['3PA-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+384,"['3PA-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+385,"['3PA-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+386,"['3PA-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+387,"['3PA-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+388,"['3PA-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+389,"['3PA-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+390,"['3PA-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+391,"['3PA-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+392,"['3PA-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+393,"['3PA-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+394,"['3PA-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+395,"['3PA-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+396,"['3PA-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+397,"['3PA-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+398,"['3PA-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+399,"['3PA-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+400,"['3PA-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+401,"['3PA-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+402,"['3PA-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+403,"['Opp.FT-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+404,"['Opp.FT-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+405,"['Opp.FT-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+406,"['Opp.FT-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+407,"['Opp.FT-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+408,"['Opp.FT-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+409,"['Opp.FT-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+410,"['Opp.FT-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+411,"['Opp.FT-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+412,"['Opp.FT-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+413,"['Opp.FT-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+414,"['Opp.FT-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+415,"['Opp.FT-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+416,"['Opp.FT-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+417,"['Opp.FT-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+418,"['Opp.FT-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+419,"['Opp.FT-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+420,"['Opp.FT-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+421,"['Opp.FT-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+422,"['Opp.FT-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+423,"['Opp.FT-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+424,"['Opp.FT-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+425,"['Opp.FT-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+426,"['Opp.FT-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+427,"['Opp.FTA-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+428,"['Opp.FTA-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+429,"['Opp.FTA-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+430,"['Opp.FTA-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+431,"['Opp.FTA-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+432,"['Opp.FTA-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+433,"['Opp.FTA-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+434,"['Opp.FTA-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+435,"['Opp.FTA-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+436,"['Opp.FTA-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+437,"['Opp.FTA-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+438,"['Opp.FTA-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+439,"['Opp.FTA-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+440,"['Opp.FTA-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+441,"['Opp.FTA-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+442,"['Opp.FTA-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+443,"['Opp.FTA-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+444,"['Opp.FTA-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+445,"['Opp.FTA-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+446,"['Opp.FTA-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+447,"['Opp.FTA-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+448,"['Opp.FTA-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+449,"['Opp.FTA-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+450,"['Opp.FT%-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+451,"['Opp.FT%-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+452,"['Opp.FT%-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+453,"['Opp.FT%-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+454,"['Opp.FT%-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+455,"['Opp.FT%-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+456,"['Opp.FT%-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+457,"['Opp.FT%-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+458,"['Opp.FT%-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+459,"['Opp.FT%-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+460,"['Opp.FT%-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+461,"['Opp.FT%-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+462,"['Opp.FT%-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+463,"['Opp.FT%-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+464,"['Opp.FT%-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+465,"['Opp.FT%-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+466,"['Opp.FT%-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+467,"['Opp.FT%-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+468,"['Opp.FT%-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+469,"['Opp.FT%-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+470,"['Opp.FT%-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+471,"['Opp.FT%-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+472,"['Opp.ORB-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+473,"['Opp.ORB-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+474,"['Opp.ORB-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+475,"['Opp.ORB-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+476,"['Opp.ORB-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+477,"['Opp.ORB-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+478,"['Opp.ORB-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+479,"['Opp.ORB-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+480,"['Opp.ORB-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+481,"['Opp.ORB-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+482,"['Opp.ORB-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+483,"['Opp.ORB-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+484,"['Opp.ORB-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+485,"['Opp.ORB-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+486,"['Opp.ORB-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+487,"['Opp.ORB-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+488,"['Opp.ORB-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+489,"['Opp.ORB-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+490,"['Opp.ORB-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+491,"['Opp.ORB-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+492,"['Opp.ORB-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+493,"['Opp.TRB-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+494,"['Opp.TRB-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+495,"['Opp.TRB-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+496,"['Opp.TRB-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+497,"['Opp.TRB-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+498,"['Opp.TRB-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+499,"['Opp.TRB-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+500,"['Opp.TRB-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+501,"['Opp.TRB-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+502,"['Opp.TRB-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+503,"['Opp.TRB-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+504,"['Opp.TRB-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+505,"['Opp.TRB-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+506,"['Opp.TRB-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+507,"['Opp.TRB-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+508,"['Opp.TRB-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+509,"['Opp.TRB-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+510,"['Opp.TRB-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+511,"['Opp.TRB-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+512,"['Opp.TRB-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+513,"['Opp.AST-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+514,"['Opp.AST-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+515,"['Opp.AST-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+516,"['Opp.AST-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+517,"['Opp.AST-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+518,"['Opp.AST-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+519,"['Opp.AST-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+520,"['Opp.AST-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+521,"['Opp.AST-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+522,"['Opp.AST-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+523,"['Opp.AST-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+524,"['Opp.AST-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+525,"['Opp.AST-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+526,"['Opp.AST-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+527,"['Opp.AST-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+528,"['Opp.AST-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+529,"['Opp.AST-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+530,"['Opp.AST-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+531,"['Opp.AST-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+532,"['Opp.STL-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+533,"['Opp.STL-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+534,"['Opp.STL-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+535,"['Opp.STL-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+536,"['Opp.STL-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+537,"['Opp.STL-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+538,"['Opp.STL-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+539,"['Opp.STL-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+540,"['Opp.STL-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+541,"['Opp.STL-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+542,"['Opp.STL-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+543,"['Opp.STL-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+544,"['Opp.STL-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+545,"['Opp.STL-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+546,"['Opp.STL-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+547,"['Opp.STL-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+548,"['Opp.STL-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+549,"['Opp.STL-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+550,"['Opp.BLK-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+551,"['Opp.BLK-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+552,"['Opp.BLK-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+553,"['Opp.BLK-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+554,"['Opp.BLK-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+555,"['Opp.BLK-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+556,"['Opp.BLK-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+557,"['Opp.BLK-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+558,"['Opp.BLK-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+559,"['Opp.BLK-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+560,"['Opp.BLK-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+561,"['Opp.BLK-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+562,"['Opp.BLK-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+563,"['Opp.BLK-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+564,"['Opp.BLK-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+565,"['Opp.BLK-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+566,"['Opp.BLK-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+567,"['Opp.TOV-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+568,"['Opp.TOV-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+569,"['Opp.TOV-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+570,"['Opp.TOV-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+571,"['Opp.TOV-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+572,"['Opp.TOV-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+573,"['Opp.TOV-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+574,"['Opp.TOV-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+575,"['Opp.TOV-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+576,"['Opp.TOV-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+577,"['Opp.TOV-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+578,"['Opp.TOV-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+579,"['Opp.TOV-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+580,"['Opp.TOV-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+581,"['Opp.TOV-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+582,"['Opp.TOV-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+583,"['Opp.PF-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+584,"['Opp.PF-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+585,"['Opp.PF-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+586,"['Opp.PF-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+587,"['Opp.PF-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+588,"['Opp.PF-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+589,"['Opp.PF-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+590,"['Opp.PF-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+591,"['Opp.PF-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+592,"['Opp.PF-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+593,"['Opp.PF-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+594,"['Opp.PF-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+595,"['Opp.PF-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+596,"['Opp.PF-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+597,"['Opp.PF-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+598,"['3P%-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+599,"['3P%-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+600,"['3P%-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+601,"['3P%-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+602,"['3P%-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+603,"['3P%-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+604,"['3P%-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+605,"['3P%-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+606,"['3P%-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+607,"['3P%-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+608,"['3P%-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+609,"['3P%-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+610,"['3P%-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+611,"['3P%-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+612,"['DRB-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+613,"['DRB-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+614,"['DRB-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+615,"['DRB-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+616,"['DRB-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+617,"['DRB-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+618,"['DRB-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+619,"['DRB-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+620,"['DRB-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+621,"['DRB-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+622,"['DRB-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+623,"['DRB-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+624,"['DRB-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+625,"['Opp.DRB-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+626,"['Opp.DRB-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+627,"['Opp.DRB-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+628,"['Opp.DRB-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+629,"['Opp.DRB-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+630,"['Opp.DRB-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+631,"['Opp.DRB-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+632,"['Opp.DRB-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+633,"['Opp.DRB-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+634,"['Opp.DRB-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+635,"['Opp.DRB-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+636,"['Opp.DRB-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+637,"['datetime-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+638,"['datetime-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+639,"['datetime-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+640,"['datetime-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+641,"['datetime-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+642,"['datetime-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+643,"['datetime-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+644,"['datetime-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+645,"['datetime-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+646,"['datetime-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+647,"['datetime-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+648,"['home-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+649,"['home-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+650,"['home-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+651,"['home-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+652,"['home-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+653,"['home-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+654,"['home-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+655,"['home-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+656,"['home-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+657,"['home-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+658,"['is_regular-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+659,"['is_regular-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+660,"['is_regular-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+661,"['is_regular-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+662,"['is_regular-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+663,"['is_regular-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+664,"['is_regular-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+665,"['is_regular-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+666,"['is_regular-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+667,"['opponen-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+668,"['opponen-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+669,"['opponen-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+670,"['opponen-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+671,"['opponen-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+672,"['opponen-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+673,"['opponen-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+674,"['opponen-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+675,"['team_name-False', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+676,"['team_name-False', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+677,"['team_name-False', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+678,"['team_name-False', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+679,"['team_name-False', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+680,"['team_name-False', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+681,"['team_name-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+682,"['team_name-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+683,"['team_name-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+684,"['team_name-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+685,"['team_name-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+686,"['team_name-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+687,"['FT-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+688,"['FT-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+689,"['FT-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+690,"['FT-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+691,"['FT-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+692,"['FTA-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+693,"['FTA-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+694,"['FTA-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+695,"['FTA-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+696,"['FT%-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+697,"['FT%-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+698,"['FT%-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+699,"['ORB-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+700,"['ORB-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+701,"['TRB-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+702,"['3P-True', 'STL-True', 'BLK-True']",['WINorLOSS-True'],1.0,1.0
+703,"['3P-True', 'STL-True', 'TOV-True']",['WINorLOSS-True'],1.0,1.0
+704,"['3P-True', 'STL-True', 'PF-True']",['WINorLOSS-True'],1.0,1.0
+705,"['3P-True', 'STL-True', 'Opp.FG-True']",['WINorLOSS-True'],1.0,1.0
+706,"['3P-True', 'STL-True', 'Opp.FGA-True']",['WINorLOSS-True'],1.0,1.0
+707,"['3P-True', 'STL-True', 'Opp.FG%-True']",['WINorLOSS-True'],1.0,1.0
+708,"['3P-True', 'STL-True', 'Opp.3P-True']",['WINorLOSS-True'],1.0,1.0
+709,"['3P-True', 'STL-True', 'Opp.3PA-True']",['WINorLOSS-True'],1.0,1.0
+710,"['3P-True', 'STL-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+711,"['3P-True', 'STL-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+712,"['3P-True', 'STL-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+713,"['3P-True', 'STL-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+714,"['3P-True', 'STL-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+715,"['3P-True', 'STL-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+716,"['3P-True', 'STL-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+717,"['3P-True', 'STL-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+718,"['3P-True', 'STL-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+719,"['3P-True', 'STL-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+720,"['3P-True', 'STL-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+721,"['3P-True', 'STL-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+722,"['3P-True', 'STL-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+723,"['3P-True', 'STL-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+724,"['3P-True', 'STL-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+725,"['3P-True', 'STL-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+726,"['3P-True', 'STL-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+727,"['3P-True', 'STL-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+728,"['3P-True', 'STL-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+729,"['3P-True', 'STL-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+730,"['3P-True', 'STL-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+731,"['3P-True', 'STL-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+732,"['3P-True', 'STL-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+733,"['3P-True', 'STL-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+734,"['3P-True', 'STL-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+735,"['3P-True', 'STL-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+736,"['3P-True', 'STL-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+737,"['3P-True', 'BLK-True', 'TOV-True']",['WINorLOSS-True'],1.0,1.0
+738,"['3P-True', 'BLK-True', 'PF-True']",['WINorLOSS-True'],1.0,1.0
+739,"['3P-True', 'BLK-True', 'Opp.FG-True']",['WINorLOSS-True'],1.0,1.0
+740,"['3P-True', 'BLK-True', 'Opp.FGA-True']",['WINorLOSS-True'],1.0,1.0
+741,"['3P-True', 'BLK-True', 'Opp.FG%-True']",['WINorLOSS-True'],1.0,1.0
+742,"['3P-True', 'BLK-True', 'Opp.3P-True']",['WINorLOSS-True'],1.0,1.0
+743,"['3P-True', 'BLK-True', 'Opp.3PA-True']",['WINorLOSS-True'],1.0,1.0
+744,"['3P-True', 'BLK-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+745,"['3P-True', 'BLK-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+746,"['3P-True', 'BLK-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+747,"['3P-True', 'BLK-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+748,"['3P-True', 'BLK-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+749,"['3P-True', 'BLK-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+750,"['3P-True', 'BLK-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+751,"['3P-True', 'BLK-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+752,"['3P-True', 'BLK-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+753,"['3P-True', 'BLK-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+754,"['3P-True', 'BLK-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+755,"['3P-True', 'BLK-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+756,"['3P-True', 'BLK-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+757,"['3P-True', 'BLK-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+758,"['3P-True', 'BLK-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+759,"['3P-True', 'BLK-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+760,"['3P-True', 'BLK-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+761,"['3P-True', 'BLK-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+762,"['3P-True', 'BLK-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+763,"['3P-True', 'BLK-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+764,"['3P-True', 'BLK-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+765,"['3P-True', 'BLK-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+766,"['3P-True', 'BLK-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+767,"['3P-True', 'BLK-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+768,"['3P-True', 'BLK-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+769,"['3P-True', 'BLK-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+770,"['3P-True', 'BLK-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+771,"['3P-True', 'TOV-True', 'PF-True']",['WINorLOSS-True'],1.0,1.0
+772,"['3P-True', 'TOV-True', 'Opp.FG-True']",['WINorLOSS-True'],1.0,1.0
+773,"['3P-True', 'TOV-True', 'Opp.FGA-True']",['WINorLOSS-True'],1.0,1.0
+774,"['3P-True', 'TOV-True', 'Opp.FG%-True']",['WINorLOSS-True'],1.0,1.0
+775,"['3P-True', 'TOV-True', 'Opp.3P-True']",['WINorLOSS-True'],1.0,1.0
+776,"['3P-True', 'TOV-True', 'Opp.3PA-True']",['WINorLOSS-True'],1.0,1.0
+777,"['3P-True', 'TOV-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+778,"['3P-True', 'TOV-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+779,"['3P-True', 'TOV-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+780,"['3P-True', 'TOV-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+781,"['3P-True', 'TOV-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+782,"['3P-True', 'TOV-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+783,"['3P-True', 'TOV-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+784,"['3P-True', 'TOV-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+785,"['3P-True', 'TOV-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+786,"['3P-True', 'TOV-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+787,"['3P-True', 'TOV-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+788,"['3P-True', 'TOV-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+789,"['3P-True', 'TOV-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+790,"['3P-True', 'TOV-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+791,"['3P-True', 'TOV-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+792,"['3P-True', 'TOV-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+793,"['3P-True', 'TOV-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+794,"['3P-True', 'TOV-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+795,"['3P-True', 'TOV-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+796,"['3P-True', 'TOV-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+797,"['3P-True', 'TOV-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+798,"['3P-True', 'TOV-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+799,"['3P-True', 'TOV-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+800,"['3P-True', 'TOV-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+801,"['3P-True', 'TOV-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+802,"['3P-True', 'TOV-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+803,"['3P-True', 'TOV-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+804,"['3P-True', 'PF-True', 'Opp.FG-True']",['WINorLOSS-True'],1.0,1.0
+805,"['3P-True', 'PF-True', 'Opp.FGA-True']",['WINorLOSS-True'],1.0,1.0
+806,"['3P-True', 'PF-True', 'Opp.FG%-True']",['WINorLOSS-True'],1.0,1.0
+807,"['3P-True', 'PF-True', 'Opp.3P-True']",['WINorLOSS-True'],1.0,1.0
+808,"['3P-True', 'PF-True', 'Opp.3PA-True']",['WINorLOSS-True'],1.0,1.0
+809,"['3P-True', 'PF-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+810,"['3P-True', 'PF-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+811,"['3P-True', 'PF-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+812,"['3P-True', 'PF-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+813,"['3P-True', 'PF-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+814,"['3P-True', 'PF-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+815,"['3P-True', 'PF-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+816,"['3P-True', 'PF-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+817,"['3P-True', 'PF-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+818,"['3P-True', 'PF-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+819,"['3P-True', 'PF-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+820,"['3P-True', 'PF-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+821,"['3P-True', 'PF-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+822,"['3P-True', 'PF-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+823,"['3P-True', 'PF-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+824,"['3P-True', 'PF-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+825,"['3P-True', 'PF-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+826,"['3P-True', 'PF-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+827,"['3P-True', 'PF-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+828,"['3P-True', 'PF-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+829,"['3P-True', 'PF-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+830,"['3P-True', 'PF-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+831,"['3P-True', 'PF-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+832,"['3P-True', 'PF-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+833,"['3P-True', 'PF-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+834,"['3P-True', 'PF-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+835,"['3P-True', 'PF-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+836,"['3P-True', 'Opp.FG-True', 'Opp.FGA-True']",['WINorLOSS-True'],1.0,1.0
+837,"['3P-True', 'Opp.FG-True', 'Opp.FG%-True']",['WINorLOSS-True'],1.0,1.0
+838,"['3P-True', 'Opp.FG-True', 'Opp.3P-True']",['WINorLOSS-True'],1.0,1.0
+839,"['3P-True', 'Opp.FG-True', 'Opp.3PA-True']",['WINorLOSS-True'],1.0,1.0
+840,"['3P-True', 'Opp.FG-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+841,"['3P-True', 'Opp.FG-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+842,"['3P-True', 'Opp.FG-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+843,"['3P-True', 'Opp.FG-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+844,"['3P-True', 'Opp.FG-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+845,"['3P-True', 'Opp.FG-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+846,"['3P-True', 'Opp.FG-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+847,"['3P-True', 'Opp.FG-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+848,"['3P-True', 'Opp.FG-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+849,"['3P-True', 'Opp.FG-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+850,"['3P-True', 'Opp.FG-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+851,"['3P-True', 'Opp.FG-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+852,"['3P-True', 'Opp.FG-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+853,"['3P-True', 'Opp.FG-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+854,"['3P-True', 'Opp.FG-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+855,"['3P-True', 'Opp.FG-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+856,"['3P-True', 'Opp.FG-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+857,"['3P-True', 'Opp.FG-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+858,"['3P-True', 'Opp.FG-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+859,"['3P-True', 'Opp.FG-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+860,"['3P-True', 'Opp.FG-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+861,"['3P-True', 'Opp.FG-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+862,"['3P-True', 'Opp.FG-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+863,"['3P-True', 'Opp.FG-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+864,"['3P-True', 'Opp.FG-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+865,"['3P-True', 'Opp.FG-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+866,"['3P-True', 'Opp.FG-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+867,"['3P-True', 'Opp.FGA-True', 'Opp.FG%-True']",['WINorLOSS-True'],1.0,1.0
+868,"['3P-True', 'Opp.FGA-True', 'Opp.3P-True']",['WINorLOSS-True'],1.0,1.0
+869,"['3P-True', 'Opp.FGA-True', 'Opp.3PA-True']",['WINorLOSS-True'],1.0,1.0
+870,"['3P-True', 'Opp.FGA-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+871,"['3P-True', 'Opp.FGA-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+872,"['3P-True', 'Opp.FGA-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+873,"['3P-True', 'Opp.FGA-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+874,"['3P-True', 'Opp.FGA-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+875,"['3P-True', 'Opp.FGA-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+876,"['3P-True', 'Opp.FGA-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+877,"['3P-True', 'Opp.FGA-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+878,"['3P-True', 'Opp.FGA-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+879,"['3P-True', 'Opp.FGA-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+880,"['3P-True', 'Opp.FGA-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+881,"['3P-True', 'Opp.FGA-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+882,"['3P-True', 'Opp.FGA-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+883,"['3P-True', 'Opp.FGA-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+884,"['3P-True', 'Opp.FGA-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+885,"['3P-True', 'Opp.FGA-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+886,"['3P-True', 'Opp.FGA-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+887,"['3P-True', 'Opp.FGA-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+888,"['3P-True', 'Opp.FGA-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+889,"['3P-True', 'Opp.FGA-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+890,"['3P-True', 'Opp.FGA-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+891,"['3P-True', 'Opp.FGA-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+892,"['3P-True', 'Opp.FGA-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+893,"['3P-True', 'Opp.FGA-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+894,"['3P-True', 'Opp.FGA-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+895,"['3P-True', 'Opp.FGA-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+896,"['3P-True', 'Opp.FGA-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+897,"['3P-True', 'Opp.FG%-True', 'Opp.3P-True']",['WINorLOSS-True'],1.0,1.0
+898,"['3P-True', 'Opp.FG%-True', 'Opp.3PA-True']",['WINorLOSS-True'],1.0,1.0
+899,"['3P-True', 'Opp.FG%-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+900,"['3P-True', 'Opp.FG%-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+901,"['3P-True', 'Opp.FG%-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+902,"['3P-True', 'Opp.FG%-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+903,"['3P-True', 'Opp.FG%-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+904,"['3P-True', 'Opp.FG%-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+905,"['3P-True', 'Opp.FG%-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+906,"['3P-True', 'Opp.FG%-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+907,"['3P-True', 'Opp.FG%-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+908,"['3P-True', 'Opp.FG%-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+909,"['3P-True', 'Opp.FG%-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+910,"['3P-True', 'Opp.FG%-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+911,"['3P-True', 'Opp.FG%-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+912,"['3P-True', 'Opp.FG%-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+913,"['3P-True', 'Opp.FG%-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+914,"['3P-True', 'Opp.FG%-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+915,"['3P-True', 'Opp.FG%-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+916,"['3P-True', 'Opp.FG%-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+917,"['3P-True', 'Opp.FG%-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+918,"['3P-True', 'Opp.FG%-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+919,"['3P-True', 'Opp.FG%-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+920,"['3P-True', 'Opp.FG%-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+921,"['3P-True', 'Opp.FG%-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+922,"['3P-True', 'Opp.FG%-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+923,"['3P-True', 'Opp.FG%-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+924,"['3P-True', 'Opp.FG%-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+925,"['3P-True', 'Opp.FG%-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+926,"['3P-True', 'Opp.3P-True', 'Opp.3PA-True']",['WINorLOSS-True'],1.0,1.0
+927,"['3P-True', 'Opp.3P-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+928,"['3P-True', 'Opp.3P-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+929,"['3P-True', 'Opp.3P-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+930,"['3P-True', 'Opp.3P-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+931,"['3P-True', 'Opp.3P-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+932,"['3P-True', 'Opp.3P-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+933,"['3P-True', 'Opp.3P-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+934,"['3P-True', 'Opp.3P-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+935,"['3P-True', 'Opp.3P-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+936,"['3P-True', 'Opp.3P-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+937,"['3P-True', 'Opp.3P-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+938,"['3P-True', 'Opp.3P-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+939,"['3P-True', 'Opp.3P-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+940,"['3P-True', 'Opp.3P-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+941,"['3P-True', 'Opp.3P-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+942,"['3P-True', 'Opp.3P-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+943,"['3P-True', 'Opp.3P-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+944,"['3P-True', 'Opp.3P-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+945,"['3P-True', 'Opp.3P-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+946,"['3P-True', 'Opp.3P-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+947,"['3P-True', 'Opp.3P-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+948,"['3P-True', 'Opp.3P-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+949,"['3P-True', 'Opp.3P-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+950,"['3P-True', 'Opp.3P-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+951,"['3P-True', 'Opp.3P-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+952,"['3P-True', 'Opp.3P-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+953,"['3P-True', 'Opp.3P-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+954,"['3P-True', 'Opp.3PA-True', 'Opp.3P%-True']",['WINorLOSS-True'],1.0,1.0
+955,"['3P-True', 'Opp.3PA-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+956,"['3P-True', 'Opp.3PA-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+957,"['3P-True', 'Opp.3PA-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+958,"['3P-True', 'Opp.3PA-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+959,"['3P-True', 'Opp.3PA-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+960,"['3P-True', 'Opp.3PA-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+961,"['3P-True', 'Opp.3PA-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+962,"['3P-True', 'Opp.3PA-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+963,"['3P-True', 'Opp.3PA-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+964,"['3P-True', 'Opp.3PA-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+965,"['3P-True', 'Opp.3PA-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+966,"['3P-True', 'Opp.3PA-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+967,"['3P-True', 'Opp.3PA-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+968,"['3P-True', 'Opp.3PA-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+969,"['3P-True', 'Opp.3PA-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+970,"['3P-True', 'Opp.3PA-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+971,"['3P-True', 'Opp.3PA-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+972,"['3P-True', 'Opp.3PA-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+973,"['3P-True', 'Opp.3PA-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
+974,"['3P-True', 'Opp.3PA-True', 'team_name-True']",['WINorLOSS-True'],1.0,1.0
+975,"['3P-True', 'Opp.3PA-True', 'FT-True']",['WINorLOSS-True'],1.0,1.0
+976,"['3P-True', 'Opp.3PA-True', 'FTA-True']",['WINorLOSS-True'],1.0,1.0
+977,"['3P-True', 'Opp.3PA-True', 'FT%-True']",['WINorLOSS-True'],1.0,1.0
+978,"['3P-True', 'Opp.3PA-True', 'ORB-True']",['WINorLOSS-True'],1.0,1.0
+979,"['3P-True', 'Opp.3PA-True', 'TRB-True']",['WINorLOSS-True'],1.0,1.0
+980,"['3P-True', 'Opp.3PA-True', 'AST-True']",['WINorLOSS-True'],1.0,1.0
+981,"['3P-True', 'Opp.3P%-True', '3PA-True']",['WINorLOSS-True'],1.0,1.0
+982,"['3P-True', 'Opp.3P%-True', 'Opp.FT-True']",['WINorLOSS-True'],1.0,1.0
+983,"['3P-True', 'Opp.3P%-True', 'Opp.FTA-True']",['WINorLOSS-True'],1.0,1.0
+984,"['3P-True', 'Opp.3P%-True', 'Opp.FT%-True']",['WINorLOSS-True'],1.0,1.0
+985,"['3P-True', 'Opp.3P%-True', 'Opp.ORB-True']",['WINorLOSS-True'],1.0,1.0
+986,"['3P-True', 'Opp.3P%-True', 'Opp.TRB-True']",['WINorLOSS-True'],1.0,1.0
+987,"['3P-True', 'Opp.3P%-True', 'Opp.AST-True']",['WINorLOSS-True'],1.0,1.0
+988,"['3P-True', 'Opp.3P%-True', 'Opp.STL-True']",['WINorLOSS-True'],1.0,1.0
+989,"['3P-True', 'Opp.3P%-True', 'Opp.BLK-True']",['WINorLOSS-True'],1.0,1.0
+990,"['3P-True', 'Opp.3P%-True', 'Opp.TOV-True']",['WINorLOSS-True'],1.0,1.0
+991,"['3P-True', 'Opp.3P%-True', 'Opp.PF-True']",['WINorLOSS-True'],1.0,1.0
+992,"['3P-True', 'Opp.3P%-True', '3P%-True']",['WINorLOSS-True'],1.0,1.0
+993,"['3P-True', 'Opp.3P%-True', 'DRB-True']",['WINorLOSS-True'],1.0,1.0
+994,"['3P-True', 'Opp.3P%-True', 'Opp.DRB-True']",['WINorLOSS-True'],1.0,1.0
+995,"['3P-True', 'Opp.3P%-True', 'datetime-True']",['WINorLOSS-True'],1.0,1.0
+996,"['3P-True', 'Opp.3P%-True', 'home-True']",['WINorLOSS-True'],1.0,1.0
+997,"['3P-True', 'Opp.3P%-True', 'is_regular-True']",['WINorLOSS-True'],1.0,1.0
+998,"['3P-True', 'Opp.3P%-True', 'opponen-True']",['WINorLOSS-True'],1.0,1.0
+999,"['3P-True', 'Opp.3P%-True', 'team_name-False']",['WINorLOSS-True'],1.0,1.0
