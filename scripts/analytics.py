@@ -84,7 +84,7 @@ def perform_analytics(
 
     if save_results:
         # Save DataFrames to CSV if they are not None
-        if False and truth_table_df is not None:
+        if truth_table_df is not None:
             truth_table_df.to_csv(
                 "./data/cluster_results/cluster.stats.results-truth-table.csv"
             )
@@ -101,9 +101,9 @@ def perform_analytics(
 if __name__ == "__main__":
     perform_analytics(
         save_results=True,
-        generate_biplot=False,
-        get_column_avg=False,
-        calculate_cluster_dist=False,
-        generate_truth_tables=False,
-        run_apriori_algo=True,
+        generate_biplot=True,
+        get_column_avg=True,
+        calculate_cluster_dist=True,
+        generate_truth_tables=True,
+        run_apriori_algo=False,
     )  # Default flags can be changed as needed
