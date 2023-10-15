@@ -14,7 +14,7 @@ def perform_k_means(df: pd.DataFrame) -> tuple:
     Returns:
         tuple: A tuple containing the KMeans object and the labels for each point.
     """
-    kmeans = KMeans(n_clusters=N_CLUSTERS, init='random')
+    kmeans = KMeans(n_clusters=N_CLUSTERS, init='random', n_init='auto',)
     y_km = kmeans.fit_predict(df)
 
     return kmeans, y_km

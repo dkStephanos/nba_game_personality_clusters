@@ -11,7 +11,7 @@ def generate_elbow_plot(dataset, cluster_range=31, save=True, show=True):
         km = KMeans(
             n_clusters=i,
             init='random',
-            n_init=10,
+            n_init='auto',
             max_iter=300,
             tol=1e-04,
             random_state=0,
@@ -38,7 +38,7 @@ def generate_silhouette_coef_plot(dataset, cluster_range=31, save=True, show=Tru
     silhouette_coefficients = []
 
     for k in range(2, cluster_range):
-        kmeans = KMeans(n_clusters=k)
+        kmeans = KMeans(n_clusters=k, n_init='auto',)
         kmeans.fit(dataset)
         score = silhouette_score(dataset, kmeans.labels_)
         silhouette_coefficients.append(score)
