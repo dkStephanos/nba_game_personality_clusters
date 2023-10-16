@@ -39,7 +39,7 @@ def generate_quantile_truth_table(stats_df, save_results=False):
                             if col == q_col:
                                 if col + str(q_index) not in result_dict:
                                     result_dict[col + str(q_index)] = []
-                                result_dict[col + str(q_index)].append(val > q_val)
+                                result_dict[col + str(q_index)].append(1 if val > q_val else 0)
                 else:
                     if col not in result_dict:
                         result_dict[col] = []
