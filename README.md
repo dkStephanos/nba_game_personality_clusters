@@ -9,10 +9,10 @@ The preprocessing script reads the raw data, filters for Home games to avoid dup
 ### Usage
 
 ```python
-from preprocess import normalize_and_save
+from preprocess import perform_preprocessing
 
-# Specify the save filepath if different from the default
-normalize_and_save(save_filepath='./data/box_scores/nba.games.stats-normalized.csv')
+# Specify the save filepath if different from the default, normalization is optional
+perform_preprocessing(save_filepath='./data/box_scores/nba.games.stats-normalized.csv', save_results=True, normalize_results=True)
 ```
 
 ## 2. Clustering
