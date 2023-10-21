@@ -68,37 +68,46 @@ def get_cluster_distribution(df: pd.DataFrame) -> pd.Series:
     """
     return df['cluster'].value_counts()
 
-def get_samples_closest_to_centroid(X: pd.DataFrame, cluster_centers: list, y_kmeans, num_samples: int = 4) -> pd.DataFrame:
+
+def get_samples_closest_to_centroid(X: pd.DataFrame, cluster_df: pd.DataFrame, cluster_centers: list, y_kmeans, num_samples: int = 4) -> pd.DataFrame:
     """
     Finds the samples closest to the centroid of each cluster.
     
     Args:
-        df (pd.DataFrame): The DataFrame containing the data points.
-        stats_df (pd.DataFrame): The DataFrame containing the statistics.
-        kmeans (KMeans): The KMeans object used for clustering.
+        X (pd.DataFrame): The DataFrame containing the data points.
+        cluster_df (pd.DataFrame): The DataFrame containing the original data with all necessary information.
+        cluster_centers (list): The list containing the centroids of the clusters.
+        y_kmeans (np.ndarray): The array containing the cluster of each data point.
         num_samples (int, optional): The number of samples to return for each cluster. Defaults to 4.
     
     Returns:
         pd.DataFrame: A DataFrame containing the samples closest to the centroid.
-    """    
+    """
     closest_samples = []
-    for i, center in enumerate(cluster_centers):
-        # Calculate the distance from each point in the cluster to its centroid
-        dists = np.linalg.norm(X[y_kmeans == i] - center, axis=1)
 
-        # Get the indices of the n_samples closest points
+    for i, center in enumerate(cluster_centers):
+        # Filter to only the points in the current cluster
+        cluster_points = X[y_kmeans == i]
+
+        # Calculate the distance from each point in the cluster to its centroid
+        dists = np.linalg.norm(cluster_points - center, axis=1)
+
+        # Get the indices of the closest points in the filtered view
         idx_closest = np.argsort(dists)[:num_samples]
 
+        # Get the indices of the closest points in terms of the original DataFrame
+        original_indices = cluster_points.iloc[idx_closest].index
+
         # Extract the rows corresponding to the closest points and add a 'cluster' column
-        cluster_samples = X[y_kmeans == i].iloc[idx_closest].copy()
-        cluster_samples['cluster'] = i
-        
+        cluster_samples = cluster_df.loc[original_indices].copy()
+        cluster_samples['cluster'] = i  # Adding which cluster these samples belong to
         closest_samples.append(cluster_samples)
 
     # Concatenate the samples from all clusters into a single dataframe
     closest_samples_df = pd.concat(closest_samples, axis=0)
-    
+
     return closest_samples_df
+
 
 def get_column_avgs_per_cluster(df: pd.DataFrame) -> pd.DataFrame:
     """

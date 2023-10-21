@@ -32,12 +32,10 @@ def perform_clustering(
     stats_df = pd.read_csv("./data/src/nba.games.stats-normalized.csv")
 
     # Reduce to features only
-    data_df = stats_df.iloc[:, 5:].drop(columns=['PTS', '+/-', 'Opp.PTS', 'Opp.+/-'])
+    data_df = stats_df.iloc[:, 5:].drop(columns=['+/-', 'Opp.+/-'])
 
     print("Selecting features -----------\n\n")
-    data_df = perform_feature_selection(
-        data_df, C=0.2
-    )
+    data_df = perform_feature_selection(data_df)
     X = project_cols(stats_df, data_df.columns)
 
     if generate_cluster_plots:
@@ -60,7 +58,7 @@ def perform_clustering(
     if get_closest_samples and kmeans is not None:
         print("Getting the samples closest to the centroids...")
         closest_samples_df = get_samples_closest_to_centroid(
-            X, kmeans.cluster_centers_, y_km, num_samples=1000
+            X, cluster_df, kmeans.cluster_centers_, y_km, num_samples=12
         )
 
     if save_results:
@@ -83,5 +81,5 @@ def perform_clustering(
 
 if __name__ == "__main__":
     perform_clustering(
-        save_results=True, generate_cluster_plots=True, run_kmeans=True
+        save_results=True, generate_cluster_plots=False, run_kmeans=True
     )  # Default flags can be changed as needed
