@@ -60,20 +60,18 @@ def perform_analytics(
     if generate_truth_tables:
         print("Generating cluster truth tables...")
         truth_table_df = generate_quantile_truth_table(
-            data_df, save_results=save_results
+            df, save_results=save_results
         )
+
         truth_table_df.to_csv(
             "./data/cluster_results/cluster.stats.results-truth-table.csv"
         )
     if run_fpgrowth_algo:
         if truth_table_df is None:  # Ensure truth_table_df is not None
-            truth_table_df = pd.read_csv("./data/cluster_results/cluster.stats.results-truth-table.csv", index_col=0)
+            truth_table_df = pd.read_csv("./data/cluster_results/cluster.stats.results-truth-table.csv")
             
-        truth_table_df.drop(
-            truth_table_df.columns[list(range(0, 5))], axis=1, inplace=True
-        )
         for cluster in range(0, N_CLUSTERS):
-            print(f"Running apriori algorithm for cluster {cluster}...")
+            print(f"Running fpgrowth algorithm for cluster {cluster}...")
             run_fpgrowth(
                 cluster,
                 truth_table_df.loc[truth_table_df["cluster"] == cluster],
@@ -88,22 +86,22 @@ def perform_analytics(
         # Save DataFrames to CSV if they are not None
         if truth_table_df is not None:
             truth_table_df.to_csv(
-                "./data/cluster_results/cluster.stats.results-truth-table.csv"
+                "./data/cluster_results/cluster.stats.results-truth-table.csv", index=False
             )
         if column_avgs_df is not None:
             column_avgs_df.to_csv(
-                "./data/cluster_results/cluster.stats.results-column-avgs.csv"
+                "./data/cluster_results/cluster.stats.results-column-avgs.csv", index=False
             )
         if cluster_dist_df is not None:
             cluster_dist_df.to_csv( 
-                "./data/cluster_results/cluster.stats.results-distribution.csv"
+                "./data/cluster_results/cluster.stats.results-distribution.csv", index=False
             )
 
 
 if __name__ == "__main__":
     perform_analytics(
         save_results=True,
-        generate_biplot=False,
+        generate_biplot=True,
         get_column_avg=True,
         calculate_cluster_dist=True,
         generate_truth_tables=True,
