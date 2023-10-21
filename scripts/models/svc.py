@@ -9,7 +9,7 @@ import pandas as pd
 def perform_feature_selection(
     stats_df: pd.DataFrame, 
     cluster_df: Optional[pd.DataFrame] = None, 
-    C: float = 0.001
+    C: float = 0.2
 ) -> pd.DataFrame:
     """
     Performs feature selection using a Linear Support Vector Classification (LinearSVC) model
@@ -48,5 +48,4 @@ def perform_feature_selection(
         X_new = X_new[X_new.index.isin(cluster_df.index)]
         X_new['cluster'] = cluster_df['cluster']
     
-    print(X_new)
     return X_new
