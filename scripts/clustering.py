@@ -28,8 +28,8 @@ def perform_clustering(
     """
 
     print("Reading in data -----------\n\n")
-    cluster_df = pd.read_csv("./data/src/nba.games.stats-raw.csv", index_col=0)
-    stats_df = pd.read_csv("./data/src/nba.games.stats-normalized.csv", index_col=0)
+    cluster_df = pd.read_csv("./data/src/nba.games.stats-raw.csv")
+    stats_df = pd.read_csv("./data/src/nba.games.stats-normalized.csv")
 
     # Reduce to features only
     data_df = stats_df.iloc[:, 5:].drop(columns=['PTS', '+/-', 'Opp.PTS', 'Opp.+/-'])
