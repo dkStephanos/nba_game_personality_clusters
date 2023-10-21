@@ -39,13 +39,15 @@ def perform_feature_selection(
     
     # Select features using the fitted model
     model = SelectFromModel(lsvc, prefit=True)
-    X_new = model.transform(X)
-    X_new = X.iloc[:, model.get_support(indices=True)].copy()
+    X_new = X.loc[:, model.get_support()]
     X_new.loc[:, "win"] = y
     
     # If a clustering result is provided, align the feature selection result with it
     if cluster_df is not None:
         X_new = X_new[X_new.index.isin(cluster_df.index)]
         X_new['cluster'] = cluster_df['cluster']
+    elif 'cluster' in list(stats_df.columns):
+        # Fall back to original cluster assignement if there
+        X_new.loc[:, 'cluster'] = stats_df['cluster']
     
     return X_new
