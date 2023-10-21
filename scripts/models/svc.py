@@ -2,6 +2,7 @@ from sklearn.svm import LinearSVC
 from sklearn.feature_selection import SelectFromModel
 from utils.general import project_cols
 from utils.constants import NUMERIC_COLS
+from utils.transform import normalize_df
 from typing import Optional
 import pandas as pd
 
@@ -23,10 +24,13 @@ def perform_feature_selection(
     Returns:
         pd.DataFrame: A dataframe with selected features, and optionally with cluster labels.
     """
+    
+    # Normalize input df
+    stats_df = normalize_df(stats_df)
 
     # Project the data to the set of numeric columns
     X = project_cols(stats_df, NUMERIC_COLS)
-
+    
     # Get the target variable
     y = stats_df["win"]
     
