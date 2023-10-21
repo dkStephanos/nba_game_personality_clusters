@@ -36,10 +36,11 @@ def perform_analytics(
     
     # Reduce to features only
     print("Performing feature selection -----------\n\n")
+    metadata_df = stats_df.iloc[:, :5]
     data_df = stats_df.iloc[:, 5:].drop(
-        columns=["PTS", "+/-", "Opp.PTS", "Opp.+/-"]
+        columns=["+/-", "Opp.+/-"]
     )
-    df = perform_feature_selection(data_df, cluster_df)
+    df = perform_feature_selection(data_df)
 
     if generate_biplot:
         print("Generating PCA Biplot.... ")
@@ -62,20 +63,18 @@ def perform_analytics(
         truth_table_df = generate_quantile_truth_table(
             df, save_results=save_results
         )
+        truth_table_df = pd.concat([metadata_df, truth_table_df], axis=1)
 
-        truth_table_df.to_csv(
-            "./data/cluster_results/cluster.stats.results-truth-table.csv"
-        )
     if run_fpgrowth_algo:
         if truth_table_df is None:  # Ensure truth_table_df is not None
             truth_table_df = pd.read_csv("./data/cluster_results/cluster.stats.results-truth-table.csv")
-            
+
         for cluster in range(0, N_CLUSTERS):
             print(f"Running fpgrowth algorithm for cluster {cluster}...")
             run_fpgrowth(
                 cluster,
                 truth_table_df.loc[truth_table_df["cluster"] == cluster],
-                min_support=0.35,
+                min_support=0.1,
                 min_confidence=0.1,
                 max_len=5,
                 verbose=True,
@@ -101,9 +100,9 @@ def perform_analytics(
 if __name__ == "__main__":
     perform_analytics(
         save_results=True,
-        generate_biplot=True,
-        get_column_avg=True,
-        calculate_cluster_dist=True,
-        generate_truth_tables=True,
+        generate_biplot=False,
+        get_column_avg=False,
+        calculate_cluster_dist=False,
+        generate_truth_tables=False,
         run_fpgrowth_algo=True,
     )  # Default flags can be changed as needed
