@@ -3,3 +3,4 @@ pandas
 sklearn
 matplotlib
 efficient_apriori
+mlxtend
