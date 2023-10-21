@@ -54,24 +54,38 @@ def get_column_quantiles(
 
 
 def generate_quantile_truth_table(stats_df, save_results=False):
-    quantiles_df = get_column_quantiles(stats_df, save_results=save_results)
+    quantiles = [0.1, 0.3, 0.5, 0.7, 0.9]
+    
+    # Generate quantiles DataFrame
+    quantiles_df = get_column_quantiles(stats_df, quantiles=quantiles, save_results=save_results)
 
-    result_dict = {}
-    for cluster in range(0, N_CLUSTERS):
-        for index, row in stats_df.loc[stats_df["cluster"] == cluster].iterrows():
-            for col, val in row.items():
-                if col in NUMERIC_COLS:
-                    for q_index, q_row in quantiles_df.loc[
-                        quantiles_df["cluster"] == cluster
-                    ].iterrows():
-                        for q_col, q_val in q_row.items():
-                            if col == q_col:
-                                if col + str(q_index) not in result_dict:
-                                    result_dict[col + str(q_index)] = []
-                                result_dict[col + str(q_index)].append(val > q_val)
-                else:
-                    if col not in result_dict:
-                        result_dict[col] = []
-                    result_dict[col].append(val)
+    # Prepare the list of statistic columns
+    statistics = [col for col in stats_df.columns if col in NUMERIC_COLS]
 
-    return pd.DataFrame.from_dict(result_dict)
+    # Create a new DataFrame to store the truth values, including the 'game_id' and 'cluster' columns
+    truth_table_df = pd.DataFrame(index=stats_df.index)
+    # TO DO -- include game_id in cluster results so we can append here
+    # truth_table_df['game_id'] = stats_df['game_id']  # or whatever your game identifier column is named
+    truth_table_df['cluster'] = stats_df['cluster']
+
+    # Iterate over each quantile
+    for percentile in quantiles:
+        # Iterate over each statistic
+        for stat in statistics:
+            column_name = f"{stat}_{percentile}"
+            
+            # Direct comparison for each row using vectorized operations
+            truth_table_df[column_name] = False  # Initialize with default value
+            for cluster in stats_df['cluster'].unique():
+                quantile_value = quantiles_df.loc[(quantiles_df['cluster'] == cluster) & 
+                                                  (quantiles_df['quantile'] == percentile), stat].values
+                if quantile_value.size > 0:  # Check if quantile_value is not empty
+                    mask = (stats_df['cluster'] == cluster) & (stats_df[stat] > quantile_value[0])
+                    truth_table_df.loc[mask, column_name] = True
+
+    return truth_table_df
+
+
+
+
+
