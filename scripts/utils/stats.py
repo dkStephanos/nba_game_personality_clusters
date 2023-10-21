@@ -1,5 +1,5 @@
 import pandas as pd
-from utils.constants import NUMERIC_COLS, N_CLUSTERS
+from utils.constants import NUMERIC_COLS, N_CLUSTERS, QUANTILES
 
 
 def get_column_quantiles(
@@ -54,44 +54,39 @@ def get_column_quantiles(
 
 
 def generate_quantile_truth_table(stats_df, save_results=False):
-    quantiles = [0.1, 0.3, 0.5, 0.7, 0.9]
-
     # Generate quantiles DataFrame
-    quantiles_df = get_column_quantiles(stats_df, quantiles=quantiles, save_results=save_results)
+    quantiles_df = get_column_quantiles(stats_df, quantiles=QUANTILES, save_results=save_results)
 
     # Prepare the list of statistic columns
     statistics = [col for col in stats_df.columns if col in NUMERIC_COLS]
 
-    # Create a new DataFrame to store the truth values, including the 'game_id' and 'cluster' columns
-    truth_table_df = pd.DataFrame()
-    # truth_table_df['game_id'] = stats_df['game_id']  # TODO -- add game_id to cluster df so it will be available here
-    truth_table_df['cluster'] = stats_df['cluster']
+    # Initialize the truth table with game_id and cluster information
+    truth_table_df = stats_df[['cluster']].copy()  # Assuming 'game_id' is the identifier
 
-    # Prepare a dictionary to collect new columns
-    new_columns = {}
-
-    # Iterate over each quantile
-    for percentile in quantiles:
-        # Iterate over each statistic
+    for percentile in QUANTILES:
         for stat in statistics:
+            # The new column for each statistic and percentile
             column_name = f"{stat}_{percentile}"
-            new_columns[column_name] = []
 
-            for cluster in stats_df['cluster'].unique():
-                quantile_value = quantiles_df.loc[(quantiles_df['cluster'] == cluster) & 
-                                                  (quantiles_df['quantile'] == percentile), stat].values
-                if quantile_value.size > 0:  # Check if quantile_value is not empty
-                    mask = (stats_df['cluster'] == cluster) & (stats_df[stat] > quantile_value[0])
-                    new_columns[column_name].extend(mask.tolist())
-                else:
-                    # Appropriate handling if quantile_value is empty, for example, extend with a default value
-                    new_columns[column_name].extend([False] * stats_df.shape[0])
+            # Creating a new column with default False
+            truth_table_df[column_name] = False
 
-    # Convert lists in new_columns to actual DataFrame columns and concatenate
-    new_columns_df = pd.DataFrame(new_columns)
-    truth_table_df = pd.concat([truth_table_df, new_columns_df], axis=1)
+            for index, row in stats_df.iterrows():
+                cluster = row['cluster']
+                game_stat_value = row[stat]
+
+                # Get the quantile value for the current cluster and percentile
+                quantile_value = quantiles_df.loc[
+                    (quantiles_df['cluster'] == cluster) & (quantiles_df['quantile'] == percentile), 
+                    stat
+                ].values
+
+                if quantile_value.size > 0 and game_stat_value > quantile_value[0]:
+                    # If the game_stat_value is greater than the quantile value, update the truth table
+                    truth_table_df.at[index, column_name] = True
 
     return truth_table_df
+
 
 
 
