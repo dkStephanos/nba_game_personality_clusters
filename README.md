@@ -1,3 +1,5 @@
+![image](https://github.com/dkStephanos/nba_game_personality_clusters/assets/29663585/f2febb06-d164-412a-88e0-782715976ffb)
+
 # NBA Game Personality Clusters
 
 In this repository, `nba_game_personality_clusters`, we have scripts organized to execute a three-step analysis pipeline on NBA game statistics. The steps include preprocessing the raw data, clustering the preprocessed data to identify different game "personalities", and performing analytics to derive insights from the clustered data.
