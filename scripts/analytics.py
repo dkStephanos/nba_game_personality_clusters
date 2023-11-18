@@ -73,10 +73,10 @@ def perform_analytics(
             print(f"Running fpgrowth algorithm for cluster {cluster}...")
             run_fpgrowth(
                 cluster,
-                truth_table_df.loc[truth_table_df["cluster"] == cluster],
-                min_support=0.1,
-                min_confidence=0.1,
-                max_len=5,
+                truth_table_df.loc[truth_table_df["cluster"] == cluster].iloc[:2000,:],
+                min_support=0.15,
+                min_confidence=0.15,
+                max_len=6,
                 verbose=True,
                 save_results=save_results,
             )

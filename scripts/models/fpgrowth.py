@@ -2,7 +2,7 @@ import pandas as pd
 from typing import Optional
 from mlxtend.frequent_patterns import fpgrowth
 from mlxtend.frequent_patterns import association_rules
-from pyspark.sql import SparkSession
+from pyspark.sql import SparkSession, Row
 from pyspark.ml.fpm import FPGrowth
 from pyspark.sql.functions import array, array_contains, concat, lit
 
@@ -66,8 +66,14 @@ def run_fpgrowth(
     # Initialize Spark session
     spark = SparkSession.builder.appName("FP-growth").getOrCreate()
     
+    # Convert truth table DataFrame to a list of transactions
+    transactions = df.apply(lambda row: [item for item in row.index if row[item]], axis=1).tolist()
+    
+    # Convert transactions to PySpark Rows
+    data = [Row(items=transaction) for transaction in transactions]
+    
     # Convert Pandas DataFrame to Spark DataFrame
-    sdf = spark.createDataFrame(df)
+    sdf = spark.createDataFrame(data)
     
     # Get the list of columns to select, and enclose them in backticks
     select_columns = [f'`{col}`' for col in sdf.columns[6:]]
