@@ -62,37 +62,27 @@ def run_fpgrowth(
     verbose: bool = False,
     save_results: bool = True,
 ) -> None:
+    # Preprocess DataFrame.
+    df = df.iloc[:, 5:].astype(bool)
     
     # Initialize Spark session
     spark = SparkSession.builder.appName("FP-growth").getOrCreate()
-    
+
     # Convert truth table DataFrame to a list of transactions
-    transactions = df.apply(lambda row: [item for item in row.index if row[item]], axis=1).tolist()
-    
+    transactions = df.apply(lambda row: [f"{item}-{row[item]}" for item in row.index if row[item]], axis=1).tolist()
+
     # Convert transactions to PySpark Rows
     data = [Row(items=transaction) for transaction in transactions]
-    
+        
     # Convert Pandas DataFrame to Spark DataFrame
     sdf = spark.createDataFrame(data)
-    
-    # Get the list of columns to select, and enclose them in backticks
-    select_columns = [f'`{col}`' for col in sdf.columns[6:]]
-
-    # Now use the select expression
-    sdf = sdf.selectExpr(*select_columns)
-     
-    # Iterate through each column from the 7th column onwards, and update each cell
-    for col in sdf.columns:
-        sdf = sdf.withColumn(col, concat(lit(col + "_"), sdf[f'`{col}`'].cast("string")))
-    
-    # Prepare data for FP-growth
-    # Assuming your boolean columns are intended as items in a transaction
-    sdf = sdf.withColumn("items", array(*select_columns))
     
     # Generate frequent itemsets using FP-growth
     fp_growth = FPGrowth(itemsCol="items", minSupport=min_support, minConfidence=min_confidence)
     model = fp_growth.fit(sdf)
     frequent_itemsets = model.freqItemsets
+    
+    print(frequent_itemsets)
     
     # Check if frequent itemsets contain 'win'
     frequent_itemsets_win = frequent_itemsets.filter(array_contains(frequent_itemsets.items, 'win'))
@@ -107,6 +97,8 @@ def run_fpgrowth(
     
     # Generate association rules
     association_rules = model.associationRules
+    
+    print(association_rules)
     
     # Filter rules to get those with 'win'
     rules_win = association_rules.filter(association_rules.consequent.contains('win'))
