@@ -36,8 +36,8 @@ def perform_analytics(
     
     # Reduce to features only
     print("Performing feature selection -----------\n\n")
-    metadata_df = stats_df.iloc[:, :5]
-    data_df = stats_df.iloc[:, 5:].drop(
+    metadata_df = stats_df.iloc[:, :6]
+    data_df = stats_df.iloc[:, 6:].drop(
         columns=["+/-", "Opp.+/-"]
     )
     df = perform_feature_selection(data_df)
@@ -69,17 +69,17 @@ def perform_analytics(
         if truth_table_df is None:  # Ensure truth_table_df is not None
             truth_table_df = pd.read_csv("./data/cluster_results/cluster.stats.results-truth-table.csv")
 
-        for cluster in range(0, N_CLUSTERS):
-            print(f"Running fpgrowth algorithm for cluster {cluster}...")
-            run_fpgrowth(
-                cluster,
-                truth_table_df.loc[truth_table_df["cluster"] == cluster].iloc[:2000,:],
-                min_support=0.15,
-                min_confidence=0.15,
-                max_len=6,
-                verbose=True,
-                save_results=save_results,
-            )
+        # for cluster in range(0, N_CLUSTERS):
+        print(f"Running fpgrowth algorithm for cluster {3}...")
+        run_fpgrowth(
+            3,
+            truth_table_df.loc[truth_table_df["cluster"] == 3],
+            min_support=0.25,
+            min_confidence=0.25,
+            max_len=8,
+            verbose=True,
+            save_results=save_results,
+        )
 
     if save_results:
         # Save DataFrames to CSV if they are not None
