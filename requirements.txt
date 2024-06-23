@@ -1,6 +1,7 @@
 numpy
 pandas
-sklearn
+scikit-learn
 matplotlib
-efficient_apriori
+efficient-apriori
 mlxtend
+pyspark
