@@ -1,2 +1,3 @@
 scripts/clustering/
 __pycache__/
+/data/fpgrowth_results
