@@ -4,6 +4,33 @@
 
 In this repository, `nba_game_personality_clusters`, we have scripts organized to execute a three-step analysis pipeline on NBA game statistics. The steps include preprocessing the raw data, clustering the preprocessed data to identify different game "personalities", and performing analytics to derive insights from the clustered data.
 
+## Table of Contents
+
+- [NBA Game Personality Clusters](#nba-game-personality-clusters)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [1. Preprocessing](#1-preprocessing)
+    - [Usage](#usage)
+      - [Extended Functionality](#extended-functionality)
+  - [2. Clustering](#2-clustering)
+    - [Usage](#usage-1)
+      - [Extended Functionality](#extended-functionality-1)
+  - [3. Analytics](#3-analytics)
+    - [Usage](#usage-2)
+      - [Extended Functionality](#extended-functionality-2)
+  - [Data Sources](#data-sources)
+  - [Contributing](#contributing)
+  - [License](#license)
+  - [Acknowledgements](#acknowledgements)
+
+## Installation
+
+```bash
+git clone https://github.com/dkStephanos/nba_game_personality_clusters
+cd nba_game_personality_clusters
+docker-compose up
+```
+
 ## 1. Preprocessing
 
 The preprocessing script is an integral component of the data pipeline, meticulously preparing raw NBA game data for further analysis. It executes several critical operations, detailed below:
@@ -110,21 +137,24 @@ The analytics script is a composite of several analytical methods, each designed
 - `generate_quantile_truth_table()`: Constructs truth tables based on data quantiles, delivering a granular analysis of the data's distribution across different statistical categories within each cluster.
 - `run_fpgrowth()`: Implements the fpgrowth algorithm for each cluster, uncovering valuable rules and associations that define the interactions of different features within the clustered data.
 
+## Data Sources
 
-## TO-DO
+- Game statistics and data were collected from [Basketball Reference](https://www.basketball-reference.com).
 
-Collection of future/pending work:
-- Evaluate alternatives to fp-growth and apriori for multivariate analysis
-- Explore higher-level composite statistics over raw statistical inputs
-- Generate traditional differntial value contributors based on winning/losing team traits 
-- Filter results based off diferent contexts (Era, Regular/Playoff, etc.)
-- Train multi-class classifier to predict game personality cluster based of partial game stats
+## Contributing
 
+We welcome contributions to enhance this project. To contribute, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Commit your changes and push the branch to your forked repository.
+4. Create a pull request with a detailed description of your changes.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
-
-Data Collection Source:
-- Game statistics and data were collected from [Basketball Reference](https://www.basketball-reference.com).
 
 Scraping Tool:
 - The scraping scripts utilized for data collection originated in this repository (additional updates submitted as PR): [NBA Webscrapes by PatrickH1994](https://github.com/PatrickH1994/nba_webscrapes).
