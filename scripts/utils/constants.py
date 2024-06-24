@@ -2,7 +2,16 @@ N_CLUSTERS = 5
 
 QUANTILES = [0.1, 0.3, 0.5, 0.7, 0.9]
 
-STRING_COLS = ["game_id", "team_name", "datetime", "is_regular", "opponent", "home", "win", "cluster"]
+STRING_COLS = [
+    "game_id",
+    "team_name",
+    "datetime",
+    "is_regular",
+    "opponent",
+    "home",
+    "win",
+    "cluster",
+]
 
 NUMERIC_COLS = [
     "PTS",
@@ -44,4 +53,3 @@ NUMERIC_COLS = [
     "Opp.PF",
     "Opp.+/-",
 ]
-

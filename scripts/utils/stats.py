@@ -1,20 +1,18 @@
 import pandas as pd
-from utils.constants import NUMERIC_COLS, N_CLUSTERS, QUANTILES
+from utils.constants import NUMERIC_COLS, QUANTILES
 
 
 def get_column_quantiles(
     stats_df,
     quantiles=[0.1, 0.3, 0.5, 0.7, 0.9],
     save_results=False,
-    output_path="./data/cluster_results/cluster.stats.results-quantiles.csv",
+    output_path="../data/cluster_results/cluster.stats.results-quantiles.csv",
 ):
     """
     Calculate quantiles for specified numeric columns within clusters in the dataframe.
 
     Parameters:
         stats_df (pd.DataFrame): The input dataframe containing the data.
-        numeric_cols (list): A list of columns for which to calculate quantiles.
-        n_clusters (int): The number of clusters in the dataframe.
         quantiles (list): The quantiles to calculate (default is [0.2, 0.4, 0.6, 0.8]).
         save_results (bool): Whether to save the results to a file (default is False).
         output_path (str): The path to the file where results should be saved if save_results is True.
@@ -55,7 +53,7 @@ def generate_quantile_truth_table(stats_df, save_results=False):
     # Preprocess quantiles_df for efficient lookup
     quantile_lookup = quantiles_df.pivot(index='cluster', columns='quantile', values=statistics)
 
-   # Dictionary to hold new columns
+    # Dictionary to hold new columns
     new_columns = {}
 
     for percentile in QUANTILES:

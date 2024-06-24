@@ -77,7 +77,7 @@ def _save_to_csv(results: Dict[str, List], columns: pd.Index, cluster: int) -> N
             sorted(results[result_type], key=lambda x: x.lift, reverse=True)[:1000],
             columns,
         )
-        file_path = f'./data/apriori_results/stats.results-apriori-rules-cluster-{cluster}-{result_type}.csv'
+        file_path = f'../data/apriori_results/stats.results-apriori-rules-cluster-{cluster}-{result_type}.csv'
         processed_results.to_csv(file_path)
 
 def _process_apriori_results(results: List, columns: pd.Index) -> pd.DataFrame:

@@ -28,7 +28,7 @@ perform_preprocessing()
 
 # For custom save locations, result saving, and data normalization, use:
 perform_preprocessing(
-    save_filepath='./data/your_preferred_folder/',
+    save_filepath='../data/your_preferred_folder/',
     save_results=True, 
     normalize_results=True
 )

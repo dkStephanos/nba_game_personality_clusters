@@ -10,8 +10,8 @@ def generate_elbow_plot(dataset, cluster_range=31, save=True, show=True):
         print(f"starting fit for {i} clusters")
         km = KMeans(
             n_clusters=i,
-            init='random',
-            n_init='auto',
+            init="random",
+            n_init="auto",
             max_iter=300,
             tol=1e-04,
             random_state=0,
@@ -20,13 +20,13 @@ def generate_elbow_plot(dataset, cluster_range=31, save=True, show=True):
         distortions.append(km.inertia_)
 
     plt.style.use("fivethirtyeight")
-    plt.plot(range(1, cluster_range), distortions, marker='o')
+    plt.plot(range(1, cluster_range), distortions, marker="o")
     plt.xticks(range(1, cluster_range))
-    plt.xlabel('Number of clusters')
-    plt.ylabel('Distortion')
+    plt.xlabel("Number of clusters")
+    plt.ylabel("Distortion")
 
     if save:
-        plt.savefig('./data/plots/elbow_plot.png')
+        plt.savefig("../data/plots/elbow_plot.png")
 
     if show:
         plt.show()
@@ -38,7 +38,10 @@ def generate_silhouette_coef_plot(dataset, cluster_range=31, save=True, show=Tru
     silhouette_coefficients = []
 
     for k in range(2, cluster_range):
-        kmeans = KMeans(n_clusters=k, n_init='auto',)
+        kmeans = KMeans(
+            n_clusters=k,
+            n_init="auto",
+        )
         kmeans.fit(dataset)
         score = silhouette_score(dataset, kmeans.labels_)
         silhouette_coefficients.append(score)
@@ -50,14 +53,14 @@ def generate_silhouette_coef_plot(dataset, cluster_range=31, save=True, show=Tru
     plt.ylabel("Silhouette Coefficient")
 
     if save:
-        plt.savefig('./data/plots/silhouette_plot.png')
+        plt.savefig("../data/plots/silhouette_plot.png")
 
     if show:
         plt.show()
 
 
 def generate_biplot(score, y, coeff, labels=None, save=True, show=True):
-    colors = {0: 'r', 1: 'c', 2: 'b', 3: 'y', 4: 'm'}
+    colors = {0: "r", 1: "c", 2: "b", 3: "y", 4: "m"}
     y = list(map(lambda x: colors[x], y))
     xs = score[:, 0]
     ys = score[:, 1]
@@ -66,24 +69,24 @@ def generate_biplot(score, y, coeff, labels=None, save=True, show=True):
     scaley = 1.0 / (ys.max() - ys.min())
     plt.scatter(xs * scalex, ys * scaley, c=y)
     for i in range(n):
-        plt.arrow(0, 0, coeff[i, 0], coeff[i, 1], color='r', alpha=0.5)
+        plt.arrow(0, 0, coeff[i, 0], coeff[i, 1], color="r", alpha=0.5)
         if labels is None:
             plt.text(
                 coeff[i, 0] * 1.15,
                 coeff[i, 1] * 1.15,
                 "Var" + str(i + 1),
-                color='g',
-                ha='center',
-                va='center',
+                color="g",
+                ha="center",
+                va="center",
             )
         else:
             plt.text(
                 coeff[i, 0] * 1.15,
                 coeff[i, 1] * 1.15,
                 labels[i],
-                color='g',
-                ha='center',
-                va='center',
+                color="g",
+                ha="center",
+                va="center",
             )
     plt.xlim(-1, 1)
     plt.ylim(-1, 1)
@@ -92,7 +95,7 @@ def generate_biplot(score, y, coeff, labels=None, save=True, show=True):
     plt.grid()
 
     if save:
-        plt.savefig('./data/plots/pca_biplot.png')
+        plt.savefig("../data/plots/pca_biplot.png")
 
     if show:
         plt.show()

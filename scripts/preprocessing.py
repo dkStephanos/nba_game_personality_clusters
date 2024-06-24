@@ -8,7 +8,7 @@ from utils.transform import (
 
 
 def perform_preprocessing(
-    save_filepath: str = "./data/src/", save_results=True, normalize_results=True
+    save_filepath: str = "../data/src/", save_results=True, normalize_results=True
 ) -> None:
     """
     This function reads raw data, aggregates it, merges it together, extends the data so each row
@@ -20,12 +20,12 @@ def perform_preprocessing(
     """
 
     # Read in raw data
-    games_df = pd.read_csv("data/src/games.csv")
-    boxscore_df = pd.read_csv("data/src/boxscore.csv")
-    
+    games_df = pd.read_csv("../data/src/games.csv")
+    boxscore_df = pd.read_csv("../data/src/boxscore.csv")
+
     # Aggregate the statiscial cols
     aggregated_df = aggregate_boxscores(boxscore_df)
-    
+
     # Merge with the games_df to get the datetime, home_team, away_team, and is_regular values
     game_boxscore_df = pd.merge(
         aggregated_df,
@@ -68,7 +68,7 @@ def perform_preprocessing(
 
     # Reduce to only Home games to avoid duplicated inputs
     final_df = game_boxscore_df[game_boxscore_df.home == "Home"]
-    
+
     if normalize_results:
         normalized_df = normalize_df(final_df)
 
@@ -77,7 +77,10 @@ def perform_preprocessing(
         final_df.to_csv(save_filepath + "nba.games.stats-raw.csv", index=False)
         if normalize_results:
             normalized_df = normalized_df.sort_values(by=["datetime"])
-            normalized_df.to_csv(save_filepath + "nba.games.stats-normalized.csv", index=False)
+            normalized_df.to_csv(
+                save_filepath + "nba.games.stats-normalized.csv", index=False
+            )
+
 
 if __name__ == "__main__":
     # Specify the save filepath if different from the default

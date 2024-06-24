@@ -28,11 +28,11 @@ def perform_clustering(
     """
 
     print("Reading in data -----------\n\n")
-    cluster_df = pd.read_csv("./data/src/nba.games.stats-raw.csv")
-    stats_df = pd.read_csv("./data/src/nba.games.stats-normalized.csv")
+    cluster_df = pd.read_csv("../data/src/nba.games.stats-raw.csv")
+    stats_df = pd.read_csv("../data/src/nba.games.stats-normalized.csv")
 
     # Reduce to features only
-    data_df = stats_df.iloc[:, 5:].drop(columns=['+/-', 'Opp.+/-'])
+    data_df = stats_df.iloc[:, 5:].drop(columns=["+/-", "Opp.+/-"])
 
     print("Selecting features -----------\n\n")
     data_df = perform_feature_selection(data_df)
@@ -65,16 +65,16 @@ def perform_clustering(
         if kmeans is not None:
             # Save DataFrames to CSV if they are not None
             cluster_df.to_csv(
-                "./data/cluster_results/cluster.stats.results-raw.csv", index=False
+                "../data/cluster_results/cluster.stats.results-raw.csv", index=False
             )
         if distortion_df is not None:
             distortion_df.to_csv(
-                "./data/cluster_results/cluster.stats.results-distortion.csv",
+                "../data/cluster_results/cluster.stats.results-distortion.csv",
                 index=False,
             )
         if closest_samples_df is not None:
             closest_samples_df.to_csv(
-                "./data/cluster_results/cluster.stats.results-closest-samples.csv",
+                "../data/cluster_results/cluster.stats.results-closest-samples.csv",
                 index=False,
             )
 

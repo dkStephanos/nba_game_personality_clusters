@@ -3,6 +3,7 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 from utils.constants import STRING_COLS
 
+
 def aggregate_boxscores(boxscore_df):
     # Drop rows for player's without statistics
     mask = boxscore_df.isin(

@@ -3,7 +3,7 @@ from models.pca import create_pca_biplot
 from models.svc import perform_feature_selection
 from models.fpgrowth import run_fpgrowth
 from models.kmeans import get_column_avgs_per_cluster, get_cluster_distribution
-from utils.stats import generate_quantile_truth_table, get_column_quantiles
+from utils.stats import generate_quantile_truth_table
 from utils.constants import N_CLUSTERS
 
 
@@ -28,18 +28,16 @@ def perform_analytics(
     """
 
     print("Reading in data -----------\n\n")
-    stats_df = pd.read_csv("./data/cluster_results/cluster.stats.results-raw.csv")
+    stats_df = pd.read_csv("../data/cluster_results/cluster.stats.results-raw.csv")
     cluster_df = pd.read_csv(
-        "./data/cluster_results/cluster.stats.results-closest-samples.csv"
+        "../data/cluster_results/cluster.stats.results-closest-samples.csv"
     )
     truth_table_df = None  # Initializing DataFrame to None
-    
+
     # Reduce to features only
     print("Performing feature selection -----------\n\n")
     metadata_df = stats_df.iloc[:, :6]
-    data_df = stats_df.iloc[:, 6:].drop(
-        columns=["+/-", "Opp.+/-"]
-    )
+    data_df = stats_df.iloc[:, 6:].drop(columns=["+/-", "Opp.+/-"])
     df = perform_feature_selection(data_df)
 
     if generate_biplot:
@@ -60,22 +58,22 @@ def perform_analytics(
 
     if generate_truth_tables:
         print("Generating cluster truth tables...")
-        truth_table_df = generate_quantile_truth_table(
-            df, save_results=save_results
-        )
+        truth_table_df = generate_quantile_truth_table(df, save_results=save_results)
         truth_table_df = pd.concat([metadata_df, truth_table_df], axis=1)
 
     if run_fpgrowth_algo:
         if truth_table_df is None:  # Ensure truth_table_df is not None
-            truth_table_df = pd.read_csv("./data/cluster_results/cluster.stats.results-truth-table.csv")
+            truth_table_df = pd.read_csv(
+                "../data/cluster_results/cluster.stats.results-truth-table.csv"
+            )
 
         # for cluster in range(0, N_CLUSTERS):
         print(f"Running fpgrowth algorithm for cluster {3}...")
         run_fpgrowth(
             3,
             truth_table_df.loc[truth_table_df["cluster"] == 3],
-            min_support=0.25,
-            min_confidence=0.25,
+            min_support=0.5,
+            min_confidence=0.5,
             max_len=8,
             verbose=True,
             save_results=save_results,
@@ -85,15 +83,18 @@ def perform_analytics(
         # Save DataFrames to CSV if they are not None
         if truth_table_df is not None:
             truth_table_df.to_csv(
-                "./data/cluster_results/cluster.stats.results-truth-table.csv", index=False
+                "../data/cluster_results/cluster.stats.results-truth-table.csv",
+                index=False,
             )
         if column_avgs_df is not None:
             column_avgs_df.to_csv(
-                "./data/cluster_results/cluster.stats.results-column-avgs.csv", index=False
+                "../data/cluster_results/cluster.stats.results-column-avgs.csv",
+                index=False,
             )
         if cluster_dist_df is not None:
-            cluster_dist_df.to_csv( 
-                "./data/cluster_results/cluster.stats.results-distribution.csv", index=False
+            cluster_dist_df.to_csv(
+                "../data/cluster_results/cluster.stats.results-distribution.csv",
+                index=False,
             )
 
 
