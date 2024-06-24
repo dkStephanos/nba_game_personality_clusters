@@ -8,7 +8,6 @@ from models.kmeans import (
     perform_k_means,
 )
 
-
 def perform_clustering(
     save_results: bool = True,
     generate_cluster_plots: bool = True,
@@ -58,7 +57,7 @@ def perform_clustering(
     if get_closest_samples and kmeans is not None:
         print("Getting the samples closest to the centroids...")
         closest_samples_df = get_samples_closest_to_centroid(
-            X, cluster_df, kmeans.cluster_centers_, y_km, num_samples=12
+            cluster_df, kmeans.cluster_centers_, num_samples=150
         )
 
     if save_results:
@@ -77,7 +76,6 @@ def perform_clustering(
                 "../data/cluster_results/cluster.stats.results-closest-samples.csv",
                 index=False,
             )
-
 
 if __name__ == "__main__":
     perform_clustering(
