@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  nba_personality:
+    build:
+      context: ..
+      dockerfile: devops/Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - ../data:/app/data
+      - ../scripts:/app/scripts
+      - ../notebooks:/app/notebooks
+      - ./startup.py:/app/scripts/startup.py
