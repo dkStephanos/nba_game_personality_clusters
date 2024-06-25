@@ -4,7 +4,7 @@ from utils.constants import NUMERIC_COLS, QUANTILES
 
 def get_column_quantiles(
     stats_df,
-    quantiles=[0.1, 0.3, 0.5, 0.7, 0.9],
+    quantiles=QUANTILES,
     save_results=False,
     output_path="../data/cluster_results/cluster.stats.results-quantiles.csv",
 ):
@@ -40,9 +40,9 @@ def get_column_quantiles(
     return quantiles_df
 
 
-def generate_quantile_truth_table(stats_df, save_results=False):
+def generate_quantile_truth_table(stats_df, quantiles=QUANTILES, save_results=False):
     # Generate quantiles DataFrame
-    quantiles_df = get_column_quantiles(stats_df, quantiles=QUANTILES, save_results=save_results)
+    quantiles_df = get_column_quantiles(stats_df, quantiles=quantiles, save_results=save_results)
 
     # Prepare the list of statistic columns
     statistics = [col for col in stats_df.columns if col in NUMERIC_COLS]
