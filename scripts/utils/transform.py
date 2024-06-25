@@ -1,73 +1,48 @@
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
-from utils.constants import STRING_COLS
+from utils.constants import STRING_COLS, STATISTICAL_COLS
 
 
-def aggregate_boxscores(boxscore_df):
-    # Drop rows for player's without statistics
+def aggregate_boxscores(boxscore_df, games_df):
+    # Drop rows for players without statistics
     mask = boxscore_df.isin(
         ["Player Suspended", "Did Not Play", "Did Not Dress", "Not With Team"]
     ).any(axis=1)
     boxscore_df = boxscore_df[~mask]
 
     # Convert statistical cols to numeric dtype
-    for col in [
-        "FG",
-        "FGA",
-        "3P",
-        "3PA",
-        "FT",
-        "FTA",
-        "ORB",
-        "DRB",
-        "TRB",
-        "AST",
-        "STL",
-        "BLK",
-        "TOV",
-        "PF",
-        "PTS",
-        "+/-",
-    ]:
-        boxscore_df[col] = pd.to_numeric(boxscore_df[col])
+    numeric_cols = [
+        "FG", "FGA", "3P", "3PA", "FT", "FTA", "ORB", "DRB", "TRB",
+        "AST", "STL", "BLK", "TOV", "PF", "PTS", "+/-"
+    ]
+    for col in numeric_cols:
+        boxscore_df[col] = pd.to_numeric(boxscore_df[col], errors='coerce')
 
     # Group on game_id and team_name to isolate the players to aggregate
     grouped = boxscore_df.groupby(["game_id", "team_name"])
 
-    # First, aggregate the stats in your main dataframe
-    aggregated_df = (
-        grouped[
-            [
-                "FG",
-                "FGA",
-                "3P",
-                "3PA",
-                "FT",
-                "FTA",
-                "ORB",
-                "DRB",
-                "TRB",
-                "AST",
-                "STL",
-                "BLK",
-                "TOV",
-                "PF",
-                "PTS",
-                "+/-",
-            ]
-        ]
-        .sum()
-        .reset_index()
-    )
+    # Aggregate the stats
+    aggregated_df = grouped[numeric_cols].sum().reset_index()
 
     # Calculate percentages for the team
     aggregated_df["FG%"] = aggregated_df["FG"] / aggregated_df["FGA"]
     aggregated_df["FT%"] = aggregated_df["FT"] / aggregated_df["FTA"]
     aggregated_df["3P%"] = aggregated_df["3P"] / aggregated_df["3PA"]
 
-    return aggregated_df
-
+    # Merge with games_df to preserve additional columns
+    preserved_cols = [
+        "game_id",
+        "home_team",
+        "away_team",
+        "datetime",
+        "is_regular",
+        "season_start_year",
+    ]
+    
+    return pd.merge(
+        aggregated_df, games_df[preserved_cols], on="game_id", how="left"
+    )
 
 def extend_metadata(game_boxscore_df):
     # Create 'opponent' column
@@ -99,27 +74,7 @@ def extend_statistical_data(game_boxscore_df):
     home_df = game_boxscore_df.iloc[1::2].reset_index(drop=True)
 
     # List of columns you want to prefix (excluding 'game_id' and other non-stat columns)
-    cols_to_prefix = [
-        "FG",
-        "FGA",
-        "3P",
-        "3PA",
-        "FT",
-        "FTA",
-        "ORB",
-        "DRB",
-        "TRB",
-        "AST",
-        "STL",
-        "BLK",
-        "TOV",
-        "PF",
-        "PTS",
-        "+/-",
-        "FG%",
-        "FT%",
-        "3P%",
-    ]
+    cols_to_prefix = STATISTICAL_COLS + ["FG%", "FT%", "3P%"]
 
     # Rename these columns in away_df to have the prefix 'Opp.'
     away_df_prefixed = away_df[["game_id"] + cols_to_prefix].rename(

@@ -13,6 +13,25 @@ STRING_COLS = [
     "cluster",
 ]
 
+STATISTICAL_COLS = [
+        "FG",
+        "FGA",
+        "3P",
+        "3PA",
+        "FT",
+        "FTA",
+        "ORB",
+        "DRB",
+        "TRB",
+        "AST",
+        "STL",
+        "BLK",
+        "TOV",
+        "PF",
+        "PTS",
+        "+/-",
+    ]
+
 NUMERIC_COLS = [
     "PTS",
     "Opp.PTS",

@@ -40,7 +40,7 @@ def perform_preprocessing(
     )
 
     # Aggregate the statistical cols
-    aggregated_df = aggregate_boxscores(merged_df)
+    aggregated_df = aggregate_boxscores(merged_df, games_df)
 
     # Add additional cols for analysis
     game_boxscore_df = extend_metadata(aggregated_df)
