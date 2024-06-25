@@ -8,6 +8,9 @@ from utils.constants import N_CLUSTERS
 
 
 def perform_analytics(
+    min_support: float = 0.5,
+    min_confidence: float = 0.5,
+    max_len: int = 8,
     save_results: bool = True,
     generate_biplot: bool = True,
     get_column_avg: bool = True,
@@ -72,9 +75,9 @@ def perform_analytics(
         run_fpgrowth(
             3,
             truth_table_df.loc[truth_table_df["cluster"] == 3],
-            min_support=0.5,
-            min_confidence=0.5,
-            max_len=8,
+            min_support=min_support,
+            min_confidence=min_confidence,
+            max_len=max_len,
             verbose=True,
             save_results=save_results,
         )
