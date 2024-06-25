@@ -15,17 +15,6 @@ def perform_clustering(
     calculate_distortion: bool = True,
     get_closest_samples: bool = True,
 ) -> None:
-    """
-    Main function to orchestrate the execution of various analytics tasks.
-
-    Parameters:
-    - save_results (bool): Flag to control the saving of results to CSV.
-    - generate_cluster_plots (bool): Flag to control the generation of cluster plots.
-    - run_kmeans (bool): Flag to control the execution of the KMeans clustering model.
-    - calculate_distortion (bool): Flag to control the calculation of cluster distortion.
-    - get_closest_samples (bool): Flag to control fetching samples closest to the centroids.
-    """
-
     print("Reading in data -----------\n\n")
     cluster_df = pd.read_csv("../data/src/nba.games.stats-raw.csv")
     stats_df = pd.read_csv("../data/src/nba.games.stats-normalized.csv")
@@ -34,8 +23,9 @@ def perform_clustering(
     data_df = stats_df.iloc[:, 5:].drop(columns=["+/-", "Opp.+/-"])
 
     print("Selecting features -----------\n\n")
-    data_df = perform_feature_selection(data_df)
-    X = project_cols(stats_df, data_df.columns)
+    selected_features_df = perform_feature_selection(data_df)
+    selected_feature_names = selected_features_df.columns.tolist()
+    X = project_cols(stats_df, selected_feature_names)
 
     if generate_cluster_plots:
         print("Generating cluster plots -----------\n\n")
@@ -57,7 +47,7 @@ def perform_clustering(
     if get_closest_samples and kmeans is not None:
         print("Getting the samples closest to the centroids...")
         closest_samples_df = get_samples_closest_to_centroid(
-            cluster_df, kmeans.cluster_centers_, num_samples=150
+            cluster_df, kmeans.cluster_centers_, num_samples=150, feature_cols=selected_feature_names
         )
 
     if save_results:
