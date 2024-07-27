@@ -1,5 +1,6 @@
 import pandas as pd
 from typing import Optional
+from joblib import Parallel, delayed
 from mlxtend.frequent_patterns import fpgrowth
 from mlxtend.frequent_patterns import association_rules
 from pyspark.sql import SparkSession, Row
@@ -61,15 +62,16 @@ def mlxtend_fpgrowth(
         print(frequent_itemsets_win)
         print(rules_win)
 
-
 def run_fpgrowth(
     cluster: int,
     df: pd.DataFrame,
     min_support: float = 0.2,
     min_confidence: float = 0.5,
+    min_lift: float = 2.0,
     max_len: Optional[int] = None,
     verbose: bool = False,
     save_results: bool = True,
+    n_jobs: int = -1  # Number of parallel jobs (-1 means using all processors)
 ) -> None:
     # Preprocess DataFrame.
     df = df.iloc[:, 6:].astype(bool)
@@ -120,7 +122,6 @@ def run_fpgrowth(
 
     # Generate association rules
     association_rules = model.associationRules
-    print(association_rules)
 
     # Filter rules to get those with 'win'
     print("Evaluating association rules...")
@@ -133,24 +134,58 @@ def run_fpgrowth(
         print(f"No rules with 'win' for min_confidence={min_confidence}")
         return  # Exit function if no relevant rules.
 
+    # Convert rules to Pandas DataFrame for simplification
+    rules_win = rules_win.withColumn(
+        "antecedent", F.concat_ws(",", "antecedent")
+    ).withColumn("consequent", F.concat_ws(",", "consequent"))
+    pandas_df = rules_win.toPandas()
+
+    # Filter by minimum lift
+    pandas_df = pandas_df[pandas_df['lift'] >= min_lift]
+    print(len(pandas_df))
+    # Simplification logic
+    def is_subset(rule_a, rule_b):
+        set_a = set(rule_a.split(','))
+        set_b = set(rule_b.split(','))
+        return set_a.issubset(set_b)
+
+    def simplify_group(group):
+        group = group.sort_values(by=['lift', 'antecedent'], ascending=[False, True])
+        selected_rules = []
+        for i, row in group.iterrows():
+            is_redundant = False
+            for selected_rule in selected_rules:
+                if is_subset(row['antecedent'], selected_rule['antecedent']):
+                    is_redundant = True
+                    break
+            if not is_redundant:
+                selected_rules.append(row)
+        return selected_rules
+
+    print("Simplifying rule sets...")
+    # Use parallel processing to simplify rules
+    grouped = pandas_df.groupby('consequent')
+    simplified_rules = Parallel(n_jobs=n_jobs)(
+        delayed(simplify_group)(group) for name, group in grouped
+    )
+
+    # Flatten the list of lists
+    simplified_rules = [item for sublist in simplified_rules for item in sublist]
+
+    simplified_df = pd.DataFrame(simplified_rules)
+
     if save_results:
-        # Assuming `rules` is your DataFrame with the association rules
-        rules_string = rules_win.withColumn(
-            "antecedent", F.concat_ws(",", "antecedent")
-        ).withColumn("consequent", F.concat_ws(",", "consequent"))
-
-        # Convert to Pandas DataFrame
-        pandas_df = rules_string.toPandas()
-
-        # Save rules to CSV
-        pandas_df.to_csv(
-            f"../data/fpgrowth_results/cluster_{cluster}_rules.csv", header=True
+        # Save simplified rules to CSV
+        simplified_df.to_csv(
+            f"../data/fpgrowth_results/cluster_{cluster}_simplified_rules.csv", index=False
         )
 
     # Optional: Print the results (can be removed in production code)
     if verbose:
         frequent_itemsets_win.show()
         rules_win.show()
+        print(simplified_df)
 
     # Stop Spark session
     spark.stop()
+    
