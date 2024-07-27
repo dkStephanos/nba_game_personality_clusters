@@ -4,7 +4,6 @@ from models.svc import perform_feature_selection
 from models.fpgrowth import run_fpgrowth
 from models.kmeans import get_column_avgs_per_cluster, get_cluster_distribution
 from utils.stats import generate_quantile_truth_table
-from utils.constants import N_CLUSTERS
 
 
 def perform_analytics(
@@ -62,14 +61,14 @@ def perform_analytics(
     if generate_truth_tables:
         print("Generating cluster truth tables...")
         truth_table_df = generate_quantile_truth_table(df, save_results=save_results)
-        truth_table_df = pd.concat([metadata_df, truth_table_df], axis=1)
+        truth_table_df = pd.concat([metadata_df, truth_table_df], axis=1).reset_index(drop=True)
 
     if run_fpgrowth_algo:
         if truth_table_df is None:  # Ensure truth_table_df is not None
             truth_table_df = pd.read_csv(
                 "../data/cluster_results/cluster.stats.results-truth-table.csv"
             )
-
+        print(truth_table_df)
         # for cluster in range(0, N_CLUSTERS):
         print(f"Running fpgrowth algorithm for cluster {3}...")
         run_fpgrowth(
