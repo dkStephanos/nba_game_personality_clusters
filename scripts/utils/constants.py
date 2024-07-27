@@ -1,6 +1,6 @@
 N_CLUSTERS = 5
 
-QUANTILES = [0.1, 0.3, 0.5, 0.7, 0.9]
+QUANTILES = [.7, .8, .9]
 
 STRING_COLS = [
     "game_id",
