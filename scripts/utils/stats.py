@@ -1,6 +1,5 @@
 import pandas as pd
-from utils.constants import NUMERIC_COLS, QUANTILES
-
+from utils.constants import NUMERIC_COLS, QUANTILES, LOWER_IS_BETTER
 
 def get_column_quantiles(
     stats_df,
@@ -8,18 +7,6 @@ def get_column_quantiles(
     save_results=False,
     output_path="../data/cluster_results/cluster.stats.results-quantiles.csv",
 ):
-    """
-    Calculate quantiles for specified numeric columns within clusters in the dataframe.
-
-    Parameters:
-        stats_df (pd.DataFrame): The input dataframe containing the data.
-        quantiles (list): The quantiles to calculate (default is [0.2, 0.4, 0.6, 0.8]).
-        save_results (bool): Whether to save the results to a file (default is False).
-        output_path (str): The path to the file where results should be saved if save_results is True.
-
-    Returns:
-        pd.DataFrame: A dataframe containing the calculated quantiles for each cluster.
-    """
     # Ensure the columns exist in the dataframe
     numeric_cols = [col for col in NUMERIC_COLS if col in stats_df.columns]
 
@@ -27,6 +14,7 @@ def get_column_quantiles(
     def _compute_cluster_quantiles(group):
         cluster_quantiles = group[numeric_cols].quantile(quantiles)
         cluster_quantiles = cluster_quantiles.reset_index().rename(columns={'index': 'quantile'})
+        cluster_quantiles['quantile'] = cluster_quantiles['quantile'].apply(lambda x: f"{x:.1f}")
         cluster_quantiles['cluster'] = group.name
         return cluster_quantiles
 
@@ -38,7 +26,6 @@ def get_column_quantiles(
         quantiles_df.to_csv(output_path, index=False)
 
     return quantiles_df
-
 
 def generate_quantile_truth_table(stats_df, quantiles=QUANTILES, save_results=False):
     # Generate quantiles DataFrame
@@ -53,18 +40,32 @@ def generate_quantile_truth_table(stats_df, quantiles=QUANTILES, save_results=Fa
     # Preprocess quantiles_df for efficient lookup
     quantile_lookup = quantiles_df.pivot(index='cluster', columns='quantile', values=statistics)
 
+    # Ensure quantile values are stored as strings with one decimal place
+    quantile_lookup.columns = quantile_lookup.columns.set_levels(
+        quantile_lookup.columns.levels[1].astype(str).map(lambda x: f"{float(x):.1f}"),
+        level=1
+    )
+
     # Dictionary to hold new columns
     new_columns = {}
 
     for percentile in QUANTILES:
+        percentile_str = f"{float(percentile):.1f}"
         for stat in statistics:
-            column_name = f"{stat}_{percentile}"
+            column_name = f"{stat}_{percentile_str}"
 
-            # Vectorized comparison for the entire column
-            new_columns[column_name] = stats_df.apply(
-                lambda row: row[stat] > quantile_lookup.loc[row['cluster'], (stat, percentile)], 
-                axis=1
-            )
+            if stat in LOWER_IS_BETTER:
+                # For stats where lower is better, use <=
+                new_columns[column_name] = stats_df.apply(
+                    lambda row: row[stat] <= quantile_lookup.loc[row['cluster'], (stat, percentile_str)],
+                    axis=1
+                )
+            else:
+                # For stats where higher is better, use >=
+                new_columns[column_name] = stats_df.apply(
+                    lambda row: row[stat] >= quantile_lookup.loc[row['cluster'], (stat, percentile_str)],
+                    axis=1
+                )
 
     # Concatenate new columns with the original DataFrame
     new_columns_df = pd.DataFrame(new_columns)
@@ -74,8 +75,3 @@ def generate_quantile_truth_table(stats_df, quantiles=QUANTILES, save_results=Fa
     truth_table_df['win'] = stats_df['win']
 
     return truth_table_df
-
-
-
-
-

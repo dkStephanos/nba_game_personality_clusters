@@ -1,6 +1,6 @@
 N_CLUSTERS = 5
 
-QUANTILES = [.7, .8, .9]
+QUANTILES = [0.7, 0.8, 0.9]
 
 STRING_COLS = [
     "game_id",
@@ -14,23 +14,23 @@ STRING_COLS = [
 ]
 
 STATISTICAL_COLS = [
-        "FG",
-        "FGA",
-        "3P",
-        "3PA",
-        "FT",
-        "FTA",
-        "ORB",
-        "DRB",
-        "TRB",
-        "AST",
-        "STL",
-        "BLK",
-        "TOV",
-        "PF",
-        "PTS",
-        "+/-",
-    ]
+    "FG",
+    "FGA",
+    "3P",
+    "3PA",
+    "FT",
+    "FTA",
+    "ORB",
+    "DRB",
+    "TRB",
+    "AST",
+    "STL",
+    "BLK",
+    "TOV",
+    "PF",
+    "PTS",
+    "+/-",
+]
 
 NUMERIC_COLS = [
     "PTS",
@@ -71,4 +71,9 @@ NUMERIC_COLS = [
     "Opp.TOV",
     "Opp.PF",
     "Opp.+/-",
+]
+
+# Define a list of columns where lower values are better
+LOWER_IS_BETTER = ["PF", "TOV"] + [
+    col for col in NUMERIC_COLS if col.startswith("Opp.")
 ]
