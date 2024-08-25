@@ -21,6 +21,9 @@ RUN apt-get update && \
 # Set JAVA_HOME
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
+# Set JAVA_OPTS to increase the heap space
+ENV JAVA_OPTS="-Xmx8g"
+
 # Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
