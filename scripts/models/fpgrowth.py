@@ -7,6 +7,7 @@ from pyspark.sql import SparkSession, Row
 from pyspark.sql import functions as F
 from pyspark.ml.fpm import FPGrowth
 from pyspark.sql.functions import array_contains
+from pyspark import SparkConf
 
 
 def mlxtend_fpgrowth(
@@ -71,26 +72,31 @@ def run_fpgrowth(
     max_len: Optional[int] = None,
     verbose: bool = False,
     save_results: bool = True,
-    n_jobs: int = -1  # Number of parallel jobs (-1 means using all processors)
+    n_jobs: int = -1,  # Number of parallel jobs (-1 means using all processors)
+    num_partitions: int = 4
 ) -> None:
     # Preprocess DataFrame.
-    df = df.iloc[:, 6:].astype(bool)
+    df = df.iloc[:, 6:].drop(columns=['+/-_0.7', '+/-_0.8', '+/-_0.9', 'Opp.+/-_0.7', 'Opp.+/-_0.8', 'Opp.+/-_0.9']).astype(bool)
 
-    # Initialize Spark session
-    spark = SparkSession.builder.appName("FP-growth").getOrCreate()
+    # Create SparkConf object
+    conf = SparkConf()
+    conf.set("spark.executor.memory", "12g")
+    conf.set("spark.driver.memory", "12g")
+    conf.set("spark.serializer", "org.apache.spark.serializer.KryoSerializer")
+
+    # Initialize Spark session with the configuration
+    spark = SparkSession.builder.appName("FP-growth").config(conf=conf).getOrCreate()
 
     # Convert truth table DataFrame to a list of transactions
     print("Converting truth table to transactions...")
-    transactions = df.apply(
-        lambda row: [f"{item}-{row[item]}" for item in row.index if row[item]], axis=1
-    ).tolist()
+    transactions = df.apply(lambda row: [col for col in row.index if row[col]], axis=1).tolist()
 
     # Convert transactions to PySpark Rows
     data = [Row(items=transaction) for transaction in transactions]
 
     # Convert Pandas DataFrame to Spark DataFrame
-    sdf = spark.createDataFrame(data)
-
+    sdf = spark.createDataFrame(data).repartition(num_partitions)
+    
     # Generate frequent itemsets using FP-growth
     print("Fitting the fp-growth model...")
     fp_growth = FPGrowth(
