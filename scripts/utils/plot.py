@@ -60,14 +60,46 @@ def generate_silhouette_coef_plot(dataset, cluster_range=31, save=True, show=Tru
 
 
 def generate_biplot(score, y, coeff, labels=None, save=True, show=True):
+    """
+    Generate a biplot of Principal Component Analysis (PCA) results.
+
+    Parameters:
+    score (numpy.ndarray): PCA scores for each data point.
+    y (list): Cluster labels for each data point.
+    coeff (numpy.ndarray): PCA coefficients (loadings) for each feature.
+    labels (list, optional): Labels for each feature. Defaults to None.
+    save (bool, optional): Whether to save the plot as an image. Defaults to True.
+    show (bool, optional): Whether to display the plot. Defaults to True.
+
+    This function creates a biplot that shows:
+    1. Data points projected onto the first two principal components.
+    2. Feature vectors indicating the contribution of each feature to the principal components.
+    3. Color-coded clusters with a legend.
+
+    The plot is customizable and can be saved as an image file.
+    """
+
+    # Define colors for each cluster
     colors = {0: "r", 1: "c", 2: "b", 3: "y", 4: "m"}
-    y = list(map(lambda x: colors[x], y))
+    color_labels = {0: "Cluster 1", 1: "Cluster 2", 2: "Cluster 3", 3: "Cluster 4", 4: "Cluster 5"}
+    
+    # Map cluster labels to colors
+    y_colors = [colors[cluster] for cluster in y]
+
+    # Extract x and y coordinates from PCA scores
     xs = score[:, 0]
     ys = score[:, 1]
+
+    # Scale the data to fit within the plot
     n = coeff.shape[0]
     scalex = 1.0 / (xs.max() - xs.min())
     scaley = 1.0 / (ys.max() - ys.min())
-    plt.scatter(xs * scalex, ys * scaley, c=y)
+
+    # Create the scatter plot of data points
+    plt.figure(figsize=(12, 8))
+    scatter = plt.scatter(xs * scalex, ys * scaley, c=y_colors)
+
+    # Plot feature vectors
     for i in range(n):
         plt.arrow(0, 0, coeff[i, 0], coeff[i, 1], color="r", alpha=0.5)
         if labels is None:
@@ -88,14 +120,27 @@ def generate_biplot(score, y, coeff, labels=None, save=True, show=True):
                 ha="center",
                 va="center",
             )
+
+    # Set plot limits and labels
     plt.xlim(-1, 1)
     plt.ylim(-1, 1)
     plt.xlabel("PC{}".format(1))
     plt.ylabel("PC{}".format(2))
     plt.grid()
 
-    if save:
-        plt.savefig("../data/plots/pca_biplot.png")
+    # Add a legend for clusters
+    legend_elements = [plt.Line2D([0], [0], marker='o', color='w', 
+                                  label=color_labels[i], 
+                                  markerfacecolor=color, markersize=10)
+                       for i, color in colors.items()]
+    plt.legend(handles=legend_elements, title="Clusters", loc="best")
 
+    # Save the plot if requested
+    if save:
+        plt.savefig("../data/plots/pca_biplot.png", dpi=300, bbox_inches='tight')
+
+    # Show the plot if requested
     if show:
         plt.show()
+    else:
+        plt.close()
