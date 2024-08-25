@@ -4,7 +4,7 @@ from models.svc import perform_feature_selection
 from models.fpgrowth import run_fpgrowth
 from models.kmeans import get_column_avgs_per_cluster, get_cluster_distribution
 from utils.stats import generate_quantile_truth_table
-
+from utils.constants import N_CLUSTERS
 
 def perform_analytics(
     min_support: float = 0.5,
@@ -40,27 +40,28 @@ def perform_analytics(
     print("Performing feature selection -----------\n\n")
     metadata_df = stats_df.iloc[:, :6]
     data_df = stats_df.iloc[:, 6:].drop(columns=["+/-", "Opp.+/-"])
-    df = perform_feature_selection(data_df)
-
+    df = perform_feature_selection(data_df, C=.01)
+    num_selected_features = df.shape[1] - df.columns.isin(["win", "cluster"]).sum()
+    print(f"Number of selected features: {num_selected_features}")
     if generate_biplot:
         print("Generating PCA Biplot.... ")
         create_pca_biplot(
-            perform_feature_selection(df, cluster_df), save_results=save_results
+            perform_feature_selection(cluster_df.iloc[:, 6:].drop(columns=["+/-", "Opp.+/-"]), C=.1), save_results=save_results
         )
 
     column_avgs_df = None  # Initializing DataFrame to None
     if get_column_avg:
         print("Getting column averages for each cluster.... ")
-        column_avgs_df = get_column_avgs_per_cluster(df)
+        column_avgs_df = get_column_avgs_per_cluster(data_df)
 
     cluster_dist_df = None  # Initializing DataFrame to None
     if calculate_cluster_dist:
         print("Calculating cluster distribution...")
-        cluster_dist_df = get_cluster_distribution(df)
+        cluster_dist_df = get_cluster_distribution(data_df)
 
     if generate_truth_tables:
         print("Generating cluster truth tables...")
-        truth_table_df = generate_quantile_truth_table(df, save_results=save_results)
+        truth_table_df = generate_quantile_truth_table(cluster_df, save_results=save_results)
         truth_table_df = pd.concat([metadata_df, truth_table_df], axis=1).reset_index(drop=True)
 
     if run_fpgrowth_algo:
@@ -68,18 +69,18 @@ def perform_analytics(
             truth_table_df = pd.read_csv(
                 "../data/cluster_results/cluster.stats.results-truth-table.csv"
             )
-        print(truth_table_df)
-        # for cluster in range(0, N_CLUSTERS):
-        print(f"Running fpgrowth algorithm for cluster {3}...")
-        run_fpgrowth(
-            3,
-            truth_table_df.loc[truth_table_df["cluster"] == 3],
-            min_support=min_support,
-            min_confidence=min_confidence,
-            max_len=max_len,
-            verbose=True,
-            save_results=save_results,
-        )
+
+        for cluster in range(0, N_CLUSTERS):
+            print(f"Running fpgrowth algorithm for cluster {cluster}...")
+            run_fpgrowth(
+                cluster,
+                truth_table_df.loc[truth_table_df["cluster"] == cluster],
+                min_support=min_support,
+                min_confidence=min_confidence,
+                max_len=max_len,
+                verbose=True,
+                save_results=save_results,
+            )
 
     if save_results:
         # Save DataFrames to CSV if they are not None
