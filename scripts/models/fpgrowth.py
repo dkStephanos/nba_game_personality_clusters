@@ -63,6 +63,37 @@ def mlxtend_fpgrowth(
         print(frequent_itemsets_win)
         print(rules_win)
 
+def simplify_rules(pandas_df: pd.DataFrame, n_jobs: int) -> pd.DataFrame:
+    def is_subset(rule_a, rule_b):
+        set_a = set(rule_a.split(','))
+        set_b = set(rule_b.split(','))
+        return set_a.issubset(set_b)
+
+    def simplify_group(group):
+        group = group.sort_values(by=['lift', 'antecedent'], ascending=[False, True])
+        selected_rules = []
+        for i, row in group.iterrows():
+            is_redundant = False
+            for selected_rule in selected_rules:
+                if is_subset(row['antecedent'], selected_rule['antecedent']):
+                    is_redundant = True
+                    break
+            if not is_redundant:
+                selected_rules.append(row)
+        return selected_rules
+
+    print("Simplifying rule sets...")
+    # Use parallel processing to simplify rules
+    grouped = pandas_df.groupby('consequent')
+    simplified_rules = Parallel(n_jobs=n_jobs)(
+        delayed(simplify_group)(group) for name, group in grouped
+    )
+
+    # Flatten the list of lists
+    simplified_rules = [item for sublist in simplified_rules for item in sublist]
+
+    return pd.DataFrame(simplified_rules)
+
 def run_fpgrowth(
     cluster: int,
     df: pd.DataFrame,
@@ -149,36 +180,9 @@ def run_fpgrowth(
     # Filter by minimum lift
     pandas_df = pandas_df[pandas_df['lift'] >= min_lift]
     print(len(pandas_df))
-    # Simplification logic
-    def is_subset(rule_a, rule_b):
-        set_a = set(rule_a.split(','))
-        set_b = set(rule_b.split(','))
-        return set_a.issubset(set_b)
 
-    def simplify_group(group):
-        group = group.sort_values(by=['lift', 'antecedent'], ascending=[False, True])
-        selected_rules = []
-        for i, row in group.iterrows():
-            is_redundant = False
-            for selected_rule in selected_rules:
-                if is_subset(row['antecedent'], selected_rule['antecedent']):
-                    is_redundant = True
-                    break
-            if not is_redundant:
-                selected_rules.append(row)
-        return selected_rules
-
-    print("Simplifying rule sets...")
-    # Use parallel processing to simplify rules
-    grouped = pandas_df.groupby('consequent')
-    simplified_rules = Parallel(n_jobs=n_jobs)(
-        delayed(simplify_group)(group) for name, group in grouped
-    )
-
-    # Flatten the list of lists
-    simplified_rules = [item for sublist in simplified_rules for item in sublist]
-
-    simplified_df = pd.DataFrame(simplified_rules)
+    # Simplify rules
+    simplified_df = simplify_rules(pandas_df, n_jobs)
 
     if save_results:
         # Save simplified rules to CSV
@@ -194,4 +198,3 @@ def run_fpgrowth(
 
     # Stop Spark session
     spark.stop()
-    
