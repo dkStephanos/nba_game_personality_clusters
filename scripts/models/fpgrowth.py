@@ -63,13 +63,29 @@ def mlxtend_fpgrowth(
         print(frequent_itemsets_win)
         print(rules_win)
 
-def simplify_rules(pandas_df: pd.DataFrame, n_jobs: int) -> pd.DataFrame:
+def clean_rule(rule):
+    stats = {}
+    for item in rule.split(','):
+        stat, percentile = item.rsplit('_', 1)
+        percentile = float(percentile.replace('-True', ''))
+        if stat not in stats or percentile > stats[stat]:
+            stats[stat] = percentile
+    return ','.join(f"{stat}_{percentile:.1f}-True" for stat, percentile in stats.items())
+
+
+def simplify_rules(pandas_df: pd.DataFrame, n_jobs: int = -1) -> pd.DataFrame:
     def is_subset(rule_a, rule_b):
         set_a = set(rule_a.split(','))
         set_b = set(rule_b.split(','))
         return set_a.issubset(set_b)
 
     def simplify_group(group):
+        group = group.copy()
+        # Clean rules
+        group['antecedent'] = group['antecedent'].apply(clean_rule)
+        # Remove duplicates
+        group = group.drop_duplicates(subset=['antecedent', 'consequent'])
+        
         group = group.sort_values(by=['lift', 'antecedent'], ascending=[False, True])
         selected_rules = []
         for i, row in group.iterrows():
@@ -93,6 +109,7 @@ def simplify_rules(pandas_df: pd.DataFrame, n_jobs: int) -> pd.DataFrame:
     simplified_rules = [item for sublist in simplified_rules for item in sublist]
 
     return pd.DataFrame(simplified_rules)
+
 
 def run_fpgrowth(
     cluster: int,
